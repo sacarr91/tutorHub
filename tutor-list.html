@@ -53,15 +53,120 @@
                 </div> -->
             </div>
         </nav>
-        <style>
+        <!-- <style>
             .my-custom-row {
                 background-color: bisque;
-                height: 400px;
             }
-        </style>
+        </style> -->
         <div class="container">
-            <!-- Example of how to arrange rows and cols in Bootstrap -->
-            <!-- <div class="row">
+            <div class="row mt-2 g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Edward G</h5>
+                            <p class="card-text">Philadelphia, PA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col col-lg-6 mb-4 mb-lg-0">
+                    <div class="card mb-3" style="border-radius: .5rem;">
+                        <div class="row g-0">
+                            <div class="col-md-4 gradient-custom text-center text-black" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                    alt="Avatar"
+                                    class="img-fluid my-5"
+                                    style="width: 80px;"
+                                >
+                                <h5>Jessi S</h5>
+                                <p>Violinist</p>
+                                <i class="far fa-edit mb-5"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <div class="card-body p-4">
+                                    <h6>Contact info</h6>
+                                    <hr class="mt-0 mb-4">
+                                    <div class="row pt-1">
+                                        <div class="col-6 mb-3">
+                                            <h6>Email</h6>
+                                            <p class="text-muted">info@example.com</p>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Phone</h6>
+                                            <p class="text-muted">123 456 789</p>
+                                        </div>
+                                    </div>
+                                    <h6>Specialties</h6>
+                                    <hr class="mt-0 mb-4">
+                                    <div class="row pt-1">
+                                        <div class="col-6 mb-3">
+                                            <h6>Recent</h6>
+                                            <p class="text-muted">Lorem ipsum</p>
+                                        </div>
+                                        <div class="col-6 mb-3">
+                                            <h6>Most Viewed</h6>
+                                            <p class="text-muted">Dolor sit amet</p>
+                                        </div>
+                                    </div>
+                                    <div class="d-flex justify-content-start">
+                                        <a href="#!">
+                                            <i class="fab fa-facebook-f fa-lg me-3"></i>
+                                        </a>
+                                        <a href="#!">
+                                            <i class="fab fa-twitter fa-lg me-3"></i>
+                                        </a>
+                                        <a href="#!">
+                                            <i class="fab fa-instagram fa-lg"></i>
+                                        </a>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Phil Sims</h5>
+                            <p class="card-text">Orlando, FL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="row mt-2 g-3">
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Edward G</h5>
+                            <p class="card-text">Philadelphia, PA</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">James W</h5>
+                            <p class="card-text">New York, NY</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <div class="card">
+                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
+                        <div class="card-body">
+                            <h5 class="card-title">Phil Sims</h5>
+                            <p class="card-text">Orlando, FL</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <!-- Example of how to arrange rows and cols in Bootstrap -->
+        <!-- <div class="row">
                 <div class="col-sm-12 col-md-6 col-lg-2">Col One</div>
                 <div class="col-sm-12 col-md-6 col-lg-8">Col Two</div>
             </div>
@@ -73,62 +178,6 @@
                 <div class="col-sm-4 offset-2">Col One</div>
                 <div class="col-sm-4 offset-1">Col Two</div>
             </div> -->
-            <div class="row my-custom-row justify-content-center align-items-center">
-                <div class="col-sm">
-                    <div class="p-3 border bg-light">Col One</div>
-                </div>
-                <div class="col-sm-4">
-                    <div class="p-3 border bg-light">Col Two</div>
-                </div>
-            </div>
-            <div class="row">
-                <div class="col">
-                    <!-- Button trigger modal -->
-                    <button
-                        type="button"
-                        class="btn btn-primary"
-                        data-bs-toggle="modal"
-                        data-bs-target="#exampleModal"
-                    >
-                        Launch demo modal
-                    </button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-secondary">Primary</button>
-                </div>
-                <div class="col">
-                    <button type="button" class="btn btn-danger">Primary</button>
-                </div>
-            </div>
-            <!-- Modal -->
-            <div
-                class="modal fade"
-                id="exampleModal"
-                tabindex="-1"
-                aria-labelledby="exampleModalLabel"
-                aria-hidden="true"
-            >
-                <div class="modal-dialog">
-                    <div class="modal-content">
-                        <div class="modal-header">
-                            <h5 class="modal-title" id="exampleModalLabel">Modal title</h5>
-                            <button
-                                type="button"
-                                class="btn-close"
-                                data-bs-dismiss="modal"
-                                aria-label="Close"
-                            ></button>
-                        </div>
-                        <div class="modal-body">
-                            ...
-                        </div>
-                        <div class="modal-footer">
-                            <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-                            <button type="button" class="btn btn-primary">Save changes</button>
-                        </div>
-                    </div>
-                </div>
-            </div>
-            <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
-        </body>
-    </html>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.0.2/dist/js/bootstrap.bundle.min.js" integrity="sha384-MrcW6ZMFYlzcLA8Nl+NtUVF0sA7MsXsP1UyJoMp4YLEuNSfAP+JcXn/tWtIaxVXM" crossorigin="anonymous"></script>
+    </body>
+</html>
