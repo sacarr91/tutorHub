@@ -53,41 +53,23 @@
                 </div> -->
             </div>
         </nav>
-        <!-- <style>
-            .my-custom-row {
-                background-color: bisque;
+        <!-- This will be whatever I am going to include in a CSS stylesheet to override Bootstrap -->
+        <style>
+            body {
+                background-color: rgba(116, 114, 114, 0.711);
             }
-        </style> -->
+            /* .my-custom-row {
+                background-color: bisque;
+            } */
+        </style>
+        <!-- Container to hold cards that will display each individual tutor -->
         <div class="container">
+            <!-- Row to hold the cards -->
             <div class="row mt-2 g-3">
+                <!-- Card 1 -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Edward G</h5>
-                            <p class="card-text">Philadelphia, PA</p>
-                        </div>
-                    </div>
-                </div>
-                <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card mb-2" style="border-radius: .5rem;">
-                        <div class="row g-2">
-                            <div class="col-md-4 gradient-custom text-center text-black" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
-                                <img
-                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
-                                    alt="Avatar"
-                                    class="img-fluid my-2"
-                                    style="width: 40px;"
-                                >
-                                <h5>Jessi S</h5>
-                                <p>Violinist</p>
-                            </div>
-                        </div>
-                    </div>
-                </div>
-                <!-- <div class="col col-lg-6 mb-4 mb-lg-0">
-                    <div class="card mb-0" style="border-radius: .5rem;">
-                        <div class="row g-0">
+                    <div class="card mb-2" style="border-radius: .5rem; background-color: #f4f5f7;">
+                        <div class="row g-4">
                             <div class="col-md-4 gradient-custom text-center text-black" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
                                 <img
                                     src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
@@ -100,82 +82,319 @@
                                 <i class="far fa-edit mb-2"></i>
                             </div>
                             <div class="col-md-8">
-                                <div class="card-body p-2">
-                                    <h6>Contact info</h6>
-                                    <hr class="mt-0 mb-4">
-                                    <div class="row pt-1">
-                                        <div class="col-6 mb-3">
-                                            <h6>Email</h6>
-                                            <p class="text-muted">info@example.com</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <h6>Phone</h6>
-                                            <p class="text-muted">123 456 789</p>
-                                        </div>
+                                <h6>Contact Info:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-2">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">info@example.com</p>
                                     </div>
-                                    <h6>Specialties</h6>
-                                    <hr class="mt-0 mb-4">
-                                    <div class="row pt-1">
-                                        <div class="col-6 mb-3">
-                                            <h6>Recent</h6>
-                                            <p class="text-muted">Lorem ipsum</p>
-                                        </div>
-                                        <div class="col-6 mb-3">
-                                            <h6>Most Viewed</h6>
-                                            <p class="text-muted">Dolor sit amet</p>
-                                        </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone:</h6>
+                                        <p class="text-muted">123-456-7891</p>
                                     </div>
-                                    <div class="d-flex justify-content-start">
-                                        <a href="#!">
-                                            <i class="fab fa-facebook-f fa-lg me-3"></i>
-                                        </a>
-                                        <a href="#!">
-                                            <i class="fab fa-twitter fa-lg me-3"></i>
-                                        </a>
-                                        <a href="#!">
-                                            <i class="fab fa-instagram fa-lg"></i>
-                                        </a>
+                                </div>
+                                <h6>Specialties:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Instruments</h6>
+                                        <p class="text-muted">Piano, keyboard, and guitar</p>
                                     </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Tutoring location:</h6>
+                                        <p class="text-muted">Virtual or in person</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#!">
+                                        <i class="fab fa-facebook-f fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-twitter fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-instagram fa-lg"></i>
+                                    </a>
                                 </div>
                             </div>
                         </div>
                     </div>
-                </div> -->
+                </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Phil Sims</h5>
-                            <p class="card-text">Orlando, FL</p>
+                    <!-- Card 2 -->
+                    <div class="card mb-2" style="border-radius: .5rem; background-color: #f4f5f7;">
+                        <div class="row g-4">
+                            <div class="col-md-4 gradient-custom text-center text-black" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                    alt="Avatar"
+                                    class="img-fluid my-5"
+                                    style="width: 80px;"
+                                >
+                                <h5>Jessi S</h5>
+                                <p>Violinist</p>
+                                <i class="far fa-edit mb-2"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Contact Info:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-2">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">info@example.com</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone:</h6>
+                                        <p class="text-muted">123-456-7891</p>
+                                    </div>
+                                </div>
+                                <h6>Specialties:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Instruments</h6>
+                                        <p class="text-muted">Piano, keyboard, and guitar</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Tutoring location:</h6>
+                                        <p class="text-muted">Virtual or in person</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#!">
+                                        <i class="fab fa-facebook-f fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-twitter fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-instagram fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="col-12 col-md-6 col-lg-4">
+                    <!-- Card 3 -->
+                    <div class="card mb-2" style="border-radius: .5rem; background-color: #f4f5f7;">
+                        <div class="row g-4">
+                            <div class="col-md-4 gradient-custom text-center text-black" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                    alt="Avatar"
+                                    class="img-fluid my-5"
+                                    style="width: 80px;"
+                                >
+                                <h5>Jessi S</h5>
+                                <p>Violinist</p>
+                                <i class="far fa-edit mb-2"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Contact Info:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-2">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">info@example.com</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone:</h6>
+                                        <p class="text-muted">123-456-7891</p>
+                                    </div>
+                                </div>
+                                <h6>Specialties:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Instruments</h6>
+                                        <p class="text-muted">Piano, keyboard, and guitar</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Tutoring location:</h6>
+                                        <p class="text-muted">Virtual or in person</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#!">
+                                        <i class="fab fa-facebook-f fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-twitter fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-instagram fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
             </div>
             <div class="row mt-2 g-3">
+                <!-- Card 4 -->
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Edward G</h5>
-                            <p class="card-text">Philadelphia, PA</p>
+                    <div class="card mb-2" style="border-radius: .5rem; background-color: #f4f5f7;">
+                        <div class="row g-4">
+                            <div class="col-md-4 gradient-custom text-center text-black" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                    alt="Avatar"
+                                    class="img-fluid my-5"
+                                    style="width: 80px;"
+                                >
+                                <h5>Jessi S</h5>
+                                <p>Violinist</p>
+                                <i class="far fa-edit mb-2"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Contact Info:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-2">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">info@example.com</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone:</h6>
+                                        <p class="text-muted">123-456-7891</p>
+                                    </div>
+                                </div>
+                                <h6>Specialties:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Instruments</h6>
+                                        <p class="text-muted">Piano, keyboard, and guitar</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Tutoring location:</h6>
+                                        <p class="text-muted">Virtual or in person</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#!">
+                                        <i class="fab fa-facebook-f fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-twitter fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-instagram fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">James W</h5>
-                            <p class="card-text">New York, NY</p>
+                    <!-- Card 5 -->
+                    <div class="card mb-2" style="border-radius: .5rem; background-color: #f4f5f7;">
+                        <div class="row g-4">
+                            <div class="col-md-4 gradient-custom text-center text-black" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                    alt="Avatar"
+                                    class="img-fluid my-5"
+                                    style="width: 80px;"
+                                >
+                                <h5>Jessi S</h5>
+                                <p>Violinist</p>
+                                <i class="far fa-edit mb-2"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Contact Info:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-2">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">info@example.com</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone:</h6>
+                                        <p class="text-muted">123-456-7891</p>
+                                    </div>
+                                </div>
+                                <h6>Specialties:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Instruments</h6>
+                                        <p class="text-muted">Piano, keyboard, and guitar</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Tutoring location:</h6>
+                                        <p class="text-muted">Virtual or in person</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#!">
+                                        <i class="fab fa-facebook-f fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-twitter fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-instagram fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-12 col-md-6 col-lg-4">
-                    <div class="card">
-                        <img src="./assets/images/musician-place-holder.jpg" alt="Musician playing guitar" class="card-img-top">
-                        <div class="card-body">
-                            <h5 class="card-title">Phil Sims</h5>
-                            <p class="card-text">Orlando, FL</p>
+                    <!-- Card 6 -->
+                    <div class="card mb-2" style="border-radius: .5rem; background-color: #f4f5f7;">
+                        <div class="row g-4">
+                            <div class="col-md-4 gradient-custom text-center text-black" style="border-top-left-radius: .5rem; border-bottom-left-radius: .5rem;">
+                                <img
+                                    src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-chat/ava1-bg.webp"
+                                    alt="Avatar"
+                                    class="img-fluid my-5"
+                                    style="width: 80px;"
+                                >
+                                <h5>Jessi S</h5>
+                                <p>Violinist</p>
+                                <i class="far fa-edit mb-2"></i>
+                            </div>
+                            <div class="col-md-8">
+                                <h6>Contact Info:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-2">
+                                    <div class="col-6 mb-3">
+                                        <h6>Email</h6>
+                                        <p class="text-muted">info@example.com</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Phone:</h6>
+                                        <p class="text-muted">123-456-7891</p>
+                                    </div>
+                                </div>
+                                <h6>Specialties:</h6>
+                                <hr class="mt-0 mb-4">
+                                <div class="row pt-1">
+                                    <div class="col-6 mb-3">
+                                        <h6>Instruments</h6>
+                                        <p class="text-muted">Piano, keyboard, and guitar</p>
+                                    </div>
+                                    <div class="col-6 mb-3">
+                                        <h6>Tutoring location:</h6>
+                                        <p class="text-muted">Virtual or in person</p>
+                                    </div>
+                                </div>
+                                <div class="d-flex justify-content-start">
+                                    <a href="#!">
+                                        <i class="fab fa-facebook-f fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-twitter fa-lg me-3"></i>
+                                    </a>
+                                    <a href="#!">
+                                        <i class="fab fa-instagram fa-lg"></i>
+                                    </a>
+                                </div>
+                            </div>
                         </div>
                     </div>
                 </div>
