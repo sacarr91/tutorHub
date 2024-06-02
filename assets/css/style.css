@@ -26,6 +26,10 @@ body {
     margin-left: 2vh;
 }
 
+.hero img{
+    border-radius: 2%;
+}
+
 #searchArea {
     text-align: center;
 }
