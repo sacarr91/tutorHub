@@ -30,68 +30,67 @@
       </div>
     </nav>
   </header>
-  <main>
-    <div class="card">
-      <h2>New Account Registration</h2>
-      <form>
-
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="tutor-radio">
-          <label class="form-check-label" for="tutor account">
-            Tutor Account
-          </label>
+  <main class="row justify-content-center">
+    <div class="card col-10">
+      <h2 class="mb-4">New Account Registration</h2>
+      <h5>Account Type</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="tutor-radio">
+        <label class="form-check-label" for="tutor account">
+          Tutor Account
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="student-radio">
+        <label class="form-check-label mb-3" for="student account">
+          Student Account
+        </label>
+      </div>
+      <h5>User Information</h5>
+      <div class="row">
+        <div class="col-3">
+          <select class="form-select" aria-label="Default select example">
+            <option selected>Salutation</option>
+            <option value="1">Miss</option>
+            <option value="2">Ms.</option>
+            <option value="3">Mrs.</option>
+            <option value="4">Mr.</option>
+            <option value="5">Mx.</option>
+            <option value="6">Dr.</option>
+            <option value="7">Prof.</option>
+            <option value="8">Hon.</option>
+            <option value="9">Lord</option>
+            <option value="10">Lady</option>
+            <option value="11">Sir</option>
+            <option value="12">Dame</option>
+            <option value="13">Col.</option>
+            <option value="14">Maj.</option>
+            <option value="15">Lt.</option>
+            <option value="16">Sgt.</option>
+            <option value="17">Dep.</option>
+            <option value="18">Cap.</option>
+            <option value="19">Pres.</option>
+            <option value="20">Adm.</option>
+            <option value="21">HRH</option>
+          </select>
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="student-radio">
-          <label class="form-check-label" for="student account">
-            Student Account
-          </label>
+        <div class="col-4">
+          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
         </div>
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Salutation</option>
-          <option value="1">Miss</option>
-          <option value="2">Ms.</option>
-          <option value="3">Mrs.</option>
-          <option value="4">Mr.</option>
-          <option value="5">Mx.</option>
-          <option value="6">Dr.</option>
-          <option value="7">Prof.</option>
-          <option value="8">Hon.</option>
-          <option value="9">Lord</option>
-          <option value="10">Lady</option>
-          <option value="11">Sir</option>
-          <option value="12">Dame</option>
-          <option value="13">Col.</option>
-          <option value="14">Maj.</option>
-          <option value="15">Lt.</option>
-          <option value="16">Sgt.</option>
-          <option value="17">Dep.</option>
-          <option value="18">Cap.</option>
-          <option value="19">Pres.</option>
-          <option value="20">Adm.</option>
-          <option value="21">HRH</option>
+        <div class="col-5 mb-3">
+          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+        </div>
+      </div>
+      <label for="email" class="form-label">Email address <i>(will be your username)</i></label>
+      <input type="email" class="form-control mb-3" id="email-input" placeholder="name@example.com">
+      <label for="inputPassword5" class="form-label">Choose a Password</label>
+      <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+      <div id="passwordHelpBlock" class="form-text mb-3">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+        characters, or emoji.
+      </div>
 
-
-
-
-        </select>
-        <label for="first-name">First Name</label>
-        <input type="name" class="form-control" id="fn-input">
-        <label for="last-name">Last Name</label>
-        <input type="name" class="form-control" id="ln-input">
-        <label for="email" class="form-label">Email address</label>
-        <input type="email" class="form-control" id="email-input" placeholder="name@example.com">
-
-        <select id="grades">
-          <option value="A">A</option>
-          <option value="B">B</option>
-          <option value="C">C</option>
-          <option value="Incomplete">Incomplete</option>
-        </select>
-        <label for="msg">Comment</label>
-        <textarea id="msg" name="comments"></textarea>
-
-        <button id="save">SAVE</button>
+      <button id="next" class="btn mb-3">NEXT</button>
       </form>
     </div>
   </main>
