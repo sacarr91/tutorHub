@@ -12,7 +12,7 @@
       @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
       </style>
     <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>User Registration</title>
+    <title>Tutor Hub</title>
   </head>
   <body>
     <!-- Sticky Header -->
@@ -101,9 +101,30 @@
     <div id="searchArea">
         <h1>Find A Tutor</h1>
         <div class="input-group">
-            <div class="form-outline" data-mdb-input-init>
+            <!-- <div class="form-outline" data-mdb-input-init>
               <input id="search-input" type="search" id="form1" class="form-control" />
-            </div>
+            </div> -->
+            <select class="form-select" aria-label="Default select example">
+              <option selected>Choose Your Instrument</option>
+              <option value="1">Flute</option>
+              <option value="2">Oboe</option>
+              <option value="3">Bassoon</option>
+              <option value="4">Clarinet</option>
+              <option value="5">Saxophone</option>
+              <option value="6">Trumpet</option>
+              <option value="7">Horn</option>
+              <option value="8">Trombone</option>
+              <option value="9">Euphonium</option>
+              <option value="10">Tuba</option>
+              <option value="11">Percussion</option>
+              <option value="12">Piano</option>
+              <option value="13">Guitar</option>
+              <option value="14">Bass Guitar</option>
+              <option value="15">Violin</option>
+              <option value="16">Viola</option>
+              <option value="17">Cello</option>
+              <option value="18">Double Bass</option>
+            </select>
               <button id="search-button" type="button" onclick="clickHandler()" class="btn">
                 <i class="fas fa-search">Search</i>
               </button>

@@ -1,0 +1,2 @@
+DROP DATABASE IF EXISTS tutor_hub;
+CREATE DATABASE tutor_hub;
