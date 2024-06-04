@@ -5,20 +5,31 @@
     --clr-light: #f5f3ee;
     --clr-accent1: #e1895d;
     --clr-accent2: #e7cc65;
-  }
+}
 
 body {
     background-color: var(--clr-dark);
     color: var(--clr-light);
 }
 
+/* Joe added this code for cards to keep the cards all the same height */
+.card-deck {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: stretch;
+}
+
+.card {
+    flex: 1 0 auto;
+}
+
 #header a {
     color: var(--clr-accent1);
     font-weight: 400;
-    font-size:3vh;
+    font-size: 3vh;
 }
 
-.carousel-item img{
+.carousel-item img {
     width: 100%
 }
 
@@ -28,7 +39,7 @@ body {
     margin-left: 2vh;
 }
 
-.hero img{
+.hero img {
     border-radius: 2%;
 }
 
