@@ -1,23 +1,20 @@
 :root{
     --clr-dark:#1b383a;
-    --clr-accent1: #e1895d;
+    --clr-accent1:#e1895d;
 }
 
-body{
+#header a {
+    color: var(--clr-accent1);
+    font-weight: 400;
+    font-size:3vh;
+}
+
+.bg-darkgreen{
     background-color: var(--clr-dark);
 }
 
-h4{
+h3{
     color:var(--clr-accent1);
-}
-.min-100-vh{
-    min-height:100vh;
-}
-
-.flex-row{
-    display:flex;
-    flex-direction:row;
-    flex-wrap:wrap;
 }
 
 .align-center{
@@ -25,7 +22,7 @@ h4{
 }
 
 .justify-center{
-    justify-content: center;
+    justify-content:center;
 }
 
 .col-6{
@@ -35,4 +32,5 @@ h4{
 
 .btn-login{
     background-color: var(--clr-accent1);
+    margin-top:4px;
 }
