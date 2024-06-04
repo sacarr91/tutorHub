@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS tutor-hub_db;
-CREATE DATABASE tutor-hub_db;
+DROP DATABASE IF EXISTS tutorhub_db;
+CREATE DATABASE tutorhub_db;
