@@ -39,11 +39,39 @@ Tutor.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    userRole: {
+    zipcode: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    phonenumber: {
       type: DataTypes.STRING,
       allowNull: false,
-    }
+      validate: {
+        len: [10],
+      },
+    },
+    virtual: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
+    facebook: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    twitter: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    instagram: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    instruments: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
+    },
   },
+  
   {
     hooks: {
       beforeCreate: async (newUserData) => {
