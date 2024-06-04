@@ -1,9 +1,8 @@
 const thumbnailEl = document.getElementById('thumbnail-preview-tutor');
 const chooseImageEl = document.getElementById('choose-profile-image-tutor')
 
-const selectImage = (profileImage) => {
-    profileImage = chooseImageEl.value;
-    thumbnailEl.setAttribute("src", `./assets/images/Instrument-Icons/${profileImage}.png`);
+const selectImage = () => {
+    thumbnailEl.setAttribute("src", `./assets/images/Instrument-Icons/${chooseImageEl.value}.png`);
 }
 
-chooseImageEl.addEventListener("selection", selectImage);
+chooseImageEl.addEventListener("change", selectImage);
