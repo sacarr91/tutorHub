@@ -1,0 +1,19 @@
+# Exported from Render on 2024-06-04T20:22:15Z
+services:
+- type: web
+  name: tutorHub
+  runtime: node
+  repo: https://github.com/peteCodes4u/tutorHub
+  plan: free
+  envVars:
+  - key: SESSIONSECRET
+    sync: false
+  - key: POSTGRESURI
+    sync: false
+  - key: NODE_VERSION
+    sync: false
+  region: oregon
+  buildCommand: npm install
+  startCommand: node server+.js
+  autoDeploy: false
+version: "1"
