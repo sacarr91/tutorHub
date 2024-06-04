@@ -1,0 +1,38 @@
+:root{
+    --clr-dark:#1b383a;
+    --clr-accent1: #e1895d;
+}
+
+body{
+    background-color: var(--clr-dark);
+}
+
+h4{
+    color:var(--clr-accent1);
+}
+.min-100-vh{
+    min-height:100vh;
+}
+
+.flex-row{
+    display:flex;
+    flex-direction:row;
+    flex-wrap:wrap;
+}
+
+.align-center{
+    align-items:center;
+}
+
+.justify-center{
+    justify-content: center;
+}
+
+.col-6{
+    flex:0 0 50%;
+    max-width:50%;
+}
+
+.btn-login{
+    background-color: var(--clr-accent1);
+}
