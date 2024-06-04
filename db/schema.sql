@@ -1,2 +1,2 @@
-DROP DATABASE IF EXISTS heracles_db;
-CREATE DATABASE heracles_db;
+DROP DATABASE IF EXISTS tutor-hub_db;
+CREATE DATABASE tutor-hub_db;
