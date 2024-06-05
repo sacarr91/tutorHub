@@ -34,46 +34,46 @@
       </div>
     </nav>
   </header>
-  <form id="registration-form" action="/api/registration" method="POST">
-    <main class="row justify-content-center">
-      <div class="card col-10">
-        <h2 class="mb-4">New Account Registration</h2>
-        <h5>Account Type</h5>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="tutor-radio">
-          <label class="form-check-label" for="tutor-radio">
-            Tutor Account
-          </label>
+ <form id="registration-form" action="/api/registration" method="POST">
+  <main class="row justify-content-center">
+    <div class="card col-10">
+      <h2 class="mb-4">New Account Registration</h2>
+      <h5>Account Type</h5>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="userRole" value="tutor" id="tutor-radio">
+        <label class="form-check-label" for="tutor-radio">
+          Tutor Account
+        </label>
+      </div>
+      <div class="form-check">
+        <input class="form-check-input" type="radio" name="userRole" value="student" id="student-radio">
+        <label class="form-check-label mb-3" for="student-radio">
+          Student Account
+        </label>
+      </div>
+      <h5>User Information</h5>
+      <div class="row">
+        <div class="col-4">
+          <input name="firstName" type="text" class="form-control" placeholder="First name" aria-label="First name">
         </div>
-        <div class="form-check">
-          <input class="form-check-input" type="radio" name="flexRadioDefault" id="student-radio">
-          <label class="form-check-label mb-3" for="student-radio">
-            Student Account
-          </label>
+        <div class="col-5 mb-3">
+          <input name="lastName" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
         </div>
-        <h5>User Information</h5>
-        <div class="row">
-          <div class="col-4">
-            <input id= "firstName" type="text" class="form-control" placeholder="First name" aria-label="First name">
-          </div>
-          <div class="col-5 mb-3">
-            <input id= "lastName" type="text" class="form-control" placeholder="Last name" aria-label="Last name">
-          </div>
-        </div>
-        <label for="email-input" class="form-label">Email address <i>(will be your username)</i></label>
-        <input id= "email-input" type="email" class="form-control mb-3" id="email-input" placeholder="name@example.com">
-        <!-- pete's add -->
-        <label for="zip code" class="form-label">Zipcode </label>
-        <input id="zip-input" type="zipcode" class="form-control mb-3" id="zip-input" placeholder="34695">
-        <label for="inputPassword" class="form-label">Choose a Password</label>
-        <input id = "inputPassword"type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-        <div id="passwordHelpBlock" class="form-text mb-3">
-          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
-          characters, or emoji.
-        </div>
-  
-        <button type="submit" id="submit" value="Submit" class="btn mb-3">Submit</button>
-        </form>
+      </div>
+      <label for="email-input" class="form-label">Email address <i>(will be your username)</i></label>
+      <input name="email" type="email" class="form-control mb-3" id="email-input" placeholder="name@example.com">
+      <label for="zip code" class="form-label">Zipcode </label>
+      <input name="zipcode" type="text" class="form-control mb-3" id="zip-input" placeholder="34695">
+      <label for="inputPassword" class="form-label">Choose a Password</label>
+      <input name="password" type="password" class="form-control" aria-describedby="passwordHelpBlock">
+      <div id="passwordHelpBlock" class="form-text mb-3">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+      </div>
+
+      <button type="submit" id="submit" value="Submit" class="btn mb-3">Submit</button>
+    </div>
+  </main>
+</form>
       </div>
     </main>
   </form>
