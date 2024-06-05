@@ -39,13 +39,13 @@
       <h2 class="mb-4">Student Account Registration</h2>
       <h5>Account Type</h5>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="tutor-radio">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="tutor-radio" value="tutor">
         <label class="form-check-label" for="tutor-radio">
           Tutor Account
         </label>
       </div>
       <div class="form-check">
-        <input class="form-check-input" type="radio" name="flexRadioDefault" id="student-radio">
+        <input class="form-check-input" type="radio" name="flexRadioDefault" id="student-radio" value="student">
         <label class="form-check-label mb-3" for="student-radio">
           Student Account
         </label>
@@ -53,7 +53,7 @@
       <h5>User Information</h5>
       <div class="row">
         <div class="col-3">
-          <select class="form-select" aria-label="Default select example">
+          <select class="form-select" id="salutation" aria-label="Default select example">
             <option selected>Salutation</option>
             <option value="1">Miss</option>
             <option value="2">Ms.</option>
@@ -79,10 +79,10 @@
           </select>
         </div>
         <div class="col-4">
-          <input type="text" class="form-control" placeholder="First name" aria-label="First name">
+          <input type="text" class="form-control" id="first-name" placeholder="First name" aria-label="First name">
         </div>
         <div class="col-5 mb-3">
-          <input type="text" class="form-control" placeholder="Last name" aria-label="Last name">
+          <input type="text" class="form-control" id="last-name" placeholder="Last name" aria-label="Last name">
         </div>
       </div>
       <label for="email-input" class="form-label">Email address <i>(will be your username)</i></label>
@@ -102,6 +102,7 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
+    <script src="./js/user-registration.js"></script>
 </body>
 
 </html>

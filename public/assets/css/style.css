@@ -19,8 +19,9 @@ body {
     align-items: stretch;
 }
 
+/* Made changes from 1 0 auto to 0 0 auto, as card is occupying 100% width*/
 .card {
-    flex: 1 0 auto;
+    flex: 0 0 auto;
 }
 
 #header a {
