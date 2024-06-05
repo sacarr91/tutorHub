@@ -35,6 +35,12 @@ app.use(express.static(path.join(__dirname, 'public')));
 
 app.use(routes);
 
+// user registration
+app.get('/assets/js/user-registration.js', (req, res) => {
+  res.setHeader('Content-Type', 'application/javascript');
+  res.sendFile(path.join(__dirname, 'assets/js/user-registration.js'));
+});
+
 // get route
 app.get('/', async(req,res) =>{
   await res.sendFile(path.join(__dirname, './public/index.html'))
