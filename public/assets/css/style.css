@@ -61,3 +61,15 @@ body {
     justify-content: center;
     align-items: center;
 }
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em;
+}
+
+.developercard {
+    margin: 1em;
+}
