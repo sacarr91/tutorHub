@@ -72,4 +72,10 @@ body {
 
 .developercard {
     margin: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+.developercard img {
+    border-radius: 20%;
 }
