@@ -12,6 +12,10 @@ body {
     color: var(--clr-light);
 }
 
+#header img {
+    height: 100px;
+    width: 100px;
+}
 /* Joe added this code for cards to keep the cards all the same height */
 .card-deck {
     display: flex;
