@@ -59,9 +59,9 @@ Tutor.init(
       type: DataTypes.STRING,
       allowNull: true,
     },
-    tutoringLocation: {
+    virtual: {
       type: DataTypes.STRING,
-      allowNull: false,
+      allowNull: true,
     },
     instruments: {
       type: DataTypes.STRING,

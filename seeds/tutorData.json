@@ -10,7 +10,7 @@
     "specialty": "Composition",
     "region": "Tampa FL",
     "phone": "603-801-9877",
-    "tutoringLocation": "Virtual or In Person",
+    "virtual": "Virtual or In Person",
     "instruments": "guitar"
   },
   {
@@ -23,7 +23,7 @@
     "specialty": "Strings Stage Performance / Orchestra",
     "region": "St Pete FL",
     "phone": null,
-    "tutoringLocation": "Virtual or In Person",
+    "virtual": "Virtual or In Person",
     "instruments": "Cello"
   }
 ]

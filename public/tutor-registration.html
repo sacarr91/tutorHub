@@ -34,7 +34,7 @@
       </div>
     </nav>
   </header>
- <form id="registration-form" action="/api/registration" method="POST">
+ <form id="registration-form" action="/api/tutorRegistration" method="POST">
   <main class="row justify-content-center">
     <div class="card col-10">
       <h2 class="mb-4">New Account Registration</h2>
@@ -71,43 +71,43 @@
       </div>
 
       <!-- Tutor additional Details -->
-      <label for="description" class="form-label">specialty description </label>
-      <input name="specialtyDescription" type="text" class="form-control mb-3" id="specialtyDescription-input" placeholder="Drummer">
+      <label for="specialty" class="form-label">specialty description </label>
+      <input name="specialty" type="text" class="form-control mb-3" id="specialty-input" placeholder="Drummer">
       <label for="region" class="form-label">Geographic region</label>
       <input name="region" type="text" class="form-control mb-3" id="region-input" placeholder="Tampa FL">
       <label for="phone" class="form-label">Phone Number</label>
       <input name="phone" type="text" class="form-control mb-3" id="phone-input" placeholder="813-555-5555">
       <label for="tutoring location" class="form-label">Tutoring Location</label>
-      <div name="instruments" type="text" class="form-control mb-3" id="instrument-input" class="input-group">
-        <select class="form-select" aria-label="Default select example">
-          <option selected>Choose Your Instrument</option>
+      <div class="input-group">
+        <select name="virtual" class="form-control mb-3" id="virtual-input"class="form-select" aria-label="Default select example">
+          <option selected>Choose tutoring location option</option>
           <option >Virtual</option>
           <option >In Person</option>
           <option >Virtual or In Person</option>
         </select>
     </div>
       <label for="instruments" class="form-label">Instruments</label>
-      <div name="instruments" type="text" class="form-control mb-3" id="instrument-input" class="input-group">
-        <select class="form-select" aria-label="Default select example">
+      <div class="input-group">
+        <select name="instruments" class="form-control mb-3" id="instruments-input" class="form-select" aria-label="Default select example">
           <option selected>Choose Your Instrument</option>
-          <option value="1">Flute</option>
-          <option value="2">Oboe</option>
-          <option value="3">Bassoon</option>
-          <option value="4">Clarinet</option>
-          <option value="5">Saxophone</option>
-          <option value="6">Trumpet</option>
-          <option value="7">Horn</option>
-          <option value="8">Trombone</option>
-          <option value="9">Euphonium</option>
-          <option value="10">Tuba</option>
-          <option value="11">Percussion</option>
-          <option value="12">Piano</option>
-          <option value="13">Guitar</option>
-          <option value="14">Bass Guitar</option>
-          <option value="15">Violin</option>
-          <option value="16">Viola</option>
-          <option value="17">Cello</option>
-          <option value="18">Double Bass</option>
+          <option >Flute</option>
+          <option >Oboe</option>
+          <option >Bassoon</option>
+          <option >Clarinet</option>
+          <option >Saxophone</option>
+          <option >Trumpet</option>
+          <option >Horn</option>
+          <option >Trombone</option>
+          <option >Euphonium</option>
+          <option >Tuba</option>
+          <option >Percussion</option>
+          <option >Piano</option>
+          <option >Guitar</option>
+          <option >Bass Guitar</option>
+          <option >Violin</option>
+          <option >Viola</option>
+          <option >Cello</option>
+          <option >Double Bass</option>
         </select>
     </div>
     <button type="submit" id="submit" value="Submit" class="btn mb-3">Submit</button>
