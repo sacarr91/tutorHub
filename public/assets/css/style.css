@@ -5,6 +5,9 @@
     --clr-light: #f5f3ee;
     --clr-accent1: #e1895d;
     --clr-accent2: #e7cc65;
+    --bs-btn-active-border-color: #e1895d;
+    --bs-btn-active-bg: #e1895d;
+    --bs-btn-active-color: #f5f3ee;
 }
 
 body {
@@ -12,6 +15,10 @@ body {
     color: var(--clr-light);
 }
 
+#header img {
+    height: 100px;
+    width: 100px;
+}
 /* Joe added this code for cards to keep the cards all the same height */
 .card-deck {
     display: flex;
@@ -19,7 +26,7 @@ body {
     align-items: stretch;
 }
 
-.card {
+.card-joe {
     flex: 1 0 auto;
 }
 
@@ -56,4 +63,28 @@ body {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.cards-wrapper {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: center;
+    margin: 1em;
+}
+
+.developercard {
+    margin: 1em;
+    justify-content: center;
+    text-align: center;
+}
+
+.developercard img {
+    border-radius: 20%;
+}
+
+.my-btn { 
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    border-color: transparent;
 }
