@@ -16,6 +16,14 @@ Tutor.init(
       primaryKey: true,
       autoIncrement: true,
     },
+    firstName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    lastName: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
     email: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -24,33 +32,41 @@ Tutor.init(
         isEmail: true,
       },
     },
-    phonenumber: {
+    password: {
       type: DataTypes.STRING,
       allowNull: false,
       validate: {
-        len: [10],
+        len: [8],
       },
     },
-    virtual: {
+    zipcode: {
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    facebook: {
+    userRole: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    specialty: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    region: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    },
+    phone: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    twitter: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    instagram: {
+    virtual: {
       type: DataTypes.STRING,
       allowNull: true,
     },
     instruments: {
-      type: DataTypes.INTEGER,
+      type: DataTypes.STRING,
       allowNull: false,
-    },
+    }
   },
   
   {
