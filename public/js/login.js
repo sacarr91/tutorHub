@@ -1,3 +1,5 @@
+// Get reference of Log In button by id
+const loginBtnEl = document.getElementById('login-btn');
 const loginFormHandler = async (event) => {
   event.preventDefault();
 
@@ -19,6 +21,8 @@ const loginFormHandler = async (event) => {
   }
 };
 
-document
-  .querySelector('.login-form')
-  .addEventListener('submit', loginFormHandler);
+// document
+//   .querySelector('.login-form')
+//   .addEventListener('submit', loginFormHandler);
+
+  loginBtnEl.addEventListener('click',loginFormHandler);
