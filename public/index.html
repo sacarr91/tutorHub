@@ -1,148 +1,196 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <!-- bootstrap -->
-    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-    <!-- Google Fonts -->
-    <style>
-      @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
-      </style>
-    <link rel="stylesheet" href="./assets/css/style.css" />
-    <title>Tutor Hub</title>
-  </head>
-  <body>
-    <!-- Sticky Header -->
-    <header id="header">
-      <nav class="navbar navbar-expand-sm sticky-top">
-        <div class="container-fluid">
-          <a class="navbar-brand" href="index.html"><img src="./assets/images/logo.png"> TutorHub </a>
-          <!-- Login -->
-          <ul class="navbar-nav">
-            <li class="nav-item">
-              <a class="nav-link" href="user-registration+.html">Register</a>
-            </li>
-            <li class="nav-item">
-              <a class="nav-link" href="login.html">Login</a>
-            </li>
-          </ul>
-        </div>
-      </nav>
-    </header>
 
-    <!-- Hero Carousel -->
-    <div class="hero">
-      <div id="heroCarousel" class="carousel slide">
-        <div class="carousel-inner">
-          <div class="carousel-item active">
-            <div class="col-12 row">
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash1.jpg" />
-              </div>
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash2.jpg" />
-              </div>
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash3.jpg" />
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="col-12 row">
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash10.jpg" />
-              </div>
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash5.jpg" />
-              </div>
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash6.jpg" />
-              </div>
-            </div>
-          </div>
-          <div class="carousel-item">
-            <div class="col-12 row">
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash7.jpg" />
-              </div>
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash8.jpg" />
-              </div>
-              <div class="col-4" style="height: 50vh">
-                <img src="./assets/images/splash9.jpg" />
-              </div>
-            </div>
-          </div>
-        </div>
-        <button
-          class="carousel-control-prev"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="prev"
-        >
-          <span class="carousel-control-prev-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Previous</span>
-        </button>
-        <button
-          class="carousel-control-next"
-          type="button"
-          data-bs-target="#heroCarousel"
-          data-bs-slide="next"
-        >
-          <span class="carousel-control-next-icon" aria-hidden="true"></span>
-          <span class="visually-hidden">Next</span>
-        </button>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
+  </style>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>Tutor Hub</title>
+</head>
+
+<body>
+  <!-- Sticky Header -->
+  <header id="header">
+    <nav class="navbar navbar-expand-sm sticky-top">
+      <div class="container-fluid">
+        <a class="navbar-brand" href="index.html">TutorHub </a>
+        <!-- Login -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop-register">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop-login">Login</a>
+            <!-- <a class="navbar-link" href="login.html">Login </a> -->
+          </li>
+        </ul>
       </div>
-    </div>
+    </nav>
+  </header>
 
-    <div id="searchArea" style="margin-left: 25%; margin-right: 25%;">
-        <h1>Find A Tutor</h1>
-        <div class="input-group">
-            <!-- <div class="form-outline" data-mdb-input-init>
+  <!-- Hero Carousel -->
+  <div class="hero">
+    <div id="heroCarousel" class="carousel slide">
+      <div class="carousel-inner">
+        <div class="carousel-item active">
+          <div class="col-12 row">
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash1.jpg" />
+            </div>
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash2.jpg" />
+            </div>
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash3.jpg" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-12 row">
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash10.jpg" />
+            </div>
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash5.jpg" />
+            </div>
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash6.jpg" />
+            </div>
+          </div>
+        </div>
+        <div class="carousel-item">
+          <div class="col-12 row">
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash7.jpg" />
+            </div>
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash8.jpg" />
+            </div>
+            <div class="col-4" style="height: 50vh">
+              <img src="./assets/images/splash9.jpg" />
+            </div>
+          </div>
+        </div>
+      </div>
+      <button class="carousel-control-prev" type="button" data-bs-target="#heroCarousel" data-bs-slide="prev">
+        <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Previous</span>
+      </button>
+      <button class="carousel-control-next" type="button" data-bs-target="#heroCarousel" data-bs-slide="next">
+        <span class="carousel-control-next-icon" aria-hidden="true"></span>
+        <span class="visually-hidden">Next</span>
+      </button>
+    </div>
+  </div>
+
+  <div id="searchArea" style="margin-left: 25%; margin-right: 25%;">
+    <h1>Find A Tutor</h1>
+    <div class="input-group">
+      <!-- <div class="form-outline" data-mdb-input-init>
               <input id="search-input" type="search" id="form1" class="form-control" />
             </div> -->
-            <select class="form-select" aria-label="Default select example">
-              <option selected>Choose Your Instrument</option>
-              <option value="1">Flute</option>
-              <option value="2">Oboe</option>
-              <option value="3">Bassoon</option>
-              <option value="4">Clarinet</option>
-              <option value="5">Saxophone</option>
-              <option value="6">Trumpet</option>
-              <option value="7">Horn</option>
-              <option value="8">Trombone</option>
-              <option value="9">Euphonium</option>
-              <option value="10">Tuba</option>
-              <option value="11">Percussion</option>
-              <option value="12">Piano</option>
-              <option value="13">Guitar</option>
-              <option value="14">Bass Guitar</option>
-              <option value="15">Violin</option>
-              <option value="16">Viola</option>
-              <option value="17">Cello</option>
-              <option value="18">Double Bass</option>
-            </select>
-              <button id="search-button" type="button" onclick="clickHandler()" class="btn">
-                <i class="fas fa-search">Search</i>
-              </button>
+      <select class="form-select" aria-label="Default select example">
+        <option selected>Choose Your Instrument</option>
+        <option value="1">Flute</option>
+        <option value="2">Oboe</option>
+        <option value="3">Bassoon</option>
+        <option value="4">Clarinet</option>
+        <option value="5">Saxophone</option>
+        <option value="6">Trumpet</option>
+        <option value="7">Horn</option>
+        <option value="8">Trombone</option>
+        <option value="9">Euphonium</option>
+        <option value="10">Tuba</option>
+        <option value="11">Percussion</option>
+        <option value="12">Piano</option>
+        <option value="13">Guitar</option>
+        <option value="14">Bass Guitar</option>
+        <option value="15">Violin</option>
+        <option value="16">Viola</option>
+        <option value="17">Cello</option>
+        <option value="18">Double Bass</option>
+      </select>
+      <button id="search-button" type="button" onclick="clickHandler()" class="btn">
+        <i class="fas fa-search">Search</i>
+      </button>
 
 
-          </div>
     </div>
+  </div>
 
-    <!-- Including Bootstrap JS -->
-    <script
-      src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-      integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-      crossorigin="anonymous"
-    ></script>
-    <script>
-      function clickHandler() {
-        window.location.href = 'tutor-list.html';
-      }
+  <!-- Registration Modal -->
+  <div class="modal fade" id="staticBackdrop-register" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Are you a...?</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          ...
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="button" class="btn btn-primary">Next</button>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- Login Modal -->
+  <div class="modal fade" id="staticBackdrop-login" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1"
+    aria-labelledby="staticBackdropLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign In</h1>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form class="form login-form">
+            <div class="form-group">
+              <div>
+                <label for="email">Email Address</label>
+                <input type="email" class="form-control" id="email" placeholder="Enter email">
+              </div>
+              <div class="form-group">
+                <label for="password">Password</label>
+                <input type="password" class="form-control" id="password" placeholder="Password">
+              </div>
+            </div>
+            <div class="modal-footer">
+              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+              <button type="submit" class="btn btn-primary btn-login submit" id="login-btn">Next</button>
+            </div>
+          </form>
+        </div>
+      </div>
+    </div>
+  </div>
+  </div>
+
+
+
+
+  <!-- Including Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
+    crossorigin="anonymous"></script>
+  <script>
+    function clickHandler() {
+      window.location.href = 'tutor-list.html';
+    }
   </script>
-  </body>
+  <script src="/js/login.js"></script>
+</body>
+
 </html>
