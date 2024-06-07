@@ -19,7 +19,7 @@
 <body>
   <!-- Sticky Header -->
   <header id="header">
-    <nav class="navbar navbar-expand-sm sticky-top">
+    <nav class="navbar navbar-expand-sm sticky-top patrick">
       <div class="container-fluid">
         <a class="navbar-brand" href="index.html">TutorHub </a>
         <!-- Login -->
@@ -29,7 +29,6 @@
           </li>
           <li class="nav-item">
             <a class="nav-link" data-bs-toggle="modal" data-bs-target="#staticBackdrop-login">Login</a>
-            <!-- <a class="navbar-link" href="login.html">Login </a> -->
           </li>
         </ul>
       </div>
@@ -94,9 +93,6 @@
   <div id="searchArea" style="margin-left: 25%; margin-right: 25%;">
     <h1>Find A Tutor</h1>
     <div class="input-group">
-      <!-- <div class="form-outline" data-mdb-input-init>
-              <input id="search-input" type="search" id="form1" class="form-control" />
-            </div> -->
       <select class="form-select" aria-label="Default select example">
         <option selected>Choose Your Instrument</option>
         <option value="1">Flute</option>
@@ -132,15 +128,25 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Are you a...?</h1>
+          <h1 class="modal-title fs-4" id="staticBackdropLabel">Are you a student or tutor?</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
-          ...
+          <form>
+            <h5>Account Type</h5>
+            <div class="form-check normal-text">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="tutor-radio" value="tutor">
+              <label class="form-check-label" for="tutor-radio">Tutor Account</label>
+            </div>
+            <div class="form-check normal-text">
+              <input class="form-check-input" type="radio" name="flexRadioDefault" id="student-radio" value="student">
+              <label class="form-check-label" for="student-radio">Student Account</label>
+            </div>
+          </form>
         </div>
         <div class="modal-footer">
           <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-          <button type="button" class="btn btn-primary">Next</button>
+          <button type="button" class="btn btn-primary" id="next">Next</button>
         </div>
       </div>
     </div>
@@ -152,7 +158,7 @@
     <div class="modal-dialog">
       <div class="modal-content">
         <div class="modal-header">
-          <h1 class="modal-title fs-5" id="staticBackdropLabel">Sign In</h1>
+          <h1 class="modal-title fs-5" id="staticBackdropLabel">Log In</h1>
           <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
         </div>
         <div class="modal-body">
@@ -167,19 +173,16 @@
                 <input type="password" class="form-control" id="password" placeholder="Password">
               </div>
             </div>
-            <div class="modal-footer">
-              <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
-              <button type="submit" class="btn btn-primary btn-login submit" id="login-btn">Next</button>
-            </div>
           </form>
+        </div>
+        <div class="modal-footer">
+          <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">Close</button>
+          <button type="submit" class="btn btn-primary btn-login submit" id="login-btn">Log In</button>
         </div>
       </div>
     </div>
   </div>
   </div>
-
-
-
 
   <!-- Including Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
@@ -190,7 +193,8 @@
       window.location.href = 'tutor-list.html';
     }
   </script>
-  <script src="/js/login.js"></script>
+  <script src="./js/login.js"></script>
+  <script src="./js/user-registration.js"></script>
 </body>
 
 </html>
