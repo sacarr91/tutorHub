@@ -8,6 +8,7 @@
     --bs-btn-active-border-color: #e1895d;
     --bs-btn-active-bg: #e1895d;
     --bs-btn-active-color: #f5f3ee;
+    --bs-body-color:#212529;
 }
 
 body {
@@ -87,4 +88,28 @@ body {
     background-color: var(--clr-light);
     color: var(--clr-dark);
     border-color: transparent;
+}
+
+/* modal related styles */
+.modal-header{
+    color:var(--clr-accent1);
+    background-color: var(--clr-dark);
+}
+
+.modal-body{
+    color:var(--bs-body-color);
+}
+
+.modal-footer{
+    color:var(--clr-accent1);
+    background-color: var(--clr-dark);
+}
+
+/* change mouse cursor to pointer on hover */
+.a:hover{
+cursor:pointer;
+}
+
+#header a:hover{
+    cursor:pointer;
 }
