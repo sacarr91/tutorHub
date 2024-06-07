@@ -5,6 +5,9 @@
     --clr-light: #f5f3ee;
     --clr-accent1: #e1895d;
     --clr-accent2: #e7cc65;
+    --bs-btn-active-border-color: #e1895d;
+    --bs-btn-active-bg: #e1895d;
+    --bs-btn-active-color: #f5f3ee;
 }
 
 body {
@@ -23,7 +26,7 @@ body {
     align-items: stretch;
 }
 
-.card {
+.card-joe {
     flex: 1 0 auto;
 }
 
@@ -78,4 +81,10 @@ body {
 
 .developercard img {
     border-radius: 20%;
+}
+
+.my-btn { 
+    background-color: var(--clr-light);
+    color: var(--clr-dark);
+    border-color: transparent;
 }

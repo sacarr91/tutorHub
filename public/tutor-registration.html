@@ -1,0 +1,568 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="imageviewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
+  </style>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>New Tutor Account</title>
+</head>
+
+<body>
+  <!-- Sticky Header -->
+  <header id="header">
+    <nav class="navbar navbar-expand-sm sticky-top patrick">
+      <div class="container-fluid">
+        <a class="navbar-brand brush" href="index.html">TutorHub </a>
+        <!-- Login -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="user-registration-pg1.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <main class="row justify-content-center normal-text">
+    <div class="card col-10" style="margin:2%">
+      <h1 class="my-4">Tutor Account Registration</h1>
+      <div class="mx-4">
+        <h3>User Information</h3>
+        <h6>Name</h6>
+        <div class="row">
+          <div class="col-3">
+            <select class="form-select normal-text" aria-label="Default select example">
+              <option selected>Salutation</option>
+              <option value="1">Miss</option>
+              <option value="2">Ms.</option>
+              <option value="3">Mrs.</option>
+              <option value="4">Mr.</option>
+              <option value="5">Mx.</option>
+              <option value="6">Dr.</option>
+              <option value="7">Prof.</option>
+              <option value="8">Hon.</option>
+              <option value="9">Lord</option>
+              <option value="10">Lady</option>
+              <option value="11">Sir</option>
+              <option value="12">Dame</option>
+              <option value="13">Col.</option>
+              <option value="14">Maj.</option>
+              <option value="15">Lt.</option>
+              <option value="16">Sgt.</option>
+              <option value="17">Dep.</option>
+              <option value="18">Cap.</option>
+              <option value="19">Pres.</option>
+              <option value="20">Adm.</option>
+              <option value="21">HRH</option>
+            </select>
+          </div>
+          <div class="col-4">
+            <input type="text" class="form-control normal-text" placeholder="First name" aria-label="First name">
+          </div>
+          <div class="col-5 mb-3">
+            <input type="text" class="form-control normal-text" placeholder="Last name" aria-label="Last name">
+          </div>
+        </div>
+        <label for="email-input" class="form-label patrick">Email address <i>(will be your username)</i></label>
+        <input type="email" class="form-control mb-3 normal-text" id="email-input" placeholder="name@example.com">
+        <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
+        <input type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+        <div id="passwordHelpBlock" class="form-text mb-3">
+          Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+          characters, or emoji.
+        </div>
+
+        <div class="row">
+          <div id="profile-image" class="col-3 me-5">
+            <h3>Profile Image</h3>
+            <img src="./assets/images/Profile-Icons/000.png" class="img-thumbnail mb-2"
+              id="thumbnail-preview" alt="profile image preview" width="150px">
+            <select class="form-select mb-3 normal-text" id="choose-profile-image"
+              aria-label="Default select example">
+              <option selected>Choose your profile image</option>
+              <option>Bass Guitar 1</option>
+              <option>Bass Guitar 2</option>
+              <option>Bass Guitar 3</option>
+              <option>Bassoon 1</option>
+              <option>Bassoon 2</option>
+              <option>Bassoon 3</option>
+              <option>Cello 1</option>
+              <option>Cello 2</option>
+              <option>Clarinet 1</option>
+              <option>Clarinet 2</option>
+              <option>Clarinet 3</option>
+              <option>Double Bass 1</option>
+              <option>Double Bass 2</option>
+              <option>Euphonium 1</option>
+              <option>Euphonium 2</option>
+              <option>Euphonium 3</option>
+              <option>Flute 1</option>
+              <option>Flute 2</option>
+              <option>Guitar 1</option>
+              <option>Guitar 2</option>
+              <option>Guitar 3</option>
+              <option>Guitar 4</option>
+              <option>Horn 1</option>
+              <option>Horn 2</option>
+              <option>Horn 3</option>
+              <option>Oboe 1</option>
+              <option>Oboe 2</option>
+              <option>Oboe 3</option>
+              <option>Percussion 1</option>
+              <option>Percussion 2</option>
+              <option>Percussion 3</option>
+              <option>Percussion 4</option>
+              <option>Percussion 5</option>
+              <option>Piano 1</option>
+              <option>Piano 2</option>
+              <option>Piano 3</option>
+              <option>Sax 1</option>
+              <option>Sax 2</option>
+              <option>Trombone 1</option>
+              <option>Trombone 2</option>
+              <option>Trombone 3</option>
+              <option>Trumpet 1</option>
+              <option>Trumpet 2</option>
+              <option>Trumpet 3</option>
+              <option>Tuba 1</option>
+              <option>Tuba 2</option>
+              <option>Tuba 3</option>
+              <option>Viola 1</option>
+              <option>Viola 2</option>
+              <option>Violin 1</option>
+              <option>Violin 2</option>
+              <option>Woodwind 1</option>
+              <option>Woodwind 2</option>
+              <option>Woodwind 3</option>
+            </select>
+          </div>
+
+          <div class="col-8">
+            <h3>Instruments</h3>
+            <div id="performAndTeach" class="form-text light-text mb-3">
+              We wish to steer students in the direction of high-quality instructors on their chosen instrument. While
+              we
+              appreciate that the pedagogical knowledge of our tutors may extend beyond personal performance skill sets,
+              we request that you <b>please select ONLY the instruments on which you have teaching <i>AND</i> performing
+                experience.<b>
+            </div>
+            <div class="row" id="teachingInstruments">
+              <div id="strings" class="col-3">
+                <h5>Strings</h5>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="violin-checkbox">
+                  <label class="form-check-label normal-text" for="violin-checkbox">
+                    Violin
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="viola-checkbox">
+                  <label class="form-check-label normal-text" for="viola-checkbox">
+                    Viola
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="cello-checkbox">
+                  <label class="form-check-label normal-text" for="cello-checkbox">
+                    Cello
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="double-bass-checkbox">
+                  <label class="form-check-label normal-text" for="double-bass-checkbox">
+                    Double Bass
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="guitar-checkbox">
+                  <label class="form-check-label normal-text" for="guitar-checkbox">
+                    Guitar
+                  </label>
+                </div>
+              </div>
+              <div id="woodwinds" class="col-3">
+                <h5>Woodwinds</h5>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="flute-checkbox">
+                  <label class="form-check-label normal-text" for="flute-checkbox">
+                    Flute
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="oboe-checkbox">
+                  <label class="form-check-label normal-text" for="oboe-checkbox">
+                    Oboe
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="clarinet-checkbox">
+                  <label class="form-check-label normal-text" for="clarinet-checkbox">
+                    Clarinet
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="bassoon-checkbox">
+                  <label class="form-check-label normal-text" for="bassoon-checkbox">
+                    Bassoon
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="sax-checkbox">
+                  <label class="form-check-label normal-text" for="sax-checkbox">
+                    Saxophone
+                  </label>
+                </div>
+              </div>
+              <div id="brass" class="col-3">
+                <h5>Brass</h5>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="trumpet-checkbox">
+                  <label class="form-check-label normal-text" for="trumpet-checkbox">
+                    Trumpet
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="horn-checkbox">
+                  <label class="form-check-label normal-text" for="horn-checkbox">
+                    French Horn
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="trombone-checkbox">
+                  <label class="form-check-label normal-text" for="trombone-checkbox">
+                    Trombone
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="euphonium-checkbox">
+                  <label class="form-check-label normal-text" for="euphonium-checkbox">
+                    Euphonium
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="tuba-checkbox">
+                  <label class="form-check-label normal-text" for="tuba-checkbox">
+                    Tuba
+                  </label>
+                </div>
+              </div>
+              <div id="more" class="col-3">
+                <h5>& More</h5>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="percussion-checkbox">
+                  <label class="form-check-label normal-text" for="percussion-checkbox">
+                    Percussion
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="piano-checkbox">
+                  <label class="form-check-label normal-text" for="piano-checkbox">
+                    Piano
+                  </label>
+                </div>
+                <div class="form-check">
+                  <input class="form-check-input" type="checkbox" value="" id="elec-bass-checkbox">
+                  <label class="form-check-label normal-text" for="elec-bass-checkbox">
+                    Electric Bass
+                  </label>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <div id="Certifications-header">
+          <h3>Certifications & Associations</h3>
+        </div>
+        <div class="row mb-3 mx-3" id="specialties">
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="suzuki-checkbox">
+            <label class="form-check-label normal-text" for="suzuki-checkbox">
+              Suzuki
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="mtna-checkbox">
+            <label class="form-check-label normal-text" for="mtna-checkbox">
+              MTNA/NCTM
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="nfmc-checkbox">
+            <label class="form-check-label normal-text" for="nfmc-checkbox">
+              NFMC
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="rcm-checkbox">
+            <label class="form-check-label normal-text" for="rcm-checkbox">
+              RCM
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="orff-checkbox">
+            <label class="form-check-label normal-text" for="orff-checkbox">
+              Orff-Schulwerk
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="kodaly-checkbox">
+            <label class="form-check-label normal-text" for="kodaly-checkbox">
+              Kodaly
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="dalcroze-checkbox">
+            <label class="form-check-label normal-text" for="dalcroze-checkbox">
+              Dalcroze
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="mlt-checkbox">
+            <label class="form-check-label normal-text" for="mlt-checkbox">
+              Music Learning Theory
+            </label>
+          </div>
+        </div>
+
+        <div id="special-interests-header">
+          <h3>Special Teaching Interests</h3>
+        </div>
+        <div class="row mb-3 mx-3" id="special-interests">
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="college-prep">
+            <label class="form-check-label normal-text" for="college-prep">
+              College Prep
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="competitions">
+            <label class="form-check-label normal-text" for="competitions">
+              Competitions
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="jazz">
+            <label class="form-check-label normal-text" for="jazz">
+              Jazz
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="rock-pop">
+            <label class="form-check-label normal-text" for="rock-pop">
+              Rock / Pop
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="fiddle-folk">
+            <label class="form-check-label normal-text" for="fiddle-folk">
+              Fiddle / Folk
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label normal-text" for="flexCheckDefault">
+              German [Bass] Bow
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+            <label class="form-check-label normal-text" for="flexCheckDefault">
+              Alexander Technique
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="mlt-checkbox">
+            <label class="form-check-label normal-text" for="mlt-checkbox">
+              Performance
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="mlt-checkbox">
+            <label class="form-check-label normal-text" for="mlt-checkbox">
+              Composition
+            </label>
+          </div>
+          <div class="form-check col-auto me-3">
+            <input class="form-check-input" type="checkbox" value="" id="mlt-checkbox">
+            <label class="form-check-label normal-text" for="mlt-checkbox">
+              Music Therapy
+            </label>
+          </div>
+        </div>
+
+        <div id="price-range" class="row align-items-bottom">
+          <h3 class="col-3">
+            Price Per Lesson
+          </h3>
+          <div class="btn-group col-auto mb-3" role="group" aria-label="Basic radio toggle button group">
+            <input type="radio" class="btn-check" name="btnradio" id="$" autocomplete="off" checked>
+            <label class="btn my-btn" for="$">$ ($30 or less)</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="$$" autocomplete="off">
+            <label class="btn my-btn" for="$$">$$ ($35 to $55)</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="$$$" autocomplete="off">
+            <label class="btn my-btn" for="$$$">$$$ ($60 to $80)</label>
+
+            <input type="radio" class="btn-check" name="btnradio" id="$$$$" autocomplete="off">
+            <label class="btn my-btn" for="$$$$">$$$$ ($85+)</label>
+          </div>
+        </div>
+
+        <div id="setting" class="row align-items-top mb-3">
+          <h3 class="col-auto me-3 mb-3" id="setting-header">
+            Lesson Setting Options
+          </h3>
+          <div class="row col-auto" id="setting-details">
+            <div class="row">
+              <div class="row col-auto" id="checkbox-options">
+                <div class="form-check col-auto me-2">
+                  <input class="form-check-input" type="checkbox" value="" id="fiddle-folk">
+                  <label class="form-check-label normal-text" for="fiddle-folk">
+                    Student's Home
+                  </label>
+                </div>
+                <div class="form-check col-auto me-2">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label normal-text" for="flexCheckDefault">
+                    Teacher's Studio
+                  </label>
+                </div>
+                <div class="form-check col-auto me-2">
+                  <input class="form-check-input" type="checkbox" value="" id="flexCheckDefault">
+                  <label class="form-check-label normal-text" for="flexCheckDefault">
+                    Virtual
+                  </label>
+                </div>
+              </div>
+            </div>
+            <div class="row col-5">
+              <div class="input-group col-auto" id="zipCode">
+                <label for="zip-input" class="input-group-text patrick ">Zipcode</label>
+                <input type="zipcode" class="form-control normal-text" id="zip-input" placeholder="90210">
+              </div>
+            </div>
+          </div>
+        </div>
+
+
+
+        <div class="row" id="contactAndSocials">
+          <div class="col-5">
+            <h3>
+              Contact Preferences
+            </h3>
+            <!-- <div class="row"> -->
+            <div class="input-group mb-1" id="contact-phone">
+              <div class="input-group-text">
+                <input class="form-check-input my-1" type="checkbox" value=""
+                  aria-label="Checkbox for following text input">
+              </div>
+              <span class="input-group-text patrick">By Phone</span>
+              <input type="text" class="form-control normal-text me-5" placeholder="(000) 000-0000"
+                aria-label="Text input with checkbox">
+            </div>
+            <div class="form-check ms-5" id="contact-phone-call">
+              <input class="form-check-input" type="checkbox" value="" id="call">
+              <label class="form-check-label normal-text" for="call">
+                Call
+              </label>
+            </div>
+            <div class="form-check ms-5 mb-2" id="contact-phone-text">
+              <input class="form-check-input" type="checkbox" value="" id="text-msg">
+              <label class="form-check-label normal-text" for="text-msg">
+                Text
+              </label>
+
+            </div>
+            <div class="input-group mb-3" id="contact-email">
+              <div class="input-group-text">
+                <input class="form-check-input my-1" type="checkbox" value=""
+                  aria-label="Checkbox for following text input">
+              </div>
+              <span class="input-group-text patrick">By Email</span>
+              <input type="text" class="form-control normal-text me-5" placeholder="email@address.com"
+                aria-label="Text input with checkbox">
+            </div>
+          </div>
+          <div class="col-7 mb-3">
+            <h3>Website & Socials</h3>
+            <div class="input-group mb-1">
+              <select class="form-select normal-text" id="online1" aria-label="Default select example">
+                <option selected></option>
+                <option>Website</option>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>TikTok</option>
+                <option>YouTube</option>
+                <option>Other</option>
+                <input type="text" class="form-control normal-text" placeholder="Link to Page"
+                  aria-label="Text input with dropdown button">
+            </div>
+            <div class="input-group mb-1">
+              <select class="form-select normal-text" id="online2" aria-label="Default select example">
+                <option selected></option>
+                <option>Website</option>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>TikTok</option>
+                <option>YouTube</option>
+                <option>Other</option>
+                <input type="text" class="form-control normal-text" placeholder="Link to Page"
+                  aria-label="Text input with dropdown button">
+            </div>
+            <div class="input-group mb-1">
+              <select class="form-select normal-text" id="online3" aria-label="Default select example">
+                <option selected></option>
+                <option>Website</option>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>TikTok</option>
+                <option>YouTube</option>
+                <option>Other</option>
+                <input type="text" class="form-control normal-text" placeholder="Link to Page"
+                  aria-label="Text input with dropdown button">
+            </div>
+            <div class="input-group mb-1">
+              <select class="form-select normal-text" id="online4" aria-label="Default select example">
+                <option selected></option>
+                <option>Website</option>
+                <option>Facebook</option>
+                <option>Instagram</option>
+                <option>TikTok</option>
+                <option>YouTube</option>
+                <option>Other</option>
+                <input type="text" class="form-control normal-text" placeholder="Link to Page"
+                  aria-label="Text input with dropdown button">
+            </div>
+
+
+          </div>
+        </div>
+        <div class="row my-4 justify-content-center" id="next">
+          <button id="next" class="btn col-6">Create Your Profile</button>
+        </div>
+      </div>
+  </main>
+
+  <!-- Including Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
+    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
+    </script>
+  <script src="./js/choose-image.js">
+  </script>
+</body>
+
+</html>
