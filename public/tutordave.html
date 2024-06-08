@@ -55,7 +55,7 @@
  <div class="searchBar">
     <div class="input-group">
       <select class="form-select" aria-label="Default select example" id="instrumentlist">
-        <option selected disabled>Choose Your Instrument</option>
+        <option selected disabled>Filter By Instrument</option>
       </select>
       <button id="search-button" type="button" onclick="getByInstrument()" class="btn">
         <i class="fas fa-search">Search</i>
@@ -65,7 +65,7 @@
       <!-- Search by price -->
       <div class="input-group">
         <select class="form-select" aria-label="Default select example" id="pricelist">
-        <option selected disabled>Price Range</option>
+        <option selected disabled>Filter By Price Range</option>
         <option value="1">$ (Lowest)</option>
         <option value="2">$$ (Low)</option>
         <option value="3">$$$ (Middle)</option>
@@ -80,7 +80,7 @@
 
         <div class="input-group">
           <select class="form-select" aria-label="Default select example" id="locationlist">
-            <option selected disabled>Choose Your Location</option>
+            <option selected disabled>Filter By Location</option>
             <option value="1">Virtual</option>
             <option value="2">In Person</option>
           </select>
@@ -99,7 +99,7 @@
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./js/tutordave.js"></script>
     <script>
-    createCard();
+    createAllTutors();
     createInstrumentSearch();
     </script>
   </body>
