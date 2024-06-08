@@ -6,7 +6,7 @@ const instrumentList = document.querySelector('#instrumentlist')
 // This will provide a way to dynamically display each card
 
 async function createInstrumentSearch(){
-    const apiData = await fetch("./api/tutors");
+    const apiData = await fetch("./api/instruments");
     var data = await apiData.json();
     console.log(data);
     let length = data.length;
@@ -14,7 +14,7 @@ async function createInstrumentSearch(){
  
     for(let i=0; i<data.length; i++){
         const listItem = `
-        <option value="1">${data[i].firstName}</option>
+        <option value="1">${data[i].instrument_name}</option>
         `
         instrumentList.innerHTML += listItem;
     }
