@@ -115,3 +115,11 @@ cursor:pointer;
 #header a:hover{
     cursor:pointer;
 }
+
+.tutor-detail-tabs {
+    color: var(--clr-dark);
+}
+
+.tutor-detail-tabs:hover {
+    color: var(--clr-accent1);
+}

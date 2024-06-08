@@ -2,6 +2,7 @@ const tutorRadioEl = document.getElementById('tutor-radio');
 const studentRadioEl = document.getElementById('student-radio');
 const nextButtonEl = document.getElementById('next');
 let selectedAccountType = "";
+const checkboxes = document.querySelectorAll('.form-check-input');
 
 function findUserAccountType() {
     let selectionEl = document.getElementsByName("flexRadioDefault");
@@ -34,3 +35,12 @@ nextButtonEl.addEventListener('click', (event) => {
     // call function findUserAccountType
     findUserAccountType();
 })
+
+const changeValue = (e) => {
+    e.target.toggleAttribute("checked");
+}
+
+for (let i = 0; i < checkboxes.length; i++) {
+    let box = checkboxes[i]
+    box.addEventListener("click", changeValue);
+}
