@@ -1,17 +1,24 @@
 const cardDeck = document.querySelector("#card-deck");
+const instrumentList = document.querySelector('#instrumentlist')
 
 // Function needs to be created that will retrieve tutors from local storage
 // There needs to be a function created to store Tutor search list
 // This will provide a way to dynamically display each card
 
-// async function pullData(){
-//     const apiData = await fetch("./api/tutors");
-//     var data = await apiData.json();
-//     console.log(data);
-//     let length = data.length;
-//     console.log(length);
-//     return data;
-// }
+async function createInstrumentSearch(){
+    const apiData = await fetch("./api/tutors");
+    var data = await apiData.json();
+    console.log(data);
+    let length = data.length;
+    console.log(length);
+ 
+    for(let i=0; i<data.length; i++){
+        const listItem = `
+        <option value="1">${data[i].firstName}</option>
+        `
+        instrumentList.innerHTML += listItem;
+    }
+}
 async function createCard() {
   const apiData = await fetch("./api/tutors");
   var data = await apiData.json();

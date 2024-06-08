@@ -19,6 +19,7 @@
       @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap");
     </style>
     <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css">
     <title>Available Tutors</title>
   </head>
   <body>
@@ -50,13 +51,134 @@
         </div>
       </nav>
     </header>
+<!-- Dynamically Created Instrument List -->
+ <div class="searchBar">
+    <div class="input-group">
+      <select class="form-select" aria-label="Default select example" id="instrumentlist">
+        <option selected>Choose Your Instrument</option>
+      </select>
+      <button id="search-button" type="button" onclick="getByInstrument()" class="btn">
+        <i class="fas fa-search">Search</i>
+      </button>
+      </div>
+
+      <!-- Search by price -->
+      <div class="input-group">
+        <select class="form-select" aria-label="Default select example" id="pricelist">
+          <option selected>Price Range</option>
+          <option value="1">$ (Lowest)</option>
+        <option value="2">$$ (Low)</option>
+        <option value="3">$$$ (Middle)</option>
+        <option value="4">$$$$ (High)</option>
+        </select>
+        <button id="search-button" type="button" onclick="getByPrice()" class="btn">
+          <i class="fas fa-search">Search</i>
+        </button>
+        </div>
+        
+        <!-- Search by Location -->
+
+        <div class="input-group">
+          <select class="form-select" aria-label="Default select example" id="locationlist">
+            <option selected>Choose Your Location</option>
+            <option value="1">Virtual</option>
+            <option value="2">In Person</option>
+          </select>
+          <button id="search-button" type="button" onclick="getByLocation()" class="btn">
+            <i class="fas fa-search">Search</i>
+          </button>
+          </div>
+ </div>
+<!-- Dynamically created Tutor Cards -->
     <div class="card-deck" id="card-deck">
       <!-- Row to hold the cards -->
       <div class="row mt-2 g-3 cards-wrapper"></div>
     </div>
 
+<!-- Wave Footer w/ CSS
+<footer>
+  <div class="background">
+      <svg
+        version="1.1"
+        xmlns="http://www.w3.org/2000/svg"
+        xmlns:xlink="http://www.w3.org/1999/xlink"
+        x="0px"
+        y="0px"
+        width="100%"
+        height="100%"
+        viewBox="0 0 1600 900"
+      >
+        <defs>
+          <path
+            id="wave"
+            fill="#e1895d"
+            d="M-363.852,502.589c0,0,236.988-41.997,505.475,0
+    s371.981,38.998,575.971,0s293.985-39.278,505.474,5.859s493.475,48.368,716.963-4.995v560.106H-363.852V502.589z"
+          />
+        </defs>
+        <g>
+          <use xlink:href="#wave" opacity=".4">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              dur="8s"
+              calcMode="spline"
+              values="270 230; -334 180; 270 230"
+              keyTimes="0; .5; 1"
+              keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+              repeatCount="indefinite"
+            />
+          </use>
+          <use xlink:href="#wave" opacity=".6">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              dur="6s"
+              calcMode="spline"
+              values="-270 230;243 220;-270 230"
+              keyTimes="0; .6; 1"
+              keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+              repeatCount="indefinite"
+            />
+          </use>
+          <use xlink:href="#wave" opacty=".9">
+            <animateTransform
+              attributeName="transform"
+              attributeType="XML"
+              type="translate"
+              dur="4s"
+              calcMode="spline"
+              values="0 230;-140 200;0 230"
+              keyTimes="0; .4; 1"
+              keySplines="0.42, 0, 0.58, 1.0;0.42, 0, 0.58, 1.0"
+              repeatCount="indefinite"
+            />
+          </use>
+        </g>
+      </svg>
+    </div>
+    <section>
+
+      <ul class="links">
+        <li><a href="./index.html">Home</a></li>
+        <li><a href="developers.html">Developers</a></li>
+        <li><a href="login.html">Log In</a></li>
+      </ul>
+      <div class="logo">
+          <img src="./assets/images/logo.png">
+      </div>
+      <p class="legal">© 2024 All rights reserved</p>
+    </section>
+</footer> -->
+
+
     <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
     <script src="./js/tutordave.js"></script>
-    <script>createCard();</script>
+    <script>
+    createCard();
+    createInstrumentSearch();
+    </script>
   </body>
 </html>
