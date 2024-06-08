@@ -36,105 +36,44 @@
         </nav>
     </header>
     <!-- Container to hold cards that will display each individual tutor -->
-    <div class="container-tupperware-for-tutor-cards mx-4 my-4 row">
+    <div class="HARD-CODED-CONTAINER-TUPPERWARE-FOR-TUTOR-CARDS mx-4 my-4 row gx-3">
 
-        <div class="actual-tutor-card-with-margins-and-padding card col-4 my-1 mx-1 px-3 py-3">
+        <div class="ACTUAL-TUTOR-CARD-WITH-MARGINS-AND-PADDING card col my-1 px-3 py-3">
 
-            <div class="container-to-align-main-info-column-and-details-column-side-by-side row g-4">
+            <div class="CONTAINER-T0-PUT-MAIN-INFO-AND-DETAILS-COLUMNS-SIDE-BY-SIDE row">
 
-                <div class="left-side-of-tutor-card col-4">
-
-                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/5.webp"
-                        class="tutor-chosen-profile-image rounded-circle shadow-1-strong my-3" style="width: 100%;"
-                        alt="Avatar">
-
-                    <h4 class="tutor-name-first-and-last">${data[y].salutation} ${data[y].firstName} ${data[y].lastName}
-                    </h4>
-
-                    <!-- Why?? <p style="font-style: italic;"></p> -->
-
-                    <p class="tutor-location-zip-code">${data[y].instruments}</p>
-
-                    <!-- Why?? <i class="far fa-edit mb-2"></i> -->
-                </div>
-
-                <div class="detailed-tutor-info-column col-8">
-                    <h5>Contact Info</h5>
-                    <hr class="horizontal-line-divider my-1">
-                    <p class="preferred-method-of-contact-indication text-muted"
-                        style="font-style: italic; font-size: smaller;">
-                        Preferred method of contact:</br>
-                        ${data[y].PREFERRED-METHOD-OF-CONTACT}
-                    </p>
-
-                    <div class="container-to-put-contact-info-side-by-side row">
-
-                        <div class="contact-email-address-tutor-card col-6">
-                            <h6>Email</h6>
-                            <p class="text-muted">${data[y].email}</p>
-                        </div>
-                        <div class="contact-phone-number-tutor-card col-6">
-                            <h6>Phone</h6>
-                            <p class="text-muted">${data[y].phone}</p>
-                        </div>
-                    </div>
-
-                    <h5>Details</h5>
-                    <hr class="horizontal-line-divider my-1">
-
-                    <div class="container-to-put-instruments-and-tutoring-location-side-by-side row">
-
-                        <div class="list-of-instruments-offered-by-tutor col-6">
-                            <h6>Instruments</h6>
-                            <p class="text-muted">${data[y].instruments}</p>
-                        </div>
-                        <div class="setting-and-location-options-offered-by-tutor col-6">
-                            <h6>Tutoring location:</h6>
-                            <p class="text-muted">${data[y].virtual}</p>
-                        </div>
-
-                    </div>
-
-                </div>
-
-            </div>
-
-        </div>
-        <div class="actual-tutor-card-with-margins-and-padding card col-4 my-1 mx-1 px-3 py-3">
-
-            <div class="container-to-align-main-info-column-and-details-column-side-by-side row g-4">
-
-                <div class="left-side-of-tutor-card col-4">
+                <div class="LEFT-SIDE-OF-TUTOR-CARD col-4">
 
                     <img src="https://mdbcdn.b-cdn.net/img/new/avatars/5.webp"
-                        class="tutor-chosen-profile-image rounded-circle shadow-1-strong my-3" style="width: 100%;"
+                        class="TUTOR-CHOSEN-PROFILE-IMAGE rounded-circle shadow-1-strong my-3" style="width: 100%;"
                         alt="Avatar">
 
-                    <h2 class="tutor-name-first-and-last mb-3 open-sans-semibold-semicondensed">Mrs. Jenna Vincitore
+                    <h2 class="TUTOR-NAME-FIRST-AND-LAST mb-3 open-sans-semibold-semicondensed">${data[y].salutation}
+                        ${data[y].firstName} ${data[y].lastName}
                     </h2>
 
-                    <h5 class="instruments-offered-by-tutor light-text mb-3">Violin, Viola, Cello, Bass</h5>
-                    <div class="price-per-lesson-in-dollar-signs">
-                        <h2 class="link-price-range-here brush" style="color: green;">
-                            $$$$
+                    <h5 class="INSTRUMENTS-OFFERED-BY-TUTOR light-text mb-3">${data[y].instruments}</h5>
+                    <div class="PRICE-IN-DOLLAR-SIGNS">
+                        <h2 class="LINK-PRICE-DATA-HERE brush" style="color: green;">
+                            ${data[y].price}
                         </h2>
                     </div>
                 </div>
 
-                <div class="detailed-tutor-info-column col-8">
+                <div class="DETAILED-TUTOR-INFO-COLUMN col-8">
 
-                    <p class="details-under-contact-info-header text-muted"
+                    <p class="OPTION-FOR-DETAILS-AT-TOP-OF-INFO text-muted"
                         style="font-style: italic; font-size: smaller;">
 
                     </p>
 
-                    <div class="contact-email-address-for-tutor row">
+                    <div class="CONTACT-EMAIL-ADDRESS row">
                         <h5 class="col-3">Email</h5>
-                        <p class="text-muted col">jennarose731@verizon.net</p>
+                        <p class="text-muted col">${data[y].email}</p>
                     </div>
-                    <div class="contact-phone-number-tutor-card row">
+                    <div class="CONTACT-PHONE-NUMBER row">
                         <h5 class="col-3">Phone</h5>
-                        <p class="text-muted col">(407) 538-2371</br>
+                        <p class="text-muted col">${data[y].phone}</br>
                             <!-- are we able to write add checked/unchecked attributes to checkboxes using js based on data? -->
                             <input class="form-check-input" type="checkbox" id="ok-to-call" value=""
                                 aria-label="text ok?" disabled> Call
@@ -143,38 +82,65 @@
                         </p>
                     </div>
 
-                    <div class="container-to-put-instruments-and-tutoring-location-side-by-side row border-top pt-1 border-opacity-10">
+                    <div
+                        class="SIDE-BY-SIDE-CONTAINER-LOCATION-INTERESTS row border-top pt-2 border-opacity-10">
 
-                    <div class="setting-and-location-options-offered-by-tutor col-5">
-                        <h5>Location</h5>
-                        <div class="row text-muted">
-                            <!-- are we able to write add checked/unchecked attributes to checkboxes using js based on data? -->
-                            <p><input class="form-check-input" type="checkbox" id="students-home" value=""
-                                    aria-label="text ok?" disabled> Your Home </br>
-                                <input class="form-check-input" type="checkbox" id="tutors-studio" value=""
-                                    aria-label="text ok?" disabled> Studio </br>
-                                <input class="form-check-input" type="checkbox" id="virtual-lesson" value=""
-                                    aria-label="text ok?" disabled> Virtual
+                        <div class="LOCATION-OPTIONS-OFFERED col-5">
+                            <h5>Location</h5>
+                            <div class="row text-muted">
+                                <!-- are we able to write add checked/unchecked attributes to checkboxes using js based on data? -->
+                                <p><input class="form-check-input" type="checkbox" id="students-home" value=""
+                                        aria-label="student's home" disabled> Your Home </br>
+                                    <input class="form-check-input" type="checkbox" id="tutors-studio" value=""
+                                        aria-label="tutor's studio" disabled> Studio </br>
+                                    <input class="form-check-input" type="checkbox" id="virtual-lesson" value=""
+                                        aria-label="virtual lesson" disabled> Virtual
+                                </p>
+                            </div>
+                        </div>
+
+                        <div class="SPECIAL-INTERESTS col-7 border-start border-opacity-10">
+                            <h5>Interests</h5>
+                            <!-- is listing interests separately an option? if not, remove list structure & insert as text only -->
+                            <p class="LIST-INTERESTS-HERE text-muted">
+                                ${data[y].interests}
                             </p>
                         </div>
-                    </div>
+                        <div class="EXTRA-CERTIFICATIONS border-top pt-2 border-opacity-10 mt-2">
+                            <h5>Extra Certifications</h5>
+                            <p class="LIST-CERTIFICATIONS-HERE text-muted">${data[y].certifications}</p>
+                        </div>
+                        <div class="SOCIAL-MEDIA-LINKS border-top pt-2 border-opacity-10 border-bottom row">
+                            <h5 class="col-3">Links</h5>
+                            <!-- needs formatting of links -->
+                            <p class="SOCIAL-LINKS-GO-HERE text-muted col-auto">${data[y].socials}</p>
+                        </div>
+                        <!-- IDs may need to be set by JS -->
+                        <div class="TUTOR-REVIEWS-DROPDOWN accordion accordion-flush"
+                            id="${data[y].firstName}-${data[y].lastName}-reviews-dropdown">
+                            <div class="accordion-item">
+                                <h2 class="accordion-header">
+                                    <button class="accordion-button collapsed px-0" type="button" data-bs-toggle="collapse"
+                                        data-bs-target="#${data[y].firstName}-${data[y].lastName}-reviews" style="font-size: large;">
+                                        Reviews & Testimonials
+                                    </button>
+                                </h2>
+                                <div id="${data[y].firstName}-${data[y].lastName}-reviews" class="accordion-collapse collapse"
+                                    data-bs-parent="#${data[y].firstName}-${data[y].lastName}-reviews-dropdown">
+                                    <!-- What is needed to populate reviews for each tutor? -->
+                                    <div class="accordion-body">${data[r].reviews}
+                                    </div>
+                                </div>
+                            </div>
 
-                    <div class="specialties-certifications-and-socials col-7 border-start border-opacity-10">
-                        <h5>Interests</h5>
-                        <p class="link-special-interests-here text-muted">Kicking ass & taking names</p>
-                    </div>
-                    <div class="border-top pt-1 border-opacity-10 mt-1 border-bottom">
-                        <h5>Extra Certifications</h5>
-                        <p class="link-extra-certifications-here text-muted">Orff and Wakanda Forever</p>
-                    </div>
-                    <!-- TODO: insert reviews accordion here -->
+                        </div>
 
+                    </div>
 
                 </div>
-
             </div>
-
         </div>
+
 
         <!-- Footer goes here -->
         <footer></footer>
