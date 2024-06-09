@@ -1,5 +1,5 @@
 const cardDeck = document.querySelector("#card-deck");
-const instrumentList = document.querySelector('#instrumentlist')
+const instrumentList = document.querySelector('#instrumentlist');
 
 // Function to dynamically populate instrument choices from available instruments in table
 async function createInstrumentSearch(){
