@@ -1,24 +1,24 @@
 const cardDeck = document.querySelector("#card-deck");
-const instrumentList = document.querySelector('#instrumentlist');
+const instrumentList = document.querySelector("#instrumentlist");
 
 // Function to dynamically populate instrument choices from available instruments in table
-async function createInstrumentSearch(){
-    const apiData = await fetch("./api/instruments");
-    var data = await apiData.json();
-    console.log(data);
-    let length = data.length;
-    console.log(length);
- 
-    for(let i=0; i<data.length; i++){
-        const listItem = `
+async function createInstrumentSearch() {
+  const apiData = await fetch("./api/instruments");
+  var data = await apiData.json();
+  console.log(data);
+  let length = data.length;
+  console.log(length);
+
+  for (let i = 0; i < data.length; i++) {
+    const listItem = `
         <option value="1">${data[i].instrument_name}</option>
-        `
-        instrumentList.innerHTML += listItem;
-    }
+        `;
+    instrumentList.innerHTML += listItem;
+  }
 }
 const cardCreate = (data) => {
-    for(let y=0; y<data.length; y++){
-        const card = `<div class="col-12 col-md-6 col-lg-4">
+  for (let y = 0; y < data.length; y++) {
+    const card = `<div class="col-12 col-md-6 col-lg-4">
                   <div class="card mb-2">
                       <div class="row g-4">
                           <div class="col-md-4">
@@ -62,9 +62,9 @@ const cardCreate = (data) => {
                           </div>
                       </div>
                   </div>`;
-        cardDeck.innerHTML += card;
-      }
-}
+    cardDeck.innerHTML += card;
+  }
+};
 
 // Displays all tutor cards
 async function createAllTutors() {
@@ -73,6 +73,5 @@ async function createAllTutors() {
   console.log(data);
   let length = data.length;
   console.log(length);
-cardCreate(data);
+  cardCreate(data);
 }
-
