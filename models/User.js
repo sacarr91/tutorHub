@@ -43,9 +43,13 @@ User.init(
       type: DataTypes.INTEGER,
       allowNull: false,
     },
-    userRole: {
-      type: DataTypes.STRING,
+    role_id: {
+      type: DataTypes.INTEGER,
       allowNull: false,
+      references: {
+        model: 'role',
+        key: 'id'
+      },
     },
     specialty: {
       type: DataTypes.STRING,
