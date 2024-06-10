@@ -16,6 +16,12 @@ User.init(
       primaryKey: true,
       autoIncrement: true,
     },
+
+    salutation: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+
     firstName: {
       type: DataTypes.STRING,
       allowNull: false,
@@ -39,9 +45,9 @@ User.init(
         len: [8],
       },
     },
-    zipcode: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
+    profile_img: {
+      type: DataTypes.STRING,
+      allowNull: true,
     },
     role_id: {
       type: DataTypes.INTEGER,
@@ -51,26 +57,22 @@ User.init(
         key: 'id'
       },
     },
-    specialty: {
+    price: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    region: {
+    lesson_setting: {
       type: DataTypes.STRING,
       allowNull: true,
+    },
+    zipcode: {
+      type: DataTypes.INTEGER,
+      allowNull: false,
     },
     phone: {
       type: DataTypes.STRING,
       allowNull: true,
     },
-    virtual: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    },
-    instruments: {
-      type: DataTypes.STRING,
-      allowNull: true,
-    }
   },
   {
     hooks: {
