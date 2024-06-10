@@ -46,6 +46,26 @@ User.init(
     userRole: {
       type: DataTypes.STRING,
       allowNull: false,
+    },
+    specialty: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    region: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    phone: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    virtual: {
+      type: DataTypes.STRING,
+      allowNull: true,
+    },
+    instruments: {
+      type: DataTypes.STRING,
+      allowNull: true,
     }
   },
   {
