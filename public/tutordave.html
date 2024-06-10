@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- bootstrap -->
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+      crossorigin="anonymous"
+    />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css"
+    />
+    <!-- Google Fonts -->
+    <style>
+      @import url("https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap");
+    </style>
+    <link rel="stylesheet" href="./assets/css/style.css" />
+    <link rel="stylesheet" href="./assets/css/footer.css">
+    <title>Available Tutors</title>
+  </head>
+  <body>
+    <!-- Sticky Header -->
+    <header id="header">
+      <nav class="navbar navbar-expand-sm sticky-top">
+        <div class="container-fluid">
+          <a class="navbar-brand" href="index.html">TutorHub </a>
+          <!-- Login -->
+          <ul class="navbar-nav">
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop-register"
+                >Register</a
+              >
+            </li>
+            <li class="nav-item">
+              <a
+                class="nav-link"
+                data-bs-toggle="modal"
+                data-bs-target="#staticBackdrop-login"
+                >Login</a
+              >
+              <!-- <a class="navbar-link" href="login.html">Login </a> -->
+            </li>
+          </ul>
+        </div>
+      </nav>
+    </header>
+<!-- Dynamically Created Instrument List -->
+ <div class="searchBar">
+    <div class="input-group">
+      <select class="form-select" aria-label="Default select example" id="instrumentlist">
+        <option selected disabled>Filter By Instrument</option>
+      </select>
+      <button id="search-button" type="button" onclick="getByInstrument()" class="btn">
+        <i class="fas fa-search">Search</i>
+      </button>
+      </div>
+
+      <!-- Search by price -->
+      <div class="input-group">
+        <select class="form-select" aria-label="Default select example" id="pricelist">
+        <option selected disabled>Filter By Price Range</option>
+        <option value="1">$ (Lowest)</option>
+        <option value="2">$$ (Low)</option>
+        <option value="3">$$$ (Middle)</option>
+        <option value="4">$$$$ (High)</option>
+        </select>
+        <button id="search-button" type="button" onclick="getByPrice()" class="btn">
+          <i class="fas fa-search">Search</i>
+        </button>
+        </div>
+        
+        <!-- Search by Location -->
+
+        <div class="input-group">
+          <select class="form-select" aria-label="Default select example" id="locationlist">
+            <option selected disabled>Filter By Location</option>
+            <option value="1">Virtual</option>
+            <option value="2">In Person</option>
+          </select>
+          <button id="search-button" type="button" onclick="getByLocation()" class="btn">
+            <i class="fas fa-search">Search</i>
+          </button>
+          </div>
+ </div>
+<!-- Dynamically created Tutor Cards -->
+    <div class="card-deck" id="card-deck">
+      <!-- Row to hold the cards -->
+      <div class="row mt-2 g-3 cards-wrapper"></div>
+    </div>
+
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+    <script src="./js/tutordave.js"></script>
+    <script>
+    createAllTutors();
+    createInstrumentSearch();
+    </script>
+  </body>
+</html>
