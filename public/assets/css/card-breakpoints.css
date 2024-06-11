@@ -1,0 +1,36 @@
+.tupperware {
+  --bs-gutter-x: 1.5rem;
+  --bs-gutter-y: 0;
+  width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-right: auto;
+  margin-left: auto;
+}
+
+.cardLayout {
+  flex-shrink: 0;
+  width: 100%;
+  max-width: 100%;
+  padding-right: calc(var(--bs-gutter-x) * 0.5);
+  padding-left: calc(var(--bs-gutter-x) * 0.5);
+  margin-top: var(--bs-gutter-y);
+}
+@media (min-width: 940px) {
+  .cardLayout {
+    flex: 0 0 auto;
+    width: 50%;
+  }
+}
+@media (min-width: 1385px) {
+  .cardLayout {
+    flex: 0 0 auto;
+    width: 33.33333333%;
+  }
+}
+@media (min-width: 1400px) {
+  .cardLayout {
+    flex: 0 0 auto;
+    width: 25%;
+  }
+}
