@@ -1,5 +1,8 @@
 const cardDeck = document.querySelector("#card-deck");
 const instrumentList = document.querySelector("#instrumentlist");
+const certificationList = document.querySelector("#certificationlist");
+const interestList = document.querySelector("#interestlist");
+
 
 // Function to dynamically populate instrument choices from available instruments in table
 async function createInstrumentSearch() {
@@ -11,11 +14,40 @@ async function createInstrumentSearch() {
 
   for (let i = 0; i < data.length; i++) {
     const listItem = `
-        <option value="1">${data[i].instrument_name}</option>
+        <option value="${data[i].instrument_name}">${data[i].instrument_name}</option>
         `;
     instrumentList.innerHTML += listItem;
   }
 }
+async function createCertificationSearch() {
+    const apiData = await fetch("./api/certifications");
+    var data = await apiData.json();
+    console.log(data);
+    let length = data.length;
+    console.log(length);
+  
+    for (let i = 0; i < data.length; i++) {
+      const listItem = `
+          <option value="${data[i].certification_name}">${data[i].certification_name}</option>
+          `;
+      certificationList.innerHTML += listItem;
+    }
+  }
+  async function createSpecialtySearch() {
+    const apiData = await fetch("./api/specialty");
+    var data = await apiData.json();
+    console.log(data);
+    let length = data.length;
+    console.log(length);
+  
+    for (let i = 0; i < data.length; i++) {
+      const listItem = `
+          <option value="${data[i].specialty_name}">${data[i].specialty_name}</option>
+          `;
+      interestList.innerHTML += listItem;
+    }
+  }
+
 const cardCreate = (data) => {
   for (let y = 0; y < data.length; y++) {
     const card = `<div class="col-12 col-md-6 col-lg-4">
@@ -74,4 +106,42 @@ async function createAllTutors() {
   let length = data.length;
   console.log(length);
   cardCreate(data);
+}
+
+async function getByInstrument(instrumentChoice) {
+    instrumentChoice = instrumentList.value; 
+    if (instrumentChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
+    const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
+}
+
+async function getByCertification(certificationChoice) {
+    certificationChoice = certificationList.value; 
+    if (certificationChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
+    const apiData = await fetch(`./api/tutorCertification/${certificationChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
+}
+async function getBySpecialty(specialtyChoice) {
+    specialtyChoice = interestList.value; 
+    if (specialtyChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
+    const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
 }

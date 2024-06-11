@@ -55,7 +55,7 @@
  <div class="searchBar">
     <div class="input-group">
       <select class="form-select" aria-label="Default select example" id="instrumentlist">
-        <option selected disabled>Filter By Instrument</option>
+        <option selected disabled style="display:none" value="0">Filter By Instrument</option>
       </select>
       <button id="search-button" type="button" onclick="getByInstrument()" class="btn">
         <i class="fas fa-search">Search</i>
@@ -64,14 +64,10 @@
 
       <!-- Search by price -->
       <div class="input-group">
-        <select class="form-select" aria-label="Default select example" id="pricelist">
-        <option selected disabled>Filter By Price Range</option>
-        <option value="1">$ (Lowest)</option>
-        <option value="2">$$ (Low)</option>
-        <option value="3">$$$ (Middle)</option>
-        <option value="4">$$$$ (High)</option>
+        <select class="form-select" aria-label="Default select example" id="certificationlist">
+        <option selected disabled style="display:none" value="0">Filter By Certifications</option>
         </select>
-        <button id="search-button" type="button" onclick="getByPrice()" class="btn">
+        <button id="search-button" type="button" onclick="getByCertification()" class="btn">
           <i class="fas fa-search">Search</i>
         </button>
         </div>
@@ -79,15 +75,25 @@
         <!-- Search by Location -->
 
         <div class="input-group">
-          <select class="form-select" aria-label="Default select example" id="locationlist">
-            <option selected disabled>Filter By Location</option>
-            <option value="1">Virtual</option>
-            <option value="2">In Person</option>
+          <select class="form-select" aria-label="Default select example" id="interestlist">
+            <option selected disabled style="display:none" value="0">Filter By Teaching Specialty</option>
           </select>
-          <button id="search-button" type="button" onclick="getByLocation()" class="btn">
+          <button id="search-button" type="button" onclick="getBySpecialty()" class="btn">
             <i class="fas fa-search">Search</i>
           </button>
           </div>
+
+          <div class="input-group">
+            <select class="form-select" aria-label="Default select example" id="locationlist">
+              <option selected disabled style="display:none" value="0">Filter By Location</option>
+              <option>In Home</option>
+              <option>In Studio</option>
+              <option>Virtual</option>
+            </select>
+            <button id="search-button" type="button" onclick="getByLocation()" class="btn">
+              <i class="fas fa-search">Search</i>
+            </button>
+            </div>
  </div>
 <!-- Dynamically created Tutor Cards -->
     <div class="card-deck" id="card-deck">
@@ -101,6 +107,8 @@
     <script>
     createAllTutors();
     createInstrumentSearch();
+    createCertificationSearch();
+    createSpecialtySearch();
     </script>
   </body>
 </html>

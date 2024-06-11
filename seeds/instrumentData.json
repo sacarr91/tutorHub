@@ -18,7 +18,7 @@
         "instrument_name": "Trumpet"
     },
     {
-        "instrument_name": "Horn"
+        "instrument_name": "French Horn"
     },
     {
         "instrument_name": "Trombone"
@@ -39,7 +39,7 @@
         "instrument_name": "Guitar"
     },
     {
-        "instrument_name": "Bass Guitar"
+        "instrument_name": "Double Bass"
     },
     {
         "instrument_name": "Violin"
@@ -51,6 +51,6 @@
         "instrument_name": "Cello"
     },
     {
-        "instrument_name": "Double Bass"
+        "instrument_name": "Electric Bass"
     }
 ]
