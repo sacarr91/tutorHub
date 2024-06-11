@@ -110,6 +110,10 @@ async function createAllTutors() {
 
 async function getByInstrument(instrumentChoice) {
     instrumentChoice = instrumentList.value; 
+    if (instrumentChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
     const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
     var data = await apiData.json();
     let length = data.length;
@@ -119,6 +123,10 @@ async function getByInstrument(instrumentChoice) {
 
 async function getByCertification(certificationChoice) {
     certificationChoice = certificationList.value; 
+    if (certificationChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
     const apiData = await fetch(`./api/tutorCertification/${certificationChoice}`);
     var data = await apiData.json();
     let length = data.length;
@@ -127,6 +135,10 @@ async function getByCertification(certificationChoice) {
 }
 async function getBySpecialty(specialtyChoice) {
     specialtyChoice = interestList.value; 
+    if (specialtyChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
     const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
     var data = await apiData.json();
     let length = data.length;
