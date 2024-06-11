@@ -116,3 +116,20 @@ async function getByInstrument(instrumentChoice) {
     cardDeck.innerHTML = "";
     cardCreate(data);
 }
+
+async function getByCertification(certificationChoice) {
+    certificationChoice = certificationList.value; 
+    const apiData = await fetch(`./api/tutorCertification/${certificationChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
+}
+async function getBySpecialty(specialtyChoice) {
+    specialtyChoice = interestList.value; 
+    const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
+}
