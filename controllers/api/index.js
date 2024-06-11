@@ -20,6 +20,6 @@ router.use('/certifications', certificationRoutes);
 router.use('/specialty', specialtyRoutes);
 router.use('/tutorCertification', tutorCertification);
 router.use('/tutorSpecialty', tutorSpecialty);
-router.use('/studentRegistration',studentRegistrationRoutes);
+router.use('/studentRegistration', studentRegistrationRoutes);
 
 module.exports = router;
