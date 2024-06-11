@@ -1,0 +1,151 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="imageviewport" content="width=device-width, initial-scale=1.0">
+  <!-- bootstrap -->
+  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
+    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
+  <!-- Google Fonts -->
+  <style>
+    @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
+  </style>
+  <link rel="stylesheet" href="./assets/css/style.css" />
+  <title>New Tutor Account</title>
+</head>
+<body>
+  <!-- Sticky Header -->
+  <header id="header">
+    <nav class="navbar navbar-expand-sm sticky-top patrick">
+      <div class="container-fluid">
+        <a class="navbar-brand brush" href="index.html">TutorHub </a>
+        <!-- Login -->
+        <ul class="navbar-nav">
+          <li class="nav-item">
+            <a class="nav-link" href="user-registration-pg1.html">Register</a>
+          </li>
+          <li class="nav-item">
+            <a class="nav-link" href="login.html">Login</a>
+          </li>
+        </ul>
+      </div>
+    </nav>
+  </header>
+  <!-- form -->
+   <form id="registration-form" action="/api/tutorRegistration" method="POST" >
+    <main class="row justify-content-center normal-text">
+      <div class="card col-10" style="margin:2%">
+        <h1 class="my-4">Tutor Account Registration</h1>
+        <div class="mx-4">
+          <h3>User Information</h3>
+          <h6>Name</h6>
+          <div class="row">
+            <div class="col-4">
+              <input type="text" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name">
+            </div>
+            <div class="col-5 mb-3">
+              <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name">
+            </div>
+          </div>
+          <label for="email-input" class="form-label patrick">Email address <i>(will be your username)</i></label>
+          <input name="email" type="email" class="form-control mb-3 normal-text" id="email-input" placeholder="name@example.com">
+          <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
+          <input name="password" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+          <div id="passwordHelpBlock" class="form-text mb-3">
+            Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+            characters, or emoji.
+          </div>
+          <div class="row">
+            <div class="col-8">
+              <h3>Instruments</h3>
+              <div id="performAndTeach" class="form-text light-text mb-3">
+                We wish to steer students in the direction of high-quality instructors on their chosen instrument. While
+                we
+                appreciate that the pedagogical knowledge of our tutors may extend beyond personal performance skill sets,
+                we request that you <b>please select ONLY the instruments on which you have teaching <i>AND</i> performing
+                  experience.<b>
+              </div>
+              <div class="input-group">
+                <select name="instrument_id" class="form-select" aria-label="Default select example" id="instrumentlist">
+                  <option selected disabled>Add an Instrument</option>
+                </select>
+                </div>
+            </div>
+          </div>  
+          <div id="price-range" class="row align-items-bottom">
+            <h3 class="col-3">
+              Price Per Lesson
+            </h3>
+            <div class="btn-group col-auto mb-3" role="group" aria-label="Basic radio toggle button group">
+              <input name="price" value="$" type="radio" class="btn-check" name="btnradio" id="$" autocomplete="off" checked>
+              <label class="btn my-btn" for="$">$ ($30 or less)</label>
+              <input name="price" value="$$" type="radio" class="btn-check" name="btnradio" id="$$" autocomplete="off">
+              <label class="btn my-btn" for="$$">$$ ($35 to $55)</label>
+              <input name="price" value="$$$" type="radio" class="btn-check" name="btnradio" id="$$$" autocomplete="off">
+              <label class="btn my-btn" for="$$$">$$$ ($60 to $80)</label>
+              <input name="price" value="$$$$" type="radio" class="btn-check" name="btnradio" id="$$$$" autocomplete="off">
+              <label class="btn my-btn" for="$$$$">$$$$ ($85+)</label>
+            </div>
+          </div>
+          <div id="setting" class="row align-items-top mb-3">
+            <h3 class="col-auto me-3 mb-3" id="setting-header">
+              Lesson Setting Options
+            </h3>
+            <div class="row col-auto" id="setting-details">
+              <div class="row">
+                <div class="row col-auto" id="checkbox-options">
+                  <div class="form-check col-auto me-2">
+                    <input name="lesson_setting" value="Student's Home" class="form-check-input" type="checkbox"  id="fiddle-folk">
+                    <label class="form-check-label normal-text" for="fiddle-folk">
+                      Student's Home
+                    </label>
+                  </div>
+                  <div class="form-check col-auto me-2">
+                    <input name="lesson_setting" value="Teachers's Studio" class="form-check-input" type="checkbox" id="flexCheckDefault">
+                    <label class="form-check-label normal-text" for="flexCheckDefault">
+                      Teacher's Studio
+                    </label>
+                  </div>
+                  <div class="form-check col-auto me-2">
+                    <input name="lesson_setting" value="Virtual" class="form-check-input" type="checkbox" id="flexCheckDefault">
+                    <label class="form-check-label normal-text" for="flexCheckDefault">
+                      Virtual
+                    </label>
+                  </div>
+                  <div class="form-check col-auto me-2">
+                    <input name="lesson_setting" value="Home or Virtual" class="form-check-input" type="checkbox" id="flexCheckDefault">
+                    <label class="form-check-label normal-text" for="flexCheckDefault">
+                      Home or Virtual
+                    </label>
+                  </div>
+                </div>
+              </div>
+                <div class="input-group col-auto" id="zipCode">
+                  <label for="zip-input" class="input-group-text patrick ">Zipcode</label>
+                  <input name="zipcode" type="zipcode" class="form-control normal-text" id="zip-input" placeholder="90210">
+                </div>
+              </div>
+            </div>
+          </div>
+          <div class="row" id="contactAndSocials">
+            <div class="col-5">
+              <h3>
+                Phone Number
+              </h3>
+                <input name="phone" type="text" class="form-control normal-text me-5" placeholder="(000) 000-0000"
+                  aria-label="Text input with checkbox">
+          </div>
+          <div class="row my-4 justify-content-center" id="next">
+            <button type="submit" id="submit" value="Submit" class="btn col-6">Create Your Profile</button>
+          </div>
+        </div>
+    </main>
+   </form>
+  <!-- Including Bootstrap JS -->
+  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+  <script src="./js/choose-image.js"></script>
+  <script src="./js/tutordave.js"></script>
+  <script>createInstrumentSearch();</script>
+</body>
+</html>
