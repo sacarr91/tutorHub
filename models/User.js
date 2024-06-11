@@ -67,7 +67,7 @@ User.init(
     },
     zipcode: {
       type: DataTypes.INTEGER,
-      allowNull: false,
+      allowNull: true,
     },
     phone: {
       type: DataTypes.STRING,
