@@ -5,22 +5,44 @@
     "email": "peter.appliedanalyticalsciences@gmail.com",
     "password": "wordpass123",
     "zipcode": "34695",
-    "userRole": "SuperUser"
+    "role_id": 1,
+    "salutation": "Lord",
+    "profile_img":"Guitar 3",
+    "price": "$$$$",
+    "lesson_setting": "virtual",
+    "phone": "813-555-5555"
+    
   },
   {
-    "firstName": "Instructor-1",
-    "lastName": "INS-1-LN",
-    "email": "instructor-1@gmail.com",
+    "firstName": "Stephanie",
+    "lastName": "Carr",
+    "email": "scarr@gmail.com",
     "password": "password12345",
     "zipcode": "34695",
-    "userRole": "Instructor"
+    "role_id": 1
   },
   {
-    "firstName": "Student-1",
-    "lastName": "Stdnt-1-ln",
-    "email": "student-1@aol.com",
+    "firstName": "Joe",
+    "lastName": "Ruff",
+    "email": "jruff@aol.com",
     "password": "password12345",
     "zipcode": "34695",
-    "userRole": "Student"
+    "role_id": 2
+  },
+  {
+    "firstName": "David",
+    "lastName": "Rauf",
+    "email": "drauf@aol.com",
+    "password": "password12345",
+    "zipcode": "34695",
+    "role_id": 2
+  },
+  {
+    "firstName": "Pranith",
+    "lastName": "Gunda",
+    "email": "pranithgunda@hotmail.com",
+    "password": "password12345",
+    "zipcode": "34695",
+    "role_id": 2
   }
 ]

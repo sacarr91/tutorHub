@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { Tutor } = require('../../models');
+const { User } = require('../../models');
 
 // Middleware to parse JSON and URL-encoded data
 const express = require('express');
@@ -9,19 +9,18 @@ router.use(express.urlencoded({ extended: true }));
 // Create tutor
 router.post('/', async (req, res) => {
   try {
-    await Tutor.create({
+    await User.create({
+      salutation: req.body.salutation,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
       email: req.body.email,
       password: req.body.password,
+      profile_img: req.body.profile_img,
+      role_id: 1,
+      price: req.body.price,
+      lesson_setting: req.body.lesson_setting,
       zipcode: req.body.zipcode,
-      userRole: req.body.userRole,
-      specialty: req.body.specialty,
-      region: req.body.region,
       phone: req.body.phone,
-      virtual: req.body.virtual,
-      instruments: req.body.instruments,
-
     });
     res.status(200).json({ message: `${req.body.email} has been successfully registered to TutorHub!` });
   } catch (err) {
