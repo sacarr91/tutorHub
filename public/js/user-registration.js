@@ -21,7 +21,7 @@ function redirectUserForAccountCreation() {
     } else {
         // If userinfo is present, redirect the user based on Account Type
         if (selectedAccountType === "tutor") {
-            location.href = "tutor-registration.html"
+            location.href = "tutor-registration-pete+.html"
         } else {
             location.href = "student-registration.html"
         }
