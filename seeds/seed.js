@@ -65,10 +65,6 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await Instrument.bulkCreate(instrumentData, {
-    individualHooks: true,
-    returning: true,
-  });
 
   process.exit(0);
 };
