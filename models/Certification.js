@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class Instrument extends Model {}
+class Certification extends Model {}
 
-Instrument.init(
+Certification.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,7 +12,7 @@ Instrument.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    instrument_name: {
+    certification_name: {
       type: DataTypes.STRING,
     },
   },
@@ -21,8 +21,8 @@ Instrument.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'instrument',
+    modelName: 'certification',
   }
 );
 
-module.exports = Instrument;
+module.exports = Certification;

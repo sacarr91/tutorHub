@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection.js');
 
-class Instrument extends Model {}
+class Role extends Model {}
 
-Instrument.init(
+Role.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -12,8 +12,9 @@ Instrument.init(
       primaryKey: true,
       autoIncrement: true,
     },
-    instrument_name: {
+    role: {
       type: DataTypes.STRING,
+      allowNull: false,
     },
   },
   {
@@ -21,8 +22,8 @@ Instrument.init(
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'instrument',
+    modelName: 'role',
   }
 );
 
-module.exports = Instrument;
+module.exports = Role;
