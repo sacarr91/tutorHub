@@ -55,7 +55,7 @@
  <div class="searchBar">
     <div class="input-group">
       <select class="form-select" aria-label="Default select example" id="instrumentlist">
-        <option selected disabled>Filter By Instrument</option>
+        <option selected disabled style="display:none" value="0">Filter By Instrument</option>
       </select>
       <button id="search-button" type="button" onclick="getByInstrument()" class="btn">
         <i class="fas fa-search">Search</i>
@@ -65,7 +65,7 @@
       <!-- Search by price -->
       <div class="input-group">
         <select class="form-select" aria-label="Default select example" id="certificationlist">
-        <option selected disabled>Filter By Certifications</option>
+        <option selected disabled style="display:none">Filter By Certifications</option>
         </select>
         <button id="search-button" type="button" onclick="getByCertification()" class="btn">
           <i class="fas fa-search">Search</i>
@@ -76,7 +76,7 @@
 
         <div class="input-group">
           <select class="form-select" aria-label="Default select example" id="interestlist">
-            <option selected disabled>Filter By Teaching Specialty</option>
+            <option selected disabled style="display:none">Filter By Teaching Specialty</option>
           </select>
           <button id="search-button" type="button" onclick="getBySpecialty()" class="btn">
             <i class="fas fa-search">Search</i>
@@ -85,7 +85,7 @@
 
           <div class="input-group">
             <select class="form-select" aria-label="Default select example" id="locationlist">
-              <option selected disabled>Filter By Location</option>
+              <option selected disabled style="display:none">Filter By Location</option>
               <option>In Home</option>
               <option>In Studio</option>
               <option>Virtual</option>
