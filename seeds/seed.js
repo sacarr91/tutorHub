@@ -14,12 +14,8 @@ const {
   TutorLink } 
   
   = require('../models');
-const { User, Instrument } = require('../models');
-const { Tutor } = require('../models');
 
 const userData = require('./userData.json');
-const tutorData = require('./tutorData.json');
-const instrumentData = require('./instrumentData.json');
 const roleData = require('./roleData.json');
 const instrumentData = require('./instrumentData.json');
 const userInstrumentData = require('./userInstrumentData.json');

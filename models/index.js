@@ -51,7 +51,4 @@ User.hasMany(TutorLink, {
 });
 
 module.exports = { User, Role, Instrument, UserInstrument, Certification, TutorCertification, Specialty, TutorSpecialty, TutorLink };
-const Tutor = require('./Tutor');
-const Instrument = require('./Instrument');
 
-module.exports = { User, Tutor, Instrument };
