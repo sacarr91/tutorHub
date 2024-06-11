@@ -14,11 +14,40 @@ async function createInstrumentSearch() {
 
     for (let i = 0; i < data.length; i++) {
         const listItem = `
-        <option value=${i}>${data[i].instrument_name}</option>
+        <option value="${data[i].instrument_name}">${data[i].instrument_name}</option>
         `;
         instrumentList.innerHTML += listItem;
     }
 }
+async function createCertificationSearch() {
+    const apiData = await fetch("./api/certifications");
+    var data = await apiData.json();
+    console.log(data);
+    let length = data.length;
+    console.log(length);
+  
+    for (let i = 0; i < data.length; i++) {
+      const listItem = `
+          <option value="${data[i].certification_name}">${data[i].certification_name}</option>
+          `;
+      certificationList.innerHTML += listItem;
+    }
+  }
+  async function createSpecialtySearch() {
+    const apiData = await fetch("./api/specialty");
+    var data = await apiData.json();
+    console.log(data);
+    let length = data.length;
+    console.log(length);
+  
+    for (let i = 0; i < data.length; i++) {
+      const listItem = `
+          <option value="${data[i].specialty_name}">${data[i].specialty_name}</option>
+          `;
+      interestList.innerHTML += listItem;
+    }
+  }
+
 const cardCreate = (data) => {
     for (let y = 0; y < data.length; y++) {
         // Variables to be used in HTML
@@ -26,11 +55,12 @@ const cardCreate = (data) => {
         const first = data[y].firstName;
         const surname = data[y].lastName;
         const tutorName = `${data[y].firstName}-${data[y].lastName}`;
+        const avatarDisp = data[y].avatar;
 
         if (data[y].reviews === null) {
             tutorReviews = "There are no reviews yet for this tutor.";
         } else {
-            tutorReviews = `TODO: INSERT REVIEW HTML HERE FOR INJECTION`;
+            tutorReviews = `TODO: INSERT REVIEW HTML HERE FOR INJECTION tutorsteph.js, line 62`;
         };
 
         const rate = data[y].price;
@@ -56,7 +86,7 @@ const cardCreate = (data) => {
 
                 <div class="LEFT-SIDE-OF-TUTOR-CARD col-4">
 
-                    <img src="https://mdbcdn.b-cdn.net/img/new/avatars/5.webp"
+                    <img src="./assets/images/Profile-Icons/${avatarDisp}.png"
                         class="TUTOR-CHOSEN-PROFILE-IMAGE rounded-circle shadow-1-strong my-3" style="width: 100%;"
                         alt="Avatar">
 
@@ -210,4 +240,23 @@ const cardCreate = (data) => {
 
         let prefTextOk = data[y].textOk;
     }
-}
+};
+
+// Displays all tutor cards
+async function createAllTutors() {
+    const apiData = await fetch("./api/tutors");
+    var data = await apiData.json();
+    console.log(data);
+    let length = data.length;
+    console.log(length);
+    cardCreate(data);
+  }
+  
+  async function getByInstrument(instrumentChoice) {
+      instrumentChoice = instrumentList.value; 
+      const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
+      var data = await apiData.json();
+      let length = data.length;
+      cardDeck.innerHTML = "";
+      cardCreate(data);
+  }
