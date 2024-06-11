@@ -6,5 +6,18 @@
     {
         "user_id": 2,
         "instrument_id": 17
+    },
+    {
+        "user_id": 1,
+        "instrument_id": 12 
+    },
+    {
+        "user_id": 1,
+        "instrument_id": 10 
+    },
+    {
+        "user_id": 1,
+        "instrument_id": 6 
     }
+
 ]
