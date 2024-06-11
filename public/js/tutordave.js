@@ -2,6 +2,7 @@ const cardDeck = document.querySelector("#card-deck");
 const instrumentList = document.querySelector("#instrumentlist");
 const certificationList = document.querySelector("#certificationlist");
 const interestList = document.querySelector("#interestlist");
+// const instrumentChoice = document.querySelector("#instrumentlist").value; 
 
 
 // Function to dynamically populate instrument choices from available instruments in table
@@ -14,7 +15,7 @@ async function createInstrumentSearch() {
 
   for (let i = 0; i < data.length; i++) {
     const listItem = `
-        <option value="1">${data[i].instrument_name}</option>
+        <option value="${data[i].instrument_name}">${data[i].instrument_name}</option>
         `;
     instrumentList.innerHTML += listItem;
   }
@@ -77,4 +78,13 @@ async function createAllTutors() {
   let length = data.length;
   console.log(length);
   cardCreate(data);
+}
+
+async function getByInstrument(instrumentChoice) {
+    instrumentChoice = document.querySelector("#instrumentlist").value; 
+    const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
 }

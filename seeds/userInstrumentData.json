@@ -18,6 +18,10 @@
     {
         "user_id": 1,
         "instrument_id": 6 
+    },
+    {
+        "user_id": 2,
+        "instrument_id": 6
     }
 
 ]

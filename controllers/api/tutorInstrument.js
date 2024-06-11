@@ -19,7 +19,7 @@ router.get('/:id', async (req, res) => {
                 model: Instrument,
                 required: true,
                 where: {
-                    id: req.params.id
+                    instrument_name: req.params.id
                 }
             }]
         });
