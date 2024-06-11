@@ -15,6 +15,7 @@
   padding-right: calc(var(--bs-gutter-x) * 0.5);
   padding-left: calc(var(--bs-gutter-x) * 0.5);
   margin-top: var(--bs-gutter-y);
+  margin: 0.5rem;
 }
 @media (min-width: 955px) {
   .cardLayout {
@@ -22,15 +23,19 @@
     width: 50%;
   }
 }
-@media (min-width: 1400px) {
+@media (min-width: 1500px) {
   .cardLayout {
     flex: 0 0 auto;
     width: 33.33333333%;
   }
 }
-@media (min-width: 1600px) {
+@media (min-width: 1750px) {
   .cardLayout {
     flex: 0 0 auto;
     width: 25%;
   }
+}
+
+.card {
+  max-width: 450px;
 }
