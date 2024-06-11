@@ -9,19 +9,27 @@
     },
     {
         "user_id": 1,
-        "instrument_id": 12 
+        "instrument_id": 17
     },
     {
         "user_id": 1,
-        "instrument_id": 10 
+        "instrument_id": 8
     },
     {
-        "user_id": 1,
-        "instrument_id": 6 
+        "user_id": 3,
+        "instrument_id": 17
+    },
+    {
+        "user_id": 4,
+        "instrument_id": 11
+    },
+    {
+        "user_id": 4,
+        "instrument_id": 8
     },
     {
         "user_id": 2,
-        "instrument_id": 6
+        "instrument_id": 13
     }
 
 ]

@@ -1,6 +1,17 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// code to handle retrieve user by id
+router.get('/:id', async (req, res) => {
+  try{
+    const userData = await User.findOne(
+      {where: {id: req.params.id }, returning: true},
+      {include: [{ all: true, nested: true }]}
+    );
+    res.status(200).json(userData);
+  } catch (err) {res.status(500).json(err);}
+});
+
 // code to handle login and logout 
 router.post('/login', async (req, res) => {
   try {
