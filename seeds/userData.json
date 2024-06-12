@@ -27,7 +27,7 @@
     "email": "jruff@aol.com",
     "password": "password12345",
     "zipcode": "34695",
-    "role_id": 2
+    "role_id": 1
   },
   {
     "firstName": "David",
@@ -35,12 +35,36 @@
     "email": "drauf@aol.com",
     "password": "password12345",
     "zipcode": "34695",
-    "role_id": 2
+    "role_id": 1
   },
   {
     "firstName": "Pranith",
     "lastName": "Gunda",
     "email": "pranithgunda@hotmail.com",
+    "password": "password12345",
+    "zipcode": "34695",
+    "role_id": 1
+  },
+  {
+    "firstName": "Jean-Michelle",
+    "lastName": "Basquiat",
+    "email": "jmichelle@hotmail.com",
+    "password": "password12345",
+    "zipcode": "34695",
+    "role_id": 2
+  },
+  {
+    "firstName": "Hieronymus",
+    "lastName": "Bosch",
+    "email": "hbosch@hotmail.com",
+    "password": "password12345",
+    "zipcode": "34695",
+    "role_id": 2
+  },
+  {
+    "firstName": "Louis",
+    "lastName": "Wayne",
+    "email": "lwain@hotmail.com",
     "password": "password12345",
     "zipcode": "34695",
     "role_id": 2

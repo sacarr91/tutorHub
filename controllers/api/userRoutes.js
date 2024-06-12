@@ -1,6 +1,17 @@
 const router = require('express').Router();
 const { User } = require('../../models');
 
+// code to handle retrieve user by id
+router.get('/:id', async (req, res) => {
+  try{
+    const userData = await User.findOne(
+      {where: {id: req.params.id }, returning: true},
+      {include: [{ all: true, nested: true }]}
+    );
+    res.status(200).json(userData);
+  } catch (err) {res.status(500).json(err);}
+});
+
 // code to handle login and logout 
 router.post('/login', async (req, res) => {
   try {
@@ -26,7 +37,7 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
       
-      res.json({ user: userData, message: 'You are now logged in!' });
+      res.redirect('/index.html');
     });
 
   } catch (err) {

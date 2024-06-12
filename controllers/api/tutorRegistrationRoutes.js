@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { User, UserInstrument } = require('../../models');
 
 // Middleware to parse JSON and URL-encoded data
 const express = require('express');
@@ -9,7 +9,7 @@ router.use(express.urlencoded({ extended: true }));
 // Create tutor
 router.post('/', async (req, res) => {
   try {
-    await User.create({
+    const newUser = await User.create({
       salutation: req.body.salutation,
       firstName: req.body.firstName,
       lastName: req.body.lastName,
@@ -22,10 +22,30 @@ router.post('/', async (req, res) => {
       zipcode: req.body.zipcode,
       phone: req.body.phone,
     });
-    res.status(200).json({ message: `${req.body.email} has been successfully registered to TutorHub!` });
-  } catch (err) {
-    res.status(422).json({ message: "Sorry, your request could not be processed due to the following error - " + err });
-  }
+
+    // add tutor's instruments to user_instrument table
+    const instrumentIds = Array.isArray(req.body.instrument_id) ? req.body.instrument_id : [req.body.instrument_id];
+
+    const userInstrumentPromises = instrumentIds.map(instrumentId => {
+      return UserInstrument.create({
+        user_id: newUser.id,
+        instrument_id: instrumentId
+      });
+    });
+
+    await Promise.all(userInstrumentPromises);
+
+ // Set session details for the logged-in user
+ req.session.save(() => {
+  req.session.user_id = newUser.id;
+  req.session.logged_in = true;
+
+  // Redirect to index.html after successful registration and login
+  res.redirect('/index.html');
+});
+} catch (err) {
+res.status(422).json({ message: "Sorry, your request could not be processed due to the following error - " + err });
+}
 });
 
 module.exports = router;
