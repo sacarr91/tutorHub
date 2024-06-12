@@ -2,6 +2,7 @@ const cardDeck = document.querySelector("#card-deck");
 const instrumentList = document.querySelector("#instrumentlist");
 const certificationList = document.querySelector("#certificationlist");
 const interestList = document.querySelector("#interestlist");
+const locationList = document.querySelector("#locationlist");
 
 
 // Function to dynamically populate instrument choices from available instruments in table
@@ -280,6 +281,19 @@ async function getBySpecialty(specialtyChoice) {
         return false;
     }
     const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
+}
+
+async function getByLocation(locationChoice) {
+    locationChoice = locationList.value; 
+    if (locationChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
+    const apiData = await fetch(`./api/tutorLocation/${locationChoice}`);
     var data = await apiData.json();
     let length = data.length;
     cardDeck.innerHTML = "";
