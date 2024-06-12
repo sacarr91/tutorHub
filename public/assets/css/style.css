@@ -41,15 +41,14 @@ body {
   font-size: 3vh;
 }
 
-<<<<<<< HEAD
 #header a:hover {
   color: var(--clr-light);
-=======
+}
+
 #header {
-    color: var(--clr-accent1);
-    font-weight: 400;
-    font-size: 3vh;
->>>>>>> 2c2b68f04157376fd029a33de8bdeebc8311d105
+  color: var(--clr-accent1);
+  font-weight: 400;
+  font-size: 3vh;
 }
 
 .carousel-item img {
