@@ -20,6 +20,7 @@ body {
   height: 75px;
   width: 75px;
 }
+
 /* Joe added this code for cards to keep the cards all the same height */
 .card-deck {
   margin: 2em;
@@ -119,12 +120,24 @@ body {
 
 /* change mouse cursor to pointer on hover */
 .a:hover {
-  cursor: pointer;
+    cursor: pointer;
 }
 
 #header a:hover {
+<<<<<<< HEAD
   cursor: pointer;
   color: var(--clr-light);
+=======
+    cursor: pointer;
+}
+
+.tutor-detail-tabs {
+    color: var(--clr-dark);
+}
+
+.tutor-detail-tabs:hover {
+    color: var(--clr-accent1);
+>>>>>>> 5dcadd5f8116c861e965d84f4108488e9db2346e
 }
 
 .searchBar {
