@@ -11,6 +11,7 @@ const tutorSpecialty = require('./tutorSpecialty');
 const studentRegistrationRoutes = require('./studentRegistrationRoutes');
 const tutorLocation = require('./tutorLocation');
 const tutorReview = require('./tutorReviews');
+const postReview = require('./postReview');
 
 
 router.use('/users', userRoutes);
@@ -24,6 +25,7 @@ router.use('/tutorCertification', tutorCertification);
 router.use('/tutorSpecialty', tutorSpecialty);
 router.use('/studentRegistration', studentRegistrationRoutes);
 router.use('/tutorLocation', tutorLocation);
-router.use('/reviews', tutorReview)
+router.use('/reviews', tutorReview);
+router.use('/postReview', postReview);
 
 module.exports = router;
