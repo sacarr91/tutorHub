@@ -8,7 +8,7 @@ router.get('/:id', async (req, res) => {
         const tutorData = await User.findAll({
             where: { lesson_setting: req.params.id }
         });
-        res.status(200).gitjson(tutorData);
+        res.status(200).json(tutorData);
     } catch (err) {
         res.status(500).json(err);
     }

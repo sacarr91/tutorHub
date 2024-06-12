@@ -10,6 +10,7 @@ const tutorCertification = require('./tutorCertification');
 const tutorSpecialty = require('./tutorSpecialty');
 const studentRegistrationRoutes = require('./studentRegistrationRoutes');
 const tutorLocation = require('./tutorLocation');
+const tutorReview = require('./tutorReviews');
 
 
 router.use('/users', userRoutes);
@@ -22,6 +23,7 @@ router.use('/specialty', specialtyRoutes);
 router.use('/tutorCertification', tutorCertification);
 router.use('/tutorSpecialty', tutorSpecialty);
 router.use('/studentRegistration', studentRegistrationRoutes);
-router.use('/tutorLocation', tutorLocation)
+router.use('/tutorLocation', tutorLocation);
+router.use('/reviews', tutorReview)
 
 module.exports = router;
