@@ -120,24 +120,19 @@ body {
 
 /* change mouse cursor to pointer on hover */
 .a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #header a:hover {
-<<<<<<< HEAD
   cursor: pointer;
-  color: var(--clr-light);
-=======
-    cursor: pointer;
 }
 
 .tutor-detail-tabs {
-    color: var(--clr-dark);
+  color: var(--clr-dark);
 }
 
 .tutor-detail-tabs:hover {
-    color: var(--clr-accent1);
->>>>>>> 5dcadd5f8116c861e965d84f4108488e9db2346e
+  color: var(--clr-accent1);
 }
 
 .searchBar {
