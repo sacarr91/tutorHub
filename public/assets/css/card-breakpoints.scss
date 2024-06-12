@@ -1,0 +1,41 @@
+@import '../../../node_modules/bootstrap/scss/functions';
+@import '../../../node_modules/bootstrap/scss/variables';
+@import '../../../node_modules/bootstrap/scss/variables-dark';
+@import '../../../node_modules/bootstrap/scss/mixins';
+
+
+$grid-breakpoints: (
+    xs: 0,
+    sm: 955px,
+    md: 1500px,
+    lg: 1750px
+);
+
+$container-max-widths: (
+    sm: 945px,
+    md: 1480px,
+    lg: 1740px
+);
+
+.tupperware {
+    @include make-container();
+}
+
+.cardLayout {
+    @include make-col-ready();
+    
+    @include media-breakpoint-up(sm) { // 2 columns between 955px - 1499 px
+        @include make-col(6);
+    };
+    @include media-breakpoint-up(md) { // 3 columns between 1500px - 1750px
+        @include make-col(4);
+    };
+    @include media-breakpoint-up(lg) {
+        @include make-col(3);
+    };
+    margin: 0.5rem;
+}
+
+.card {
+    max-width: 450px;
+};

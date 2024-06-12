@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Google Fonts -->
+        <style>
+@import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
+        </style>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <title>Edit Your Profile</title>
+    </head>
+    <body>
+        <div id="page-container">
+            <div id="content-wrap">
+                <header id="header">
+                    <nav class="navbar navbar-expand-sm sticky-top patrick">
+                        <div class="container-fluid">
+                            <a class="navbar-brand logo" href="index.html">TutorHub</a>
+                            <a class="navbar-brand logo" href="#">Edit Your Profile</a>
+                        </div>
+                    </div>
+                    <div class="searchBar">
+                        <!-- <div>
+                            <h3>Instruments</h3>
+                        </div> -->
+                        <div class="input-group">
+                            <select
+                                name="instrument_id"
+                                class="form-select"
+                                aria-label="Default select example"
+                                id="instrumentlist"
+                            >
+                                <option selected disabled>Select an Instrument</option>
+                            </select>
+                        </div>
+                        <!-- <p>
+                            We wish to steer students in the direction of high-quality instructors on their chosen instrument. While we appreciate that the pedagogical knowledge of our tutors may extend beyond personal performance skill sets, we request that you please select ONLY the instruments on which you have teaching
+                            <i>AND</i>
+                            performing experience.
+                        </p> -->
+                    </div>
+                    <!-- <h3>Certifications & Associations</h3> -->
+                    <div class="input-group">
+                        <select
+                            name="certification_id"
+                            class="form-select"
+                            aria-label="Default select example"
+                            id="certification-list"
+                        >
+                            <option selected disabled>Select a Certification</option>
+                        </select>
+                    </div>
+                    <div class="input-group">
+                        <!-- <h3>Special Teaching Interests</h3> -->
+                        <select
+                            name="specialty_id"
+                            class="form-select"
+                            aria-label="Default select example"
+                            id="specialty-list"
+                        >
+                            <option selected disabled>Select a Specialty</option>
+                        </select>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </body>
+</html>
