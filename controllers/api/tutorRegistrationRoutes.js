@@ -35,10 +35,17 @@ router.post('/', async (req, res) => {
 
     await Promise.all(userInstrumentPromises);
 
-    res.status(200).json({ message: `${req.body.email} has been successfully registered to TutorHub!` });
-  } catch (err) {
-    res.status(422).json({ message: "Sorry, your request could not be processed due to the following error - " + err });
-  }
+ // Set session details for the logged-in user
+ req.session.save(() => {
+  req.session.user_id = newUser.id;
+  req.session.logged_in = true;
+
+  // Redirect to index.html after successful registration and login
+  res.redirect('/index.html');
+});
+} catch (err) {
+res.status(422).json({ message: "Sorry, your request could not be processed due to the following error - " + err });
+}
 });
 
 module.exports = router;
