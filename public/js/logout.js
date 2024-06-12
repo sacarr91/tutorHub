@@ -5,7 +5,8 @@ const logout = async () => {
   });
 
   if (response.ok) {
-    document.location.replace('/login');
+    document.location.replace('/index.html');
+    window.localStorage.clear();
   } else {
     alert(response.statusText);
   }
