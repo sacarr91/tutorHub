@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, UserInstrument } = require('../../models');
+const { User, UserInstrument, TutorCertification, TutorSpecialty } = require('../../models');
 
 // Middleware to parse JSON and URL-encoded data
 const express = require('express');
@@ -34,6 +34,30 @@ router.post('/', async (req, res) => {
     });
 
     await Promise.all(userInstrumentPromises);
+
+    // add tutor's certs to tutor_certification table
+    const certificationIds = Array.isArray(req.body.certification_id) ? req.body.certification_id : [req.body.certification_id];
+
+    const tutorCertificationPromises = certificationIds.map(certificationId => {
+      return TutorCertification.create({
+        user_id: newUser.id,
+        certification_id: certificationId
+      });
+    });
+
+    await Promise.all(tutorCertificationPromises);
+
+    // add tutor's specialty to tutor_specialty table
+    const specialtyIds = Array.isArray(req.body.specialty_id) ? req.body.specialty_id : [req.body.specialty_id];
+
+    const tutorSpecialtyPromises = specialtyIds.map(specialtyId => {
+      return TutorSpecialty.create({
+        user_id: newUser.id,
+        specialty_id: specialtyId
+      });
+    });
+
+    await Promise.all(tutorSpecialtyPromises);
 
  // Set session details for the logged-in user
  req.session.save(() => {

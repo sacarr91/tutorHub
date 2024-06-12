@@ -5,9 +5,9 @@ const tutorRoutes = require('./tutorRoutes');
 const instrumentRoutes = require('./instrumentRoutes');
 const specialtyRoutes = require('./specialtyRoutes');
 const certificationRoutes = require('./certificationRoutes');
-const tutorInstrument = require('./tutorInstrument');
-const tutorCertification = require('./tutorCertification');
-const tutorSpecialty = require('./tutorSpecialty');
+const tutorInstrument = require('./tutorInstrumentRoutes');
+const tutorCertification = require('./tutorCertificationRoutes');
+const tutorSpecialty = require('./tutorSpecialtyRoutes');
 const studentRegistrationRoutes = require('./studentRegistrationRoutes');
 
 
