@@ -234,11 +234,11 @@ const cardCreate = (data) => {
 
         cardDeck.innerHTML += card;
 
-        // add checked preferences
-        let dispTextOk = document.getElementById(`${tutorName}-okToText`)
-        let dispCallOk = document.getElementById(`${tutorName}-okToCall`)
+// add checked preferences... partially developed. Do we want to use this?
+        // let dispTextOk = document.getElementById(`${tutorName}-okToText`)
+        // let dispCallOk = document.getElementById(`${tutorName}-okToCall`)
 
-        let prefTextOk = data[y].textOk;
+        // let prefTextOk = data[y].textOk;
     }
 };
 
