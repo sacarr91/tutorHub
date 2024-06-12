@@ -15,6 +15,7 @@ const loginFormHandler = async (event) => {
 
     if (response.ok) {
       document.location.replace('/');
+      window.localStorage.setItem("username", JSON.stringify(email))
     } else {
       alert('Failed to log in');
     }

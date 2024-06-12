@@ -3,7 +3,7 @@ const { User, Instrument, } = require('../../models');
 
 router.get('/:id', async (req, res) => {
     try {
-        const usersWithGuitar = await User.findAll({
+        const users = await User.findAll({
             include: [{
                 model: Instrument,
                 required: true,
@@ -12,7 +12,7 @@ router.get('/:id', async (req, res) => {
                 }
             }]
         });
-        res.status(200).json(usersWithGuitar);
+        res.status(200).json(users);
     } catch (err) {
         res.status(500).json({ error: err.message });
     }
