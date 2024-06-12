@@ -8,7 +8,7 @@ const clearArea = (area) => {
 
 const replaceWithName = (name) => {
     clearArea('#loginarea');
-    loginArea.innerHTML = `${name} <button id='logout' class='ml-2'>Log Out</button>`
+    loginArea.innerHTML = `${name} <button id='logout' class='ms-2'>Log Out</button>`
 }
 
 console.log(userName)
