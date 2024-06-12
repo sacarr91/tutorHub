@@ -107,7 +107,8 @@
 }
 
 h1 {
-  font-family: "Comforter Brush", cursive;
+  font-family: "Patric Hand SC", cursive;
+  font-size: 75px;
   font-weight: 400;
   font-style: normal;
 }
@@ -120,6 +121,10 @@ h6 {
   font-family: "Patrick Hand SC", cursive;
   font-weight: 400;
   font-style: normal;
+}
+footer {
+  font-family: "Patrick Hand SC", cursive;
+  font-size: 20px;
 }
 
 .normal-text {
