@@ -39,6 +39,69 @@
         <h1 class="my-4">Tutor Account Registration</h1>
         <div class="mx-4">
           <h3>User Information</h3>
+          <div id="profile-image" class="col-3 me-5">
+            <h3>Profile Image</h3>
+            <img src="./assets/images/Profile-Icons/000.png" class="img-thumbnail mb-2"
+              id="thumbnail-preview" alt="profile image preview" width="150px">
+            <select name="profile_img" class="form-select mb-3 normal-text" id="choose-profile-image"
+              aria-label="Default select example">
+              <option selected>Choose your profile image</option>
+              <option>Bass Guitar 1</option>
+              <option>Bass Guitar 2</option>
+              <option>Bass Guitar 3</option>
+              <option>Bassoon 1</option>
+              <option>Bassoon 2</option>
+              <option>Bassoon 3</option>
+              <option>Cello 1</option>
+              <option>Cello 2</option>
+              <option>Clarinet 1</option>
+              <option>Clarinet 2</option>
+              <option>Clarinet 3</option>
+              <option>Double Bass 1</option>
+              <option>Double Bass 2</option>
+              <option>Euphonium 1</option>
+              <option>Euphonium 2</option>
+              <option>Euphonium 3</option>
+              <option>Flute 1</option>
+              <option>Flute 2</option>
+              <option>Guitar 1</option>
+              <option>Guitar 2</option>
+              <option>Guitar 3</option>
+              <option>Guitar 4</option>
+              <option>Horn 1</option>
+              <option>Horn 2</option>
+              <option>Horn 3</option>
+              <option>Oboe 1</option>
+              <option>Oboe 2</option>
+              <option>Oboe 3</option>
+              <option>Percussion 1</option>
+              <option>Percussion 2</option>
+              <option>Percussion 3</option>
+              <option>Percussion 4</option>
+              <option>Percussion 5</option>
+              <option>Piano 1</option>
+              <option>Piano 2</option>
+              <option>Piano 3</option>
+              <option>Sax 1</option>
+              <option>Sax 2</option>
+              <option>Trombone 1</option>
+              <option>Trombone 2</option>
+              <option>Trombone 3</option>
+              <option>Trumpet 1</option>
+              <option>Trumpet 2</option>
+              <option>Trumpet 3</option>
+              <option>Tuba 1</option>
+              <option>Tuba 2</option>
+              <option>Tuba 3</option>
+              <option>Viola 1</option>
+              <option>Viola 2</option>
+              <option>Violin 1</option>
+              <option>Violin 2</option>
+              <option>Woodwind 1</option>
+              <option>Woodwind 2</option>
+              <option>Woodwind 3</option>
+            </select>
+          </div>
           <h6>Name</h6>
           <div class="row">
             <div class="col-4">
@@ -106,41 +169,13 @@
             <h3 class="col-auto me-3 mb-3" id="setting-header">
               Lesson Setting Options
             </h3>
-            <div class="row col-auto" id="setting-details">
-              <div class="row">
-                <div class="row col-auto" id="checkbox-options">
-                  <div class="form-check col-auto me-2">
-                    <input name="lesson_setting" value="Student's Home" class="form-check-input" type="checkbox"  id="fiddle-folk">
-                    <label class="form-check-label normal-text" for="fiddle-folk">
-                      Student's Home
-                    </label>
-                  </div>
-                  <div class="form-check col-auto me-2">
-                    <input name="lesson_setting" value="Teachers's Studio" class="form-check-input" type="checkbox" id="flexCheckDefault">
-                    <label class="form-check-label normal-text" for="flexCheckDefault">
-                      Teacher's Studio
-                    </label>
-                  </div>
-                  <div class="form-check col-auto me-2">
-                    <input name="lesson_setting" value="Virtual" class="form-check-input" type="checkbox" id="flexCheckDefault">
-                    <label class="form-check-label normal-text" for="flexCheckDefault">
-                      Virtual
-                    </label>
-                  </div>
-                  <div class="form-check col-auto me-2">
-                    <input name="lesson_setting" value="Home or Virtual" class="form-check-input" type="checkbox" id="flexCheckDefault">
-                    <label class="form-check-label normal-text" for="flexCheckDefault">
-                      Home or Virtual
-                    </label>
-                  </div>
-                </div>
-              </div>
-                <div class="input-group col-auto" id="zipCode">
-                  <label for="zip-input" class="input-group-text patrick ">Zipcode</label>
-                  <input name="zipcode" type="zipcode" class="form-control normal-text" id="zip-input" placeholder="90210">
-                </div>
-              </div>
-            </div>
+            <select name="lesson_setting" class="form-select" aria-label="Default select example" id="lesson-setting-list">
+              <option value="">Select desired lesson setting</option>
+              <option value="Student's Home">Student's Home</option>
+              <option value="Tutor's Studio">Tutor's Studio</option>
+              <option value="Virtual">Virtual</option>
+              <option value="Studio or Virtual">Studio or Virtual</option>
+            </select>
           </div>
           <div class="row" id="contactAndSocials">
             <div class="col-5">
