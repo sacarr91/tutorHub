@@ -1,42 +1,42 @@
-@import 'fonts.css';
+@import "fonts.css";
 
 :root {
-    --clr-dark: #1b383a;
-    --clr-light: #f5f3ee;
-    --clr-accent1: #e1895d;
-    --clr-accent2: #e7cc65;
-    --bs-btn-active-border-color: #e1895d;
-    --bs-btn-active-bg: #e1895d;
-    --bs-btn-active-color: #f5f3ee;
-    --bs-body-color:#212529;
+  --clr-dark: #1b383a;
+  --clr-light: #f5f3ee;
+  --clr-accent1: #e1895d;
+  --clr-accent2: #e7cc65;
+  --bs-btn-active-border-color: #e1895d;
+  --bs-btn-active-bg: #e1895d;
+  --bs-btn-active-color: #f5f3ee;
+  --bs-body-color: #212529;
 }
 
 body {
-    background-color: var(--clr-dark);
-    color: var(--clr-light);
+  background-color: var(--clr-dark);
+  color: var(--clr-light);
 }
 
 .logo img {
-    height: 75px;
-    width: 75px;
+  height: 75px;
+  width: 75px;
 }
 /* Joe added this code for cards to keep the cards all the same height */
 .card-deck {
-    margin: 2em;
-    display: flex;
-    flex-wrap: wrap;
-    align-items: stretch;
-    justify-content: center;
+  margin: 2em;
+  display: flex;
+  flex-wrap: wrap;
+  align-items: stretch;
+  justify-content: center;
 }
 
 .card-joe {
-    flex: 1 0 auto;
+  flex: 1 0 auto;
 }
 
 #header a {
-    color: var(--clr-accent1);
-    font-weight: 400;
-    font-size: 3vh;
+  color: var(--clr-accent1);
+  font-weight: 400;
+  font-size: 3vh;
 }
 
 #header {
@@ -46,83 +46,92 @@ body {
 }
 
 .carousel-item img {
-    width: 100%
+  width: 100%;
 }
 
 .hero {
-    margin-top: 5vh;
-    margin-bottom: 5vh;
-    margin-left: 2vh;
+  margin-top: 5vh;
+  margin-bottom: 5vh;
+  margin-left: 2vh;
 }
 
 .hero img {
-    border-radius: 2%;
+  border-radius: 2%;
 }
 
 #searchArea {
-    text-align: center;
+  text-align: center;
 }
 
 .btn {
-    background-color: var(--clr-accent1);
-    color: var(--clr-light);
+  background-color: var(--clr-accent1);
+  color: var(--clr-light);
 }
 
 .input-group {
-    display: flex;
-    justify-content: center;
-    align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .cards-wrapper {
-    display: flex;
-    flex-direction: row;
-    flex-wrap: wrap;
-    justify-content: center;
-    margin: 1em;
+  display: flex;
+  flex-direction: row;
+  flex-wrap: wrap;
+  justify-content: center;
+  margin: 1em;
 }
 
 .developercard {
-    margin: 1em;
-    justify-content: center;
-    text-align: center;
+  margin: 1em;
+  justify-content: center;
+  text-align: center;
 }
 
 .developercard img {
-    border-radius: 20%;
+  border-radius: 20%;
 }
 
-.my-btn { 
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
-    border-color: transparent;
+.my-btn {
+  background-color: var(--clr-light);
+  color: var(--clr-dark);
+  border-color: transparent;
+}
+
+/* Changed the color of the find a tutor button */
+#searchArea a {
+  color: var(--clr-light);
+}
+
+/* Added a hover effect to change the color to main font color of page */
+#searchArea a:hover {
+  color: var(--clr-accent1);
 }
 
 /* modal related styles */
-.modal-header{
-    color:var(--clr-accent1);
-    background-color: var(--clr-dark);
+.modal-header {
+  color: var(--clr-accent1);
+  background-color: var(--clr-dark);
 }
 
-.modal-body{
-    color:var(--bs-body-color);
+.modal-body {
+  color: var(--bs-body-color);
 }
 
-.modal-footer{
-    color:var(--clr-accent1);
-    background-color: var(--clr-dark);
+.modal-footer {
+  color: var(--clr-accent1);
+  background-color: var(--clr-dark);
 }
 
 /* change mouse cursor to pointer on hover */
-.a:hover{
-cursor:pointer;
+.a:hover {
+  cursor: pointer;
 }
 
-#header a:hover{
-    cursor:pointer;
+#header a:hover {
+  cursor: pointer;
 }
 
 .searchBar {
-    display: flex;
-
+  display: flex;
 }
