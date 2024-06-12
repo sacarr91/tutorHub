@@ -1,16 +1,6 @@
 @import "fonts.css";
 
 :root {
-<<<<<<< HEAD
-    --clr-dark: #1b383a;
-    --clr-light: #f5f3ee;
-    --clr-accent1: #e1895d;
-    --clr-accent2: #e7cc65;
-    --bs-btn-active-border-color: #e1895d;
-    --bs-btn-active-bg: #e1895d;
-    --bs-btn-active-color: #f5f3ee;
-    --bs-body-color: #212529;
-=======
   --clr-dark: #1b383a;
   --clr-light: #f5f3ee;
   --clr-accent1: #e1895d;
@@ -19,7 +9,6 @@
   --bs-btn-active-bg: #e1895d;
   --bs-btn-active-color: #f5f3ee;
   --bs-body-color: #212529;
->>>>>>> 3f6bbc94218f3b7a4d6dd6af8618514d6757c99a
 }
 
 body {
@@ -99,11 +88,6 @@ body {
 }
 
 .my-btn {
-<<<<<<< HEAD
-    background-color: var(--clr-light);
-    color: var(--clr-dark);
-    border-color: transparent;
-=======
   background-color: var(--clr-light);
   color: var(--clr-dark);
   border-color: transparent;
@@ -117,24 +101,10 @@ body {
 /* Added a hover effect to change the color to main font color of page */
 #searchArea a:hover {
   color: var(--clr-accent1);
->>>>>>> 3f6bbc94218f3b7a4d6dd6af8618514d6757c99a
 }
 
 /* modal related styles */
 .modal-header {
-<<<<<<< HEAD
-    color: var(--clr-accent1);
-    background-color: var(--clr-dark);
-}
-
-.modal-body {
-    color: var(--bs-body-color);
-}
-
-.modal-footer {
-    color: var(--clr-accent1);
-    background-color: var(--clr-dark);
-=======
   color: var(--clr-accent1);
   background-color: var(--clr-dark);
 }
@@ -146,12 +116,10 @@ body {
 .modal-footer {
   color: var(--clr-accent1);
   background-color: var(--clr-dark);
->>>>>>> 3f6bbc94218f3b7a4d6dd6af8618514d6757c99a
 }
 
 /* change mouse cursor to pointer on hover */
 .a:hover {
-<<<<<<< HEAD
     cursor: pointer;
 }
 
@@ -165,13 +133,6 @@ body {
 
 .tutor-detail-tabs:hover {
     color: var(--clr-accent1);
-=======
-  cursor: pointer;
-}
-
-#header a:hover {
-  cursor: pointer;
->>>>>>> 3f6bbc94218f3b7a4d6dd6af8618514d6757c99a
 }
 
 .searchBar {
