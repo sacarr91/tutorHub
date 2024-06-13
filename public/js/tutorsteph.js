@@ -240,6 +240,7 @@ const cardCreate = (data) => {
         // let dispCallOk = document.getElementById(`${tutorName}-okToCall`)
 
         // let prefTextOk = data[y].textOk;
+        // let prefTextOk = data[y].textOk;
     }
 };
 

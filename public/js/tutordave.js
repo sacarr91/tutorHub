@@ -130,6 +130,7 @@ async function getByCertification(certificationChoice) {
     cardDeck.innerHTML = "";
     cardCreate(data);
 }
+
 async function getBySpecialty(specialtyChoice) {
     specialtyChoice = interestList.value; 
     if (specialtyChoice === "0"){
