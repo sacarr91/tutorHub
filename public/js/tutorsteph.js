@@ -260,3 +260,28 @@ async function createAllTutors() {
       cardDeck.innerHTML = "";
       cardCreate(data);
   }
+
+  async function getByCertification(certificationChoice) {
+    certificationChoice = certificationList.value; 
+    if (certificationChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
+    const apiData = await fetch(`./api/tutorCertification/${certificationChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
+}
+async function getBySpecialty(specialtyChoice) {
+    specialtyChoice = interestList.value; 
+    if (specialtyChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
+    const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
+}

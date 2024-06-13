@@ -1,4 +1,5 @@
 @import "fonts.css";
+@import "card-breakpoints.css";
 
 :root {
   --clr-dark: #1b383a;
@@ -35,6 +36,16 @@ body {
 }
 
 #header a {
+  color: var(--clr-accent1);
+  font-weight: 400;
+  font-size: 3vh;
+}
+
+#header a:hover {
+  color: var(--clr-light);
+}
+
+#header {
   color: var(--clr-accent1);
   font-weight: 400;
   font-size: 3vh;
@@ -120,19 +131,19 @@ body {
 
 /* change mouse cursor to pointer on hover */
 .a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 #header a:hover {
-    cursor: pointer;
+  cursor: pointer;
 }
 
 .tutor-detail-tabs {
-    color: var(--clr-dark);
+  color: var(--clr-dark);
 }
 
 .tutor-detail-tabs:hover {
-    color: var(--clr-accent1);
+  color: var(--clr-accent1);
 }
 
 .searchBar {
