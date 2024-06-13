@@ -1,5 +1,5 @@
 const router = require('express').Router();
-const { User, UserInstrument, TutorCertification, TutorSpecialty } = require('../../models');
+const { User, UserInstrument, TutorCertification, TutorSpecialty, TutorLink } = require('../../models');
 
 // Middleware to parse JSON and URL-encoded data
 const express = require('express');
@@ -64,6 +64,21 @@ router.post('/', async (req, res) => {
       });
   
       await Promise.all(tutorSpecialtyPromises);
+    }
+
+    // add tutor's link to tutor_link table only if link is provided
+    if(req.body.link) {
+      const tutorLinks = Array.isArray(req.body.link) ? req.body.link : [req.body.link];
+      const linkPlatform = req.body.platform;
+
+      const tutorLinkPromises = tutorLinks.map(tutorLink => {
+        return TutorLink.create({
+          user_id: newUser.id,
+          link: tutorLink,
+          platform: linkPlatform
+        });
+      });
+      await Promise.all(tutorLinkPromises);
     }
 
  // Set session details for the logged-in user
