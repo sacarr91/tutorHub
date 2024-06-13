@@ -1,4 +1,4 @@
-const cardDeck = document.querySelector("#card-deck");
+const cardDeck = document.querySelector("#tupperware");
 const instrumentList = document.querySelector("#instrumentlist");
 const certificationList = document.querySelector("#certificationlist");
 const interestList = document.querySelector("#interestlist");
@@ -8,7 +8,7 @@ const locationList = document.querySelector("#locationlist");
 // Function to dynamically populate instrument choices from available instruments in table
 async function createInstrumentSearch() {
     const apiData = await fetch("./api/instruments");
-    var data = await apiData.json();
+    var data = await apiData.json()
     console.log(data);
     let length = data.length;
     console.log(length);
@@ -236,10 +236,10 @@ const cardCreate = (data) => {
         cardDeck.innerHTML += card;
 
         // add checked preferences
-        let dispTextOk = document.getElementById(`${tutorName}-okToText`)
-        let dispCallOk = document.getElementById(`${tutorName}-okToCall`)
+        // let dispTextOk = document.getElementById(`${tutorName}-okToText`)
+        // let dispCallOk = document.getElementById(`${tutorName}-okToCall`)
 
-        let prefTextOk = data[y].textOk;
+        // let prefTextOk = data[y].textOk;
     }
 };
 
