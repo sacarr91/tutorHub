@@ -81,7 +81,7 @@ const cardCreate = (data) => {
         };
 
         // HTML injection
-        const card = `<div class="ACTUAL-TUTOR-CARD-WITH-MARGINS-AND-PADDING card cardLayout p-3" id="${tutorName}-card">
+        const card = `<div class="ACTUAL-TUTOR-CARD-WITH-MARGINS-AND-PADDING card card-450 cardLayout p-3" id="${tutorName}-card">
 
             <div class="CONTAINER-T0-PUT-MAIN-INFO-AND-DETAILS-COLUMNS-SIDE-BY-SIDE row">
 
