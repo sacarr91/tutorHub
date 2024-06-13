@@ -122,7 +122,8 @@ Peter Smith
 
 - [MDB](https://mdbootstrap.com/docs/standard/extended/profiles/)
 - [lleriayo](https://github.com/Ileriayo/markdown-badges)
-- [home](https://home.aveek.io/GitHub-Profile-Badges/)
+- [Home](https://home.aveek.io/GitHub-Profile-Badges/)
+- [Canva](https://www.canva.com/features/transparent-background/)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
