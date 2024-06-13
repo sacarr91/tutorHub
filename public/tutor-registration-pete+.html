@@ -160,9 +160,10 @@
             <!-- <div class="col-8"> -->
             <h2 class="brush" style="font-size: xxx-large;">Pedagogy</h2>
 
-              <h3>Primary Instrument</h3>
-              <div id="performAndTeach" class="form-text light-text mb-3">
-                For now, please select your primary instrument. You will have the option to edit your profile to add more teaching instruments after initial registration.
+            <h3>Primary Instrument</h3>
+            <div id="performAndTeach" class="form-text light-text mb-3">
+              For now, please select your primary instrument. You will have the option to edit your profile to add more
+              teaching instruments after initial registration.
               <div class="input-group">
                 <select name="instrument_id" class="form-select" aria-label="Default select example"
                   id="instrumentlist">
@@ -182,62 +183,65 @@
           </div>
           <div id="special-interests-header">
             <h3>Special Teaching Interests</h3>
-          </div>
-          <select name="specialty_id" class="form-select" aria-label="Default select example" id="specialty-list">
-            <option selected disabled>Select a Specialty</option>
-          </select>
-          <div id="price-range" class="row align-items-bottom">
-            <h3 class="col-3">
-              Price Per Lesson
-            </h3>
-            <div class="btn-group col-auto mb-3" role="group" aria-label="Basic radio toggle button group">
-              <input name="price" value="$" type="radio" class="btn-check" name="btnradio" id="$" autocomplete="off"
-                checked>
-              <label class="btn my-btn" for="$">$ ($30 or less)</label>
-              <input name="price" value="$$" type="radio" class="btn-check" name="btnradio" id="$$" autocomplete="off">
-              <label class="btn my-btn" for="$$">$$ ($35 to $55)</label>
-              <input name="price" value="$$$" type="radio" class="btn-check" name="btnradio" id="$$$"
-                autocomplete="off">
-              <label class="btn my-btn" for="$$$">$$$ ($60 to $80)</label>
-              <input name="price" value="$$$$" type="radio" class="btn-check" name="btnradio" id="$$$$"
-                autocomplete="off">
-              <label class="btn my-btn" for="$$$$">$$$$ ($85+)</label>
-            </div>
-          </div>
-          <div id="setting" class="row align-items-top mb-3">
-            <h3 class="col-auto me-3 mb-3" id="setting-header">
-              Lesson Setting Options
-            </h3>
-            <select name="lesson_setting" class="form-select" aria-label="Default select example"
-              id="lesson-setting-list">
-              <option value="">Select desired lesson setting</option>
-              <option value="Student's Home">Student's Home</option>
-              <option value="Tutor's Studio">Tutor's Studio</option>
-              <option value="Virtual">Virtual</option>
-              <option value="Studio or Virtual">Studio or Virtual</option>
-            </select>
-          </div>
-          <h3 class="col-auto me-3 mb-3">
-            Zipcode
-          </h3>
-          <div class="col-5">
-            <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code"
-              aria-label="Zip Code">
-          </div>
-          <div class="row" id="contactAndSocials">
-            <div class="col-5">
-              <h3>
-                Phone Number
-              </h3>
-              <input name="phone" type="text" class="form-control normal-text me-5" placeholder="(000) 000-0000"
-                aria-label="Text input with checkbox">
-            </div>
-            <div class="row my-4 justify-content-center" id="next">
-              <button type="submit" id="submit" value="Submit" class="btn col-6">Create Your Profile</button>
-            </div>
-          </div>
 
+            <select name="specialty_id" class="form-select" aria-label="Default select example" id="specialty-list">
+              <option selected disabled>Select a Specialty</option>
+            </select>
+            <div id="price-range" class="row align-items-bottom">
+              <h3 class="col-3">
+                Price Per Lesson
+              </h3>
+              <div class="btn-group col-auto mb-3" role="group" aria-label="Basic radio toggle button group">
+                <input name="price" value="$" type="radio" class="btn-check" name="btnradio" id="$" autocomplete="off"
+                  checked>
+                <label class="btn my-btn" for="$">$ ($30 or less)</label>
+                <input name="price" value="$$" type="radio" class="btn-check" name="btnradio" id="$$"
+                  autocomplete="off">
+                <label class="btn my-btn" for="$$">$$ ($35 to $55)</label>
+                <input name="price" value="$$$" type="radio" class="btn-check" name="btnradio" id="$$$"
+                  autocomplete="off">
+                <label class="btn my-btn" for="$$$">$$$ ($60 to $80)</label>
+                <input name="price" value="$$$$" type="radio" class="btn-check" name="btnradio" id="$$$$"
+                  autocomplete="off">
+                <label class="btn my-btn" for="$$$$">$$$$ ($85+)</label>
+              </div>
+            </div>
+            <div id="setting" class="row align-items-top mb-3">
+              <h3 class="col-3" id="setting-header">
+                Lesson Location
+              </h3>
+              <select name="lesson_setting" class="form-select" aria-label="Default select example"
+                id="lesson-setting-list">
+                <option value="">Select lesson setting</option>
+                <option value="Student's Home">✅In Person 🏠Willing to Travel to Student's Home</option>
+                <option value="Tutor's Studio">✅Teacher's Studio Only / ⛔Travel ⛔Virtual</option>
+                <option value="Virtual">✅Virtual Only / ⛔In-Person</option>
+                <option value="Studio or Virtual">✅In-Studio ✅Virtual / ⛔Travel</option>
+              </select>
+            </div>
+            <div class="ZIPCODE row">
+            <h3 class="col-3">
+              Zipcode
+            </h3>
+            <div class="col-3">
+              <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code"
+                aria-label="Zip Code">
+            </div>
           </div>
+            <div class="row" id="contactAndSocials">
+              <div class="col-5">
+                <h3>
+                  Phone Number
+                </h3>
+                <input name="phone" type="text" class="form-control normal-text me-5" placeholder="(000) 000-0000"
+                  aria-label="Text input with checkbox">
+              </div>
+              <div class="row my-4 justify-content-center" id="next">
+                <button type="submit" id="submit" value="Submit" class="btn col-6">Create Your Profile</button>
+              </div>
+            </div>
+          </div>
+        </div>
     </main>
   </form>
   <!-- Including Bootstrap JS -->
