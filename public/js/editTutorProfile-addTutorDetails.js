@@ -1,6 +1,8 @@
 const addInstrumentButton = document.getElementById('addInstrument');
 const addCertificationButton = document.getElementById('addCertification');
+const addSpecialtyButton = document.getElementById('addSpecialty');
 
+// add instrument
 addInstrumentButton.addEventListener("click", async function(){
     // pull email from local storage
     let email = localStorage.getItem('username');
@@ -24,6 +26,7 @@ addInstrumentButton.addEventListener("click", async function(){
     if(response.ok) { alert ('you have successfully added an instrument to your profile!')}
 });
 
+// add certification
 addCertificationButton.addEventListener("click", async function(){
     let email = localStorage.getItem('username');
     email = JSON.parse(email); 
@@ -40,4 +43,23 @@ addCertificationButton.addEventListener("click", async function(){
         body: JSON.stringify({ user_id: user_id, certification_id: certification_id})
     });
     if(response.ok) { alert ('you have successfully added a certification to your profile!')}
+});
+
+// add specialty
+addSpecialtyButton.addEventListener("click", async function(){
+    let email = localStorage.getItem('username');
+    email = JSON.parse(email); 
+    const apiData = await fetch(`./api/users/email/${email}`);
+    const data = await apiData.json();
+    const user_id = data.id;
+
+    const specialty_id = document.getElementById('specialty-list').value;
+    const response = await fetch('./api/tutorSpecialty', {
+        method: 'POST',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({ user_id: user_id, specialty_id: specialty_id})
+    });
+    if(response.ok) { alert ('you have successfully added a specialty to your profile!')}
 });
