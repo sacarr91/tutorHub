@@ -30,5 +30,15 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+router.post('/', async(req, res) => {
+    try {
+        await UserInstrument.create({
+        user_id: req.body.user_id,
+        instrument_id: req.body.instrument_id,
+        });
+        res.status(200).json({ message: `a new instrument has been successfully added to your profile!` })
+    } catch (err) {res.status(500).json(err)}
+});
+
 module.exports = router;
 
