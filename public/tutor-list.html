@@ -18,36 +18,7 @@
         <div id="page-container">
             <div id="content-wrap">
         <!-- Updated Nav Bar with links to home page and developer pages -->
-        <nav class="navbar navbar-expand-sm navbar-light bg-light">
-            <div class="container-fluid">
-                <a class="navbar-brand" href="javascript:void(0)">The Crescendos</a>
-                <button
-                    class="navbar-toggler"
-                    type="button"
-                    data-bs-toggle="collapse"
-                    data-bs-target="#mynavbar"
-                >
-                    <span class="navbar-toggler-icon"></span>
-                </button>
-                <div class="collapse navbar-collapse" id="mynavbar">
-                    <ul class="navbar-nav me-auto">
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Home</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Tutor Search</a>
-                        </li>
-                        <li class="nav-item">
-                            <a class="nav-link" href="javascript:void(0)">Our Developers</a>
-                        </li>
-                    </ul>
-                    <div class="d-flex">
-                        <button type="button" class="badge rounded-pill mr-2 bg-info border border-white">Login</button>
-                        <button type="button" class="badge rounded-pill bg-danger border border-white">Register</button>
-                    </div>
-                </div>
-            </div>
-        </nav>
+        <header id="header"></header>
 
         <button id="get-tutors" action="/api/tutors" method="GET">Push</button>
         <!-- Container to hold cards that will display each individual tutor -->
@@ -389,7 +360,8 @@
                 </div>
                 <!-- Footer goes here -->
                 <footer></footer>
-                <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="./js/nav.js"></script>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
                 <script src="./js/tutordave.js"></script>
             </body>
         </html>
