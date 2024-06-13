@@ -8,7 +8,7 @@
         <li><a href="#description">Description</a></li>
         <li><a href="#languages">Languages</a></li>
         <li><a href="#usage">Usage</a></li>
-        <li><a href="#keyfeatures">Key Features</a></li>
+        <li><a href="#key-features">Key Features</a></li>
         <li><a href="#acknowledgements">Acknowledgements</a></li>
         <li><a href="#license">License</a></li>
     </ul>
