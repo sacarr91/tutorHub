@@ -4,9 +4,10 @@ const { User, Instrument, UserInstrument } = require('../../models');
 // get all tutor_instrument records
 router.get('/', async(req, res) => {
     try {
-        const tutorInstrumentData = await UserInstrument.findAll(
+       const tutorInstrumentData = await UserInstrument.findAll(
             {include: [{ all: true, nested: true }]}
-        )
+        );
+        res.status(200).json((tutorInstrumentData));
     } catch (err) {res.status(500).json(err)}
 });
 
@@ -30,6 +31,7 @@ router.get('/:id', async (req, res) => {
     }
 });
 
+// add records to the user_instrument table
 router.post('/', async(req, res) => {
     try {
         await UserInstrument.create({
@@ -37,7 +39,7 @@ router.post('/', async(req, res) => {
         instrument_id: req.body.instrument_id,
         });
         res.status(200).json({ message: `a new instrument has been successfully added to your profile!` })
-    } catch (err) {res.status(500).json(err)}
+    } catch (err) { res.status(500).json(err);}
 });
 
 module.exports = router;
