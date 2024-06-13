@@ -1,0 +1,27 @@
+[
+    {
+        "user_id": 1,
+        "student_id": 2,
+        "review": "Best teacher ever, highly recommended!!"
+    },
+    {
+        "user_id": 2,
+        "student_id": 1,
+        "review": "HATED THEM!!!"
+    },
+    {
+        "user_id": 1,
+        "student_id": 2,
+        "review": "LOVED IT"
+    },
+    {
+        "user_id": 2,
+        "student_id": 1,
+        "review": "Favorite tutor!"
+    },
+    {
+        "user_id": 3,
+        "student_id": 1,
+        "review": "Best teacher ever, highly recommended!!"
+    }
+]

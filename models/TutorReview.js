@@ -2,9 +2,9 @@ const { Model, DataTypes } = require('sequelize');
 
 const sequelize = require('../config/connection');
 
-class UserInstrument extends Model {}
+class TutorReview extends Model {}
 
-UserInstrument.init(
+TutorReview.init(
   {
     id: {
       type: DataTypes.INTEGER,
@@ -14,28 +14,32 @@ UserInstrument.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
-      allowNull: false,
       references: {
         model: 'user',
-        key: 'id'
-      },
-    },
-    instrument_id: {
-      type: DataTypes.INTEGER,
-      allowNull: false,
-      references: {
-        model: 'instrument',
         key: 'id',
       },
+      allowNull: false,
     },
+    student_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'user',
+          key: 'id',
+    },
+    allowNull: false
+},
+    review: {
+      type: DataTypes.STRING,
+      allowNull: false,
+    }
   },
   {
     sequelize,
     timestamps: false,
     freezeTableName: true,
     underscored: true,
-    modelName: 'user_instrument',
+    modelName: 'tutor_review',
   }
 );
 
-module.exports = UserInstrument;
+module.exports = TutorReview;

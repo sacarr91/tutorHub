@@ -1,24 +1,20 @@
 const router = require('express').Router();
-const { User } = require('../../models');
+const { TutorReview } = require('../../models');
 
 // Middleware to parse JSON and URL-encoded data
 const express = require('express');
 router.use(express.json());
 router.use(express.urlencoded({ extended: true }));
 
-// Create tutor
+// Create review
 router.post('/', async (req, res) => {
   try {
-    await User.create({
-      salutation: req.body.salutation,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      password: req.body.password,
-      profile_img: req.body.profile_img,
-      role_id: 2,
+    await TutorReview.create({
+      user_id: req.body.user_id,
+      student_id: req.body.student_id,
+      review: req.body.review,
     });
-    res.redirect('/index.html');
+    res.redirect('/tutordave.html');
   } catch (err) {
     res.status(422).json({ message: "Sorry, your request could not be processed due to the following error - " + err });
   }
