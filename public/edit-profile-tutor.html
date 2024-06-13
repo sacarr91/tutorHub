@@ -97,7 +97,7 @@
             <div class="row">
                 <div class="col-3">
                     <select name="salutation" id="salutation" class="form-select normal-text" aria-label="Default select example">
-                        <option selected>Salutation</option>
+                        <option></option>
                         <option value="Miss">Miss</option>
                         <option value="Ms.">Ms.</option>
                         <option value="Mrs.">Mrs.</option>
@@ -168,7 +168,7 @@
                         <option selected disabled>Select an Instrument</option>
                       </select>
                       <div>
-                        <button class="btn col-16" type="button">Add Instrument!</button>
+                        <button id="addInstrument" class="btn col-16" type="button">Add Instrument!</button>
                       </div>
                       </div> 
                 <div id="Certifications-header">
@@ -179,7 +179,7 @@
                     <option selected disabled>Select a Certification</option>
                   </select>
                   <div>
-                    <button class="btn col-16" type="button">Add Certification!</button>
+                    <button id="addCertification" class="btn col-16" type="button">Add Certification!</button>
                   </div>
                   </div>
                   <div id="special-interests-header">
@@ -190,16 +190,33 @@
                         <option selected disabled>Select a Specialty</option>
                       </select>
                       <div>
-                        <button class="btn col-16" type="button">Add Specialty!</button>
+                        <button id="addSpecialty" class="btn col-16" type="button">Add Specialty!</button>
                       </div>
                   </div>
                   
+                </div>
+                <h3>Website & Socials</h3>
+                <div class="input-group mb-1">
+                  <select name="platform" class="form-select normal-text" id="platform" aria-label="Default select example">
+                    <option selected></option>
+                    <option value="Website">Website</option>
+                    <option value="Facebook">Facebook</option>
+                    <option value="Instagram">Instagram</option>
+                    <option value="TikTok">TikTok</option>
+                    <option value="YouTube">YouTube</option>
+                    <option value="Other">Other</option> 
+                    <input name="link" id="link" type="text" class="form-control normal-text" placeholder="Link to Page"
+                      aria-label="Text input with dropdown button">
+                      <div>
+                        <button id="addLink" class="btn col-16" type="button">Add Link!</button>
+                      </div>
                 </div>
         <div class="row my-4 justify-content-center" id="next">
             <button type="submit" id="submit" value="Submit" class="btn col-16">Update Your Info</button>
           </div>
         <script src="./js/choose-image.js"></script>
         <script src="./js/pullListData.js"></script>
+        <script src="./js/editTutorProfile-addTutorDetails.js"></script>
         <script>pullInstrumentData();</script>
         <script>pullCertData();</script>
          <script>pullSpecialtyData();</script>
