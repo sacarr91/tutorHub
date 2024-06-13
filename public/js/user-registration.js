@@ -18,7 +18,7 @@ function findUserAccountType() {
 
 function redirectUserForAccountCreation() {
     if (selectedAccountType === "") {
-        window.alert("Please enter all fields")
+        window.alert("Please choose an account type.")
     } else {
         // If userinfo is present, redirect the user based on Account Type
         if (selectedAccountType === "tutor") {
