@@ -1,13 +1,14 @@
-const cardDeck = document.querySelector("#card-deck");
+const cardDeck = document.querySelector("#tupperware");
 const instrumentList = document.querySelector("#instrumentlist");
 const certificationList = document.querySelector("#certificationlist");
 const interestList = document.querySelector("#interestlist");
+const locationList = document.querySelector("#locationlist");
 
 
 // Function to dynamically populate instrument choices from available instruments in table
 async function createInstrumentSearch() {
     const apiData = await fetch("./api/instruments");
-    var data = await apiData.json();
+    var data = await apiData.json()
     console.log(data);
     let length = data.length;
     console.log(length);
@@ -80,7 +81,7 @@ const cardCreate = (data) => {
         };
 
         // HTML injection
-        const card = `<div class="ACTUAL-TUTOR-CARD-WITH-MARGINS-AND-PADDING card cardLayout p-3" id="${tutorName}-card">
+        const card = `<div class="ACTUAL-TUTOR-CARD-WITH-MARGINS-AND-PADDING card card-450 cardLayout p-3" id="${tutorName}-card">
 
             <div class="CONTAINER-T0-PUT-MAIN-INFO-AND-DETAILS-COLUMNS-SIDE-BY-SIDE row">
 
@@ -235,10 +236,11 @@ const cardCreate = (data) => {
         cardDeck.innerHTML += card;
 
         // add checked preferences
-        let dispTextOk = document.getElementById(`${tutorName}-okToText`)
-        let dispCallOk = document.getElementById(`${tutorName}-okToCall`)
+        // let dispTextOk = document.getElementById(`${tutorName}-okToText`)
+        // let dispCallOk = document.getElementById(`${tutorName}-okToCall`)
 
-        let prefTextOk = data[y].textOk;
+        // let prefTextOk = data[y].textOk;
+        // let prefTextOk = data[y].textOk;
     }
 };
 
@@ -280,6 +282,19 @@ async function getBySpecialty(specialtyChoice) {
         return false;
     }
     const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
+    var data = await apiData.json();
+    let length = data.length;
+    cardDeck.innerHTML = "";
+    cardCreate(data);
+}
+
+async function getByLocation(locationChoice) {
+    locationChoice = locationList.value; 
+    if (locationChoice === "0"){
+        alert("Please choose an option to search");
+        return false;
+    }
+    const apiData = await fetch(`./api/tutorLocation/${locationChoice}`);
     var data = await apiData.json();
     let length = data.length;
     cardDeck.innerHTML = "";
