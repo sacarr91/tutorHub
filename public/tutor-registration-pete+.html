@@ -39,8 +39,97 @@
         <h1 class="my-4">Tutor Account Registration</h1>
         <div class="mx-4">
           <h3>User Information</h3>
+          <div id="profile-image" class="col-3 me-5">
+            <h3>Profile Image</h3>
+            <img src="./assets/images/Profile-Icons/000.png" class="img-thumbnail mb-2"
+              id="thumbnail-preview" alt="profile image preview" width="150px">
+            <select name="profile_img" class="form-select mb-3 normal-text" id="choose-profile-image"
+              aria-label="Default select example">
+              <option selected>Choose your profile image</option>
+              <option>Bass Guitar 1</option>
+              <option>Bass Guitar 2</option>
+              <option>Bass Guitar 3</option>
+              <option>Bassoon 1</option>
+              <option>Bassoon 2</option>
+              <option>Bassoon 3</option>
+              <option>Cello 1</option>
+              <option>Cello 2</option>
+              <option>Clarinet 1</option>
+              <option>Clarinet 2</option>
+              <option>Clarinet 3</option>
+              <option>Double Bass 1</option>
+              <option>Double Bass 2</option>
+              <option>Euphonium 1</option>
+              <option>Euphonium 2</option>
+              <option>Euphonium 3</option>
+              <option>Flute 1</option>
+              <option>Flute 2</option>
+              <option>Guitar 1</option>
+              <option>Guitar 2</option>
+              <option>Guitar 3</option>
+              <option>Guitar 4</option>
+              <option>Horn 1</option>
+              <option>Horn 2</option>
+              <option>Horn 3</option>
+              <option>Oboe 1</option>
+              <option>Oboe 2</option>
+              <option>Oboe 3</option>
+              <option>Percussion 1</option>
+              <option>Percussion 2</option>
+              <option>Percussion 3</option>
+              <option>Percussion 4</option>
+              <option>Percussion 5</option>
+              <option>Piano 1</option>
+              <option>Piano 2</option>
+              <option>Piano 3</option>
+              <option>Sax 1</option>
+              <option>Sax 2</option>
+              <option>Trombone 1</option>
+              <option>Trombone 2</option>
+              <option>Trombone 3</option>
+              <option>Trumpet 1</option>
+              <option>Trumpet 2</option>
+              <option>Trumpet 3</option>
+              <option>Tuba 1</option>
+              <option>Tuba 2</option>
+              <option>Tuba 3</option>
+              <option>Viola 1</option>
+              <option>Viola 2</option>
+              <option>Violin 1</option>
+              <option>Violin 2</option>
+              <option>Woodwind 1</option>
+              <option>Woodwind 2</option>
+              <option>Woodwind 3</option>
+            </select>
+          </div>
           <h6>Name</h6>
           <div class="row">
+            <div class="col-3">
+              <select name="salutation" id="salutation" class="form-select normal-text" aria-label="Default select example">
+                <option selected>Salutation</option>
+                <option value="Miss">Miss</option>
+                <option value="Ms.">Ms.</option>
+                <option value="Mrs.">Mrs.</option>
+                <option value="Mr.">Mr.</option>
+                <option value="Mx.">Mx.</option>
+                <option value="Dr.">Dr.</option>
+                <option value="Prof.">Prof.</option>
+                <option value="Hon.">Hon.</option>
+                <option value="Lord">Lord</option>
+                <option value="Lady">Lady</option>
+                <option value="Sir">Sir</option>
+                <option value="Dame">Dame</option>
+                <option value="Col.">Col.</option>
+                <option value="Maj.">Maj.</option>
+                <option value="Lt.">Lt.</option>
+                <option value="Sgt.">Sgt.</option>
+                <option value="Dep.">Dep.</option>
+                <option value="Cap.">Cap.</option>
+                <option value="Pres.">Pres.</option>
+                <option value="Adm.">Adm.</option>
+                <option value="HRH">HRH</option>
+              </select>
+            </div>
             <div class="col-4">
               <input type="text" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name">
             </div>
@@ -68,11 +157,25 @@
               </div>
               <div class="input-group">
                 <select name="instrument_id" class="form-select" aria-label="Default select example" id="instrumentlist">
-                  <option selected disabled>Add an Instrument</option>
+                  <option selected disabled>Select an Instrument</option>
                 </select>
                 </div>
             </div>
           </div>  
+          <div id="Certifications-header">
+            <h3>Certifications & Associations</h3>
+          </div>
+          <div class="input-group">
+            <select name="certification_id" class="form-select" aria-label="Default select example" id="certification-list">
+              <option selected disabled>Select a Certification</option>
+            </select>
+            </div>
+            <div id="special-interests-header">
+              <h3>Special Teaching Interests</h3>
+            </div>
+            <select name="specialty_id" class="form-select" aria-label="Default select example" id="specialty-list">
+              <option selected disabled>Select a Specialty</option>
+            </select>
           <div id="price-range" class="row align-items-bottom">
             <h3 class="col-3">
               Price Per Lesson
@@ -92,41 +195,19 @@
             <h3 class="col-auto me-3 mb-3" id="setting-header">
               Lesson Setting Options
             </h3>
-            <div class="row col-auto" id="setting-details">
-              <div class="row">
-                <div class="row col-auto" id="checkbox-options">
-                  <div class="form-check col-auto me-2">
-                    <input name="lesson_setting" value="Student's Home" class="form-check-input" type="checkbox"  id="fiddle-folk">
-                    <label class="form-check-label normal-text" for="fiddle-folk">
-                      Student's Home
-                    </label>
-                  </div>
-                  <div class="form-check col-auto me-2">
-                    <input name="lesson_setting" value="Teachers's Studio" class="form-check-input" type="checkbox" id="flexCheckDefault">
-                    <label class="form-check-label normal-text" for="flexCheckDefault">
-                      Teacher's Studio
-                    </label>
-                  </div>
-                  <div class="form-check col-auto me-2">
-                    <input name="lesson_setting" value="Virtual" class="form-check-input" type="checkbox" id="flexCheckDefault">
-                    <label class="form-check-label normal-text" for="flexCheckDefault">
-                      Virtual
-                    </label>
-                  </div>
-                  <div class="form-check col-auto me-2">
-                    <input name="lesson_setting" value="Home or Virtual" class="form-check-input" type="checkbox" id="flexCheckDefault">
-                    <label class="form-check-label normal-text" for="flexCheckDefault">
-                      Home or Virtual
-                    </label>
-                  </div>
-                </div>
-              </div>
-                <div class="input-group col-auto" id="zipCode">
-                  <label for="zip-input" class="input-group-text patrick ">Zipcode</label>
-                  <input name="zipcode" type="zipcode" class="form-control normal-text" id="zip-input" placeholder="90210">
-                </div>
-              </div>
-            </div>
+            <select name="lesson_setting" class="form-select" aria-label="Default select example" id="lesson-setting-list">
+              <option value="">Select desired lesson setting</option>
+              <option value="Student's Home">Student's Home</option>
+              <option value="Tutor's Studio">Tutor's Studio</option>
+              <option value="Virtual">Virtual</option>
+              <option value="Studio or Virtual">Studio or Virtual</option>
+            </select>
+          </div>
+          <h3 class="col-auto me-3 mb-3">
+            Zipcode
+          </h3>
+          <div class="col-5">
+            <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
           </div>
           <div class="row" id="contactAndSocials">
             <div class="col-5">
@@ -145,7 +226,9 @@
   <!-- Including Bootstrap JS -->
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
   <script src="./js/choose-image.js"></script>
-  <script src="./js/tutordave+.js"></script>
-  <script>createInstrumentSearch();</script>
+  <script src="./js/pullListData.js"></script>
+  <script>pullInstrumentData();</script>
+  <script>pullCertData();</script>
+  <script>pullSpecialtyData();</script>
 </body>
 </html>

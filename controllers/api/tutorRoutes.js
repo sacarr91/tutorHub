@@ -15,7 +15,7 @@ router.get('/', async (req, res) => {
     }
 });
 
-// get by instrument id
+// get tutor by instrument id
 router.get('/:instrumentId', async (req, res) => {
     const instrumentId = req.params.instrumentId;
 

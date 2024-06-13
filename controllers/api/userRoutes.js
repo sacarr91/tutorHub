@@ -12,6 +12,19 @@ router.get('/:id', async (req, res) => {
   } catch (err) {res.status(500).json(err);}
 });
 
+// code to handle retrieve user by email
+router.get('/email/:email', async (req, res) => {
+  try {
+      const userData = await User.findOne({
+          where: { email: req.params.email },
+          include: [{ all: true, nested: true }]
+      });
+      res.status(200).json(userData);
+  } catch (err) {
+      res.status(500).json(err);
+  }
+});
+
 // code to handle login and logout 
 router.post('/login', async (req, res) => {
   try {
