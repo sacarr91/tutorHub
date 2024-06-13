@@ -14,6 +14,7 @@ TutorCertification.init(
     },
     user_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'user',
         key: 'id'
@@ -21,6 +22,7 @@ TutorCertification.init(
     },
     certification_id: {
       type: DataTypes.INTEGER,
+      allowNull: false,
       references: {
         model: 'certification',
         key: 'id',

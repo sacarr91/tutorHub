@@ -7,6 +7,7 @@ const TutorCertification = require('./TutorCertification');
 const Specialty = require('./Specialty');
 const TutorSpecialty = require('./TutorSpecialty');
 const TutorLink = require('./TutorLink');
+const TutorReview = require('./TutorReview');
 
 User.belongsTo(Role, {
     foreignKey: 'role_id'
@@ -50,5 +51,9 @@ User.hasMany(TutorLink, {
     foreignKey: "user_id"
 });
 
-module.exports = { User, Role, Instrument, UserInstrument, Certification, TutorCertification, Specialty, TutorSpecialty, TutorLink };
+User.hasMany(TutorReview, {
+    foreignKey: "user_id"
+});
+
+module.exports = { User, Role, Instrument, UserInstrument, Certification, TutorCertification, Specialty, TutorSpecialty, TutorLink, TutorReview };
 
