@@ -1,6 +1,18 @@
 const router = require('express').Router();
-const { User, Instrument, } = require('../../models');
+const { User, Instrument, UserInstrument } = require('../../models');
 
+// get all tutor_instrument records
+router.get('/', async(req, res) => {
+    try {
+        const tutorInstrumentData = await UserInstrument.findAll(
+            {include: [{ all: true, nested: true }]}
+        )
+    } catch (err) {res.status(500).json(err)}
+});
+
+
+
+// get tutor_instrument table records by instrument id
 router.get('/:id', async (req, res) => {
     try {
         const users = await User.findAll({
