@@ -19,20 +19,7 @@
 <body>
   <!-- Sticky Header -->
   <header id="header">
-    <nav class="navbar navbar-expand-sm sticky-top patrick">
-      <div class="container-fluid">
-        <a class="navbar-brand brush" href="index.html">TutorHub </a>
-        <!-- Login -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="user-registration-pg1.html">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+   
   </header>
   <form id="registration-form" action="/api/studentRegistration" method="POST">
   <main class="row justify-content-center normal-text">
@@ -44,7 +31,7 @@
           <h6>Name</h6>
           <div class="row">
             <div class="col-2">
-              <select name="salutation" id="salutation" class="form-select normal-text" aria-label="Default select example">
+              <select name="salutation" id="salutation" class="form-select normal-text" aria-label="Default select example" required>
                 <option></option>
                 <option value="Miss">Miss</option>
                 <option value="Ms.">Ms.</option>
@@ -70,19 +57,19 @@
               </select>
             </div>
             <div class="col-4">
-              <input type="text" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name">
+              <input type="text" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name" required>
             </div>
             <div class="col-4 mb-2">
-              <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name">
+              <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name" required>
             </div>
             <div class="col-2">
-              <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
+              <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code" required>
             </div>
           </div>
           <label for="email-input" class="form-label patrick">Email address <i>(will be your username)</i></label>
-          <input name="email" type="email" class="form-control mb-2 normal-text" id="email-input" placeholder="name@example.com">
+          <input name="email" type="email" class="form-control mb-2 normal-text" id="email-input" placeholder="name@example.com" required>
           <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
-          <input name="password"type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+          <input name="password"type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
           <div id="passwordHelpBlock" class="form-text mb-3">
             Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces,
             special
@@ -188,7 +175,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous">
     </script>
-  <script src="./js/choose-image.js"></script>
+        <script src="./js/nav.js"></script>
+        <script src="./js/choose-image.js"></script>
 </body>
 
 </html>
