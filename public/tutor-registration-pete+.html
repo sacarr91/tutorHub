@@ -1,260 +1,359 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="imageviewport" content="width=device-width, initial-scale=1.0">
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <!-- Google Fonts -->
-  <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="imageviewport" content="width=device-width, initial-scale=1.0">
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Google Fonts -->
+        <style>
     @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
-  </style>
-  <link rel="stylesheet" href="./assets/css/style.css" />
-  <title>New Tutor Account</title>
-</head>
-
-<body>
-  <!-- Sticky Header -->
-  <header id="header">
-    <nav class="navbar navbar-expand-sm sticky-top patrick">
-      <div class="container-fluid">
-        <a class="navbar-brand brush" href="index.html">TutorHub </a>
-        <!-- Login -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="user-registration-pg1.html">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
-  </header>
-
-
-  <!-- form -->
-  <form id="registration-form" action="/api/tutorRegistration" method="POST">
-    <main class="row justify-content-center normal-text">
-      <div class="card col-10" style="margin:2%">
-        <h1 class="my-4 brush">Tutor Account Registration</h1>
-        <div class="mx-4 row">
-          <div id="profile-image" class="col-3">
-            <h2>Profile Image</h2>
-            <img src="./assets/images/Profile-Icons/000.png" class="img-thumbnail mb-2" id="thumbnail-preview"
-              alt="profile image preview" width="col-3">
-            <select name="profile_img" class="form-select mb-3 normal-text" id="choose-profile-image"
-              aria-label="Default select example">
-              <option selected>Choose your profile image</option>
-              <option>Bass Guitar 1</option>
-              <option>Bass Guitar 2</option>
-              <option>Bass Guitar 3</option>
-              <option>Bassoon 1</option>
-              <option>Bassoon 2</option>
-              <option>Bassoon 3</option>
-              <option>Cello 1</option>
-              <option>Cello 2</option>
-              <option>Clarinet 1</option>
-              <option>Clarinet 2</option>
-              <option>Clarinet 3</option>
-              <option>Double Bass 1</option>
-              <option>Double Bass 2</option>
-              <option>Euphonium 1</option>
-              <option>Euphonium 2</option>
-              <option>Euphonium 3</option>
-              <option>Flute 1</option>
-              <option>Flute 2</option>
-              <option>Guitar 1</option>
-              <option>Guitar 2</option>
-              <option>Guitar 3</option>
-              <option>Guitar 4</option>
-              <option>Horn 1</option>
-              <option>Horn 2</option>
-              <option>Horn 3</option>
-              <option>Oboe 1</option>
-              <option>Oboe 2</option>
-              <option>Oboe 3</option>
-              <option>Percussion 1</option>
-              <option>Percussion 2</option>
-              <option>Percussion 3</option>
-              <option>Percussion 4</option>
-              <option>Percussion 5</option>
-              <option>Piano 1</option>
-              <option>Piano 2</option>
-              <option>Piano 3</option>
-              <option>Sax 1</option>
-              <option>Sax 2</option>
-              <option>Trombone 1</option>
-              <option>Trombone 2</option>
-              <option>Trombone 3</option>
-              <option>Trumpet 1</option>
-              <option>Trumpet 2</option>
-              <option>Trumpet 3</option>
-              <option>Tuba 1</option>
-              <option>Tuba 2</option>
-              <option>Tuba 3</option>
-              <option>Viola 1</option>
-              <option>Viola 2</option>
-              <option>Violin 1</option>
-              <option>Violin 2</option>
-              <option>Woodwind 1</option>
-              <option>Woodwind 2</option>
-              <option>Woodwind 3</option>
-            </select>
-          </div>
-          <div class="USER-INFORMATION-nameEmailPassword col-9">
-            <h2>User Information</h2>
-            <h5>Name</h5>
-            <div class="row">
-              <div class="col-3">
-                <select name="salutation" id="salutation" class="form-select normal-text"
-                  aria-label="Default select example">
-                  <option selected>Salutation</option>
-                  <option value="Miss">Miss</option>
-                  <option value="Ms.">Ms.</option>
-                  <option value="Mrs.">Mrs.</option>
-                  <option value="Mr.">Mr.</option>
-                  <option value="Mx.">Mx.</option>
-                  <option value="Dr.">Dr.</option>
-                  <option value="Prof.">Prof.</option>
-                  <option value="Hon.">Hon.</option>
-                  <option value="Lord">Lord</option>
-                  <option value="Lady">Lady</option>
-                  <option value="Sir">Sir</option>
-                  <option value="Dame">Dame</option>
-                  <option value="Col.">Col.</option>
-                  <option value="Maj.">Maj.</option>
-                  <option value="Lt.">Lt.</option>
-                  <option value="Sgt.">Sgt.</option>
-                  <option value="Dep.">Dep.</option>
-                  <option value="Cap.">Cap.</option>
-                  <option value="Pres.">Pres.</option>
-                  <option value="Adm.">Adm.</option>
-                  <option value="HRH">HRH</option>
-                </select>
-              </div>
-              <div class="col-4">
-                <input type="text" name="firstName" class="form-control normal-text" placeholder="First name"
-                  aria-label="First name">
-              </div>
-              <div class="col-5 mb-3">
-                <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name"
-                  aria-label="Last name">
-              </div>
-            </div>
-            <label for="email-input" class="form-label patrick h5">Email address <i>(will be your username)</i></label>
-            <input name="email" type="email" class="form-control mb-3 normal-text" id="email-input"
-              placeholder="name@example.com">
-            <label for="inputPassword5" class="form-label patrick h5">Choose a Password</label>
-            <input name="password" type="password" id="inputPassword5" class="form-control"
-              aria-describedby="passwordHelpBlock">
-            <div id="passwordHelpBlock" class="form-text mb-3">
-              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
-            </div>
-          </div>
-          <div class="row">
-            <!-- <div class="col-8"> -->
-            <h2 class="brush" style="font-size: xxx-large;">Pedagogy</h2>
-            <div>
-              <h3 class="mb-0">Primary Instrument</h3>
-              <div id="performAndTeach" class="form-text light-text mt-0">
-                For now, please select your primary instrument. You will have the option to edit your profile to add more teaching instruments after initial registration.
-                <div class="input-group">
-                  <select name="instrument_id" class="form-select text-muted mt-1 mb-3" aria-label="Default select example"
-                    id="instrumentlist">
-                    <option selected disabled>Select an Instrument</option>
-                  </select>
+        </style>
+        <link rel="stylesheet" href="./assets/css/style.css">
+        <link rel="stylesheet" href="./assets/css/fonts.css">
+        <title>New Tutor Account</title>
+    </head>
+    <body>
+        <!-- Sticky Header -->
+        <header id="header">
+            <nav class="navbar navbar-expand-sm sticky-top patrick">
+                <div class="container-fluid">
+                    <a class="navbar-brand logo" href="index.html">TutorHub</a>
+                    <!-- Login -->
+                    <ul class="navbar-nav">
+                        <li class="nav-item">
+                            <a class="nav-link" href="user-registration-pg1.html">Register</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" href="login.html">Login</a>
+                        </li>
+                    </ul>
                 </div>
-              </div>
-            </div>
-          </div>
-          <div id="Certifications-header">
-            <h3>Certifications & Associations<i class="text-muted"> optional</i></h3>
-          </div>
-          <div class="input-group">
-            <select name="certification_id" class="form-select text-muted mb-3" aria-label="Default select example"
-              id="certification-list">
-              <option selected disabled>Add a Certification</option>
-            </select>
-          </div>
-          <div id="special-interests-header">
-            <h3>Special Teaching Interests<i class="text-muted"> optional</i></h3>
-
-            <select name="specialty_id" class="form-select text-muted mb-3" aria-label="Default select example"
-              id="specialty-list">
-              <option selected disabled>Select a Specialty</option>
-            </select>
-            <div id="price-range" class="row align-items-bottom">
-              <h3 class="col-auto">
-                Price Per Lesson
-              </h3>
-              <div class="btn-group col-auto mb-3" role="group" aria-label="Basic radio toggle button group">
-                <input name="price" value="$" type="radio" class="btn-check" name="btnradio" id="$" autocomplete="off"
-                  checked>
-                <label class="btn my-btn" for="$">$ ($30 or less)</label>
-                <input name="price" value="$$" type="radio" class="btn-check" name="btnradio" id="$$"
-                  autocomplete="off">
-                <label class="btn my-btn" for="$$">$$ ($35 to $55)</label>
-                <input name="price" value="$$$" type="radio" class="btn-check" name="btnradio" id="$$$"
-                  autocomplete="off">
-                <label class="btn my-btn" for="$$$">$$$ ($60 to $80)</label>
-                <input name="price" value="$$$$" type="radio" class="btn-check" name="btnradio" id="$$$$"
-                  autocomplete="off">
-                <label class="btn my-btn" for="$$$$">$$$$ ($85+)</label>
-              </div>
-            </div>
-            <div id="setting">
-              <h3 class="col-5" id="setting-header">
-                Lesson Location
-              </h3>
-              <select name="lesson_setting" class="form-select text-muted mb-3" aria-label="Default select example"
-                id="lesson-setting-list">
-                <option value="">Select lesson setting</option>
-                <option value="Student's Home">✅In Person 🏠Willing to Travel to Student's Home</option>
-                <option value="Tutor's Studio">✅Teacher's Studio Only / ⛔Travel ⛔Virtual</option>
-                <option value="Virtual">✅Virtual Only / ⛔In-Person</option>
-                <option value="Studio or Virtual">✅In-Studio ✅Virtual / ⛔Travel</option>
-              </select>
-            </div>
-            <div class="ZIP-AND-PHONE row">
-              <div class="ZIPCODE row col-sm-12 col-md-6 mb-3">
-                <h3 class="col-auto">
-                  Zipcode
-                </h3>
-                <div class="col-sm-4 col-md-8">
-                  <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code"
-                    aria-label="Zip Code">
+            </nav>
+        </header>
+        <!-- form -->
+        <form id="registration-form" action="/api/tutorRegistration" method="POST">
+            <main class="row justify-content-center normal-text">
+                <div class="card col-10" style="margin:2%">
+                    <h1 class="my-4 brush">Tutor Account Registration</h1>
+                    <div class="mx-4 row">
+                        <div id="profile-image" class="col-3">
+                            <h2>Profile Image</h2>
+                            <img
+                                src="./assets/images/Profile-Icons/000.png"
+                                class="img-thumbnail mb-2"
+                                id="thumbnail-preview"
+                                alt="profile image preview"
+                                width="col-3"
+                            >
+                            <select
+                                name="profile_img"
+                                class="form-select mb-3 normal-text"
+                                id="choose-profile-image"
+                                aria-label="Default select example"
+                            >
+                                <option selected>Choose your profile image</option>
+                                <option>Bass Guitar 1</option>
+                                <option>Bass Guitar 2</option>
+                                <option>Bass Guitar 3</option>
+                                <option>Bassoon 1</option>
+                                <option>Bassoon 2</option>
+                                <option>Bassoon 3</option>
+                                <option>Cello 1</option>
+                                <option>Cello 2</option>
+                                <option>Clarinet 1</option>
+                                <option>Clarinet 2</option>
+                                <option>Clarinet 3</option>
+                                <option>Double Bass 1</option>
+                                <option>Double Bass 2</option>
+                                <option>Euphonium 1</option>
+                                <option>Euphonium 2</option>
+                                <option>Euphonium 3</option>
+                                <option>Flute 1</option>
+                                <option>Flute 2</option>
+                                <option>Guitar 1</option>
+                                <option>Guitar 2</option>
+                                <option>Guitar 3</option>
+                                <option>Guitar 4</option>
+                                <option>Horn 1</option>
+                                <option>Horn 2</option>
+                                <option>Horn 3</option>
+                                <option>Oboe 1</option>
+                                <option>Oboe 2</option>
+                                <option>Oboe 3</option>
+                                <option>Percussion 1</option>
+                                <option>Percussion 2</option>
+                                <option>Percussion 3</option>
+                                <option>Percussion 4</option>
+                                <option>Percussion 5</option>
+                                <option>Piano 1</option>
+                                <option>Piano 2</option>
+                                <option>Piano 3</option>
+                                <option>Sax 1</option>
+                                <option>Sax 2</option>
+                                <option>Trombone 1</option>
+                                <option>Trombone 2</option>
+                                <option>Trombone 3</option>
+                                <option>Trumpet 1</option>
+                                <option>Trumpet 2</option>
+                                <option>Trumpet 3</option>
+                                <option>Tuba 1</option>
+                                <option>Tuba 2</option>
+                                <option>Tuba 3</option>
+                                <option>Viola 1</option>
+                                <option>Viola 2</option>
+                                <option>Violin 1</option>
+                                <option>Violin 2</option>
+                                <option>Woodwind 1</option>
+                                <option>Woodwind 2</option>
+                                <option>Woodwind 3</option>
+                            </select>
+                        </div>
+                        <div class="USER-INFORMATION-nameEmailPassword col-9">
+                            <h2>User Information</h2>
+                            <h5>Name</h5>
+                            <div class="row">
+                                <div class="col-3">
+                                    <select
+                                        name="salutation"
+                                        id="salutation"
+                                        class="form-select normal-text"
+                                        aria-label="Default select example"
+                                    >
+                                        <option selected>Salutation</option>
+                                        <option value="Miss">Miss</option>
+                                        <option value="Ms.">Ms.</option>
+                                        <option value="Mrs.">Mrs.</option>
+                                        <option value="Mr.">Mr.</option>
+                                        <option value="Mx.">Mx.</option>
+                                        <option value="Dr.">Dr.</option>
+                                        <option value="Prof.">Prof.</option>
+                                        <option value="Hon.">Hon.</option>
+                                        <option value="Lord">Lord</option>
+                                        <option value="Lady">Lady</option>
+                                        <option value="Sir">Sir</option>
+                                        <option value="Dame">Dame</option>
+                                        <option value="Col.">Col.</option>
+                                        <option value="Maj.">Maj.</option>
+                                        <option value="Lt.">Lt.</option>
+                                        <option value="Sgt.">Sgt.</option>
+                                        <option value="Dep.">Dep.</option>
+                                        <option value="Cap.">Cap.</option>
+                                        <option value="Pres.">Pres.</option>
+                                        <option value="Adm.">Adm.</option>
+                                        <option value="HRH">HRH</option>
+                                    </select>
+                                </div>
+                                <div class="col-4">
+                                    <input
+                                        type="text"
+                                        name="firstName"
+                                        class="form-control normal-text"
+                                        placeholder="First name"
+                                        aria-label="First name"
+                                    >
+                                </div>
+                                <div class="col-5 mb-3">
+                                    <input
+                                        type="text"
+                                        name="lastName"
+                                        class="form-control normal-text"
+                                        placeholder="Last name"
+                                        aria-label="Last name"
+                                    >
+                                </div>
+                            </div>
+                            <label for="email-input" class="form-label patrick h5">
+                                Email address
+                                <i>(will be your username)</i>
+                            </label>
+                            <input
+                                name="email"
+                                type="email"
+                                class="form-control mb-3 normal-text"
+                                id="email-input"
+                                placeholder="name@example.com"
+                            >
+                            <label for="inputPassword5" class="form-label patrick h5">Choose a Password</label>
+                            <input
+                                name="password"
+                                type="password"
+                                id="inputPassword5"
+                                class="form-control"
+                                aria-describedby="passwordHelpBlock"
+                            >
+                            <div id="passwordHelpBlock" class="form-text mb-3">
+                                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
+                            </div>
+                        </div>
+                        <div class="row">
+                            <!-- <div class="col-8"> -->
+                            <h2 class="brush" style="font-size: xxx-large;">Pedagogy</h2>
+                            <div>
+                                <h3 class="mb-0">Primary Instrument</h3>
+                                <div id="performAndTeach" class="form-text light-text mt-0">
+                                    For now, please select your primary instrument. You will have the option to edit your profile to add more teaching instruments after initial registration.
+                                    <div class="input-group">
+                                        <select
+                                            name="instrument_id"
+                                            class="form-select text-muted mt-1 mb-3"
+                                            aria-label="Default select example"
+                                            id="instrumentlist"
+                                        >
+                                            <option selected disabled>Select an Instrument</option>
+                                        </select>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        <div id="Certifications-header">
+                            <h3>
+                                Certifications & Associations
+                                <i class="text-muted"> optional</i>
+                            </h3>
+                        </div>
+                        <div class="input-group">
+                            <select
+                                name="certification_id"
+                                class="form-select text-muted mb-3"
+                                aria-label="Default select example"
+                                id="certification-list"
+                            >
+                                <option selected disabled>Add a Certification</option>
+                            </select>
+                        </div>
+                        <div id="special-interests-header">
+                            <h3>
+                                Special Teaching Interests
+                                <i class="text-muted"> optional</i>
+                            </h3>
+                            <select
+                                name="specialty_id"
+                                class="form-select text-muted mb-3"
+                                aria-label="Default select example"
+                                id="specialty-list"
+                            >
+                                <option selected disabled>Select a Specialty</option>
+                            </select>
+                            <div id="price-range" class="row align-items-bottom">
+                                <h3 class="col-auto">
+                                    Price Per Lesson
+                                </h3>
+                                <div class="btn-group col-auto mb-3" role="group" aria-label="Basic radio toggle button group">
+                                    <input
+                                        name="price"
+                                        value="$"
+                                        type="radio"
+                                        class="btn-check"
+                                        name="btnradio"
+                                        id="$"
+                                        autocomplete="off"
+                                        checked
+                                    >
+                                    <label class="btn my-btn" for="$">$ ($30 or less)</label>
+                                    <input
+                                        name="price"
+                                        value="$$"
+                                        type="radio"
+                                        class="btn-check"
+                                        name="btnradio"
+                                        id="$$"
+                                        autocomplete="off"
+                                    >
+                                    <label class="btn my-btn" for="$$">$$ ($35 to $55)</label>
+                                    <input
+                                        name="price"
+                                        value="$$$"
+                                        type="radio"
+                                        class="btn-check"
+                                        name="btnradio"
+                                        id="$$$"
+                                        autocomplete="off"
+                                    >
+                                    <label class="btn my-btn" for="$$$">$$$ ($60 to $80)</label>
+                                    <input
+                                        name="price"
+                                        value="$$$$"
+                                        type="radio"
+                                        class="btn-check"
+                                        name="btnradio"
+                                        id="$$$$"
+                                        autocomplete="off"
+                                    >
+                                    <label class="btn my-btn" for="$$$$">$$$$ ($85+)</label>
+                                </div>
+                            </div>
+                            <div id="setting">
+                                <h3 class="col-5" id="setting-header">
+                                    Lesson Location
+                                </h3>
+                                <select
+                                    name="lesson_setting"
+                                    class="form-select text-muted mb-3"
+                                    aria-label="Default select example"
+                                    id="lesson-setting-list"
+                                >
+                                    <option value="">Select lesson setting</option>
+                                    <option value="Student's Home">✅In Person 🏠Willing to Travel to Student's Home</option>
+                                    <option value="Tutor's Studio">✅Teacher's Studio Only / ⛔Travel ⛔Virtual</option>
+                                    <option value="Virtual">✅Virtual Only / ⛔In-Person</option>
+                                    <option value="Studio or Virtual">✅In-Studio ✅Virtual / ⛔Travel</option>
+                                </select>
+                            </div>
+                            <div class="ZIP-AND-PHONE row">
+                                <div class="ZIPCODE row col-sm-12 col-md-6 mb-3">
+                                    <h3 class="col-auto">
+                                        Zipcode
+                                    </h3>
+                                    <div class="col-sm-4 col-md-8">
+                                        <input
+                                            type="text"
+                                            name="zipcode"
+                                            class="form-control normal-text"
+                                            placeholder="Zip Code"
+                                            aria-label="Zip Code"
+                                        >
+                                    </div>
+                                </div>
+                                <div class="PHONE-NUMBER row col-sm-12 col-md-6">
+                                    <h3 class="col-auto">
+                                        Phone #
+                                    </h3>
+                                    <div class="col-sm-6 col-md-8">
+                                        <input
+                                            name="phone"
+                                            type="text"
+                                            class="form-control normal-text"
+                                            placeholder="(000) 000-0000"
+                                        >
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="row my-4 justify-content-center" id="next">
+                                <button
+                                    type="submit"
+                                    id="submit"
+                                    value="Submit"
+                                    class="btn col-6"
+                                >Create Your Profile</button>
+                            </div>
+                        </div>
+                    </div>
                 </div>
-              </div>
-              <div class="PHONE-NUMBER row col-sm-12 col-md-6">
-                <h3 class="col-auto">
-                  Phone #
-                </h3>
-                <div class="col-sm-6 col-md-8">
-                  <input name="phone" type="text" class="form-control normal-text" placeholder="(000) 000-0000">
-                </div>
-              </div>
-            </div>
-            <div class="row my-4 justify-content-center" id="next">
-              <button type="submit" id="submit" value="Submit" class="btn col-6">Create Your Profile</button>
-            </div>
-          </div>
-        </div>
-      </div>
-    </main>
-  </form>
-  <!-- Including Bootstrap JS -->
-  <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
-    integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
-    crossorigin="anonymous"></script>
-  <script src="./js/choose-image.js"></script>
-  <script src="./js/pullListData.js"></script>
-  <script>pullInstrumentData();</script>
-  <script>pullCertData();</script>
-  <script>pullSpecialtyData();</script>
-</body>
-
+            </main>
+        </form>
+        <!-- Including Bootstrap JS -->
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
+        <script src="./js/choose-image.js"></script>
+        <script src="./js/pullListData.js"></script>
+        <script>pullInstrumentData();</script>
+        <script>pullCertData();</script>
+        <script>pullSpecialtyData();</script>
+    </body>
 </html>
