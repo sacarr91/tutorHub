@@ -36,7 +36,38 @@ fetch(`./api/users/email/${email}`).then( response => {
 
 // submit personal information button
 updateUserInfoButton.addEventListener("click", async function(){
+    const profile_img = document.getElementById('choose-profile-image').value;
+    const salutation = document.getElementById('salutation').value;
+    const firstname = document.getElementById('first-name').value;
+    const lastname = document.getElementById('last-name').value;
+    const email = document.getElementById('email-input').value;
+    const zipcode = document.getElementById('zipcode').value;
+    const phone = document.getElementById('phone').value;
+    const price = document.getElementById('price').value;
+    const lesson_setting = document.getElementById('lesson-setting-list').value;
 
+    const response = await fetch(`./api/users/${user_id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            profile_img: profile_img,
+            salutation: salutation,
+            firstname: firstname,
+            lastname: lastname,
+            email: email,
+            zipcode: zipcode,
+            phone: phone,
+            price: price,
+            lesson_setting: lesson_setting
+
+        })
+    });
+    if(response.ok) { alert ('you have successfully updated your personal information!')
+        window.location.reload();
+    }
+    else {alert('Sorry, something went wrong, please ensure you are logged in, refresh the browser and try again')}
 });
 
 // add instrument
@@ -53,6 +84,7 @@ addInstrumentButton.addEventListener("click", async function(){
     });
 
     if(response.ok) { alert ('you have successfully added an instrument to your profile!')}
+    else {alert('Sorry, something went wrong, please ensure you are logged in, refresh the browser and try again')}
 });
 
 // remove instrument

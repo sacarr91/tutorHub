@@ -32,13 +32,14 @@ try {
   const [ rowsAffected, [updatedUser]] = await User.update(
     {
       salutation: req.body.salutation,
-      firstname: req.body.firstname,
-      lastname: req.body.lastname,
+      firstName: req.body.firstName,
+      lastName: req.body.lastName,
       email: req.body.email,
       profile_img: req.body.profile_img,
       price: req.body.price,
       lesson_setting: req.body.lesson_setting,
       phone: req.body.phone,
+      zipcode: req.body.zipcode,
     },
     { where: {id: req.params.id}, returning: true }
   )
