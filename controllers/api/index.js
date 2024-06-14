@@ -9,9 +9,10 @@ const tutorInstrument = require('./tutorInstrumentRoutes');
 const tutorCertification = require('./tutorCertificationRoutes');
 const tutorSpecialty = require('./tutorSpecialtyRoutes');
 const studentRegistrationRoutes = require('./studentRegistrationRoutes');
+const tutorLinkRoutes = require('./tutorLinkRoutes');
 const tutorLocation = require('./tutorLocation');
-const tutorReview = require('./tutorReviews');
-const postReview = require('./postReview');
+const tutorReview = require('./tutorReview');
+const postReview = require('./postReview')
 
 
 router.use('/users', userRoutes);
@@ -24,8 +25,10 @@ router.use('/specialty', specialtyRoutes);
 router.use('/tutorCertification', tutorCertification);
 router.use('/tutorSpecialty', tutorSpecialty);
 router.use('/studentRegistration', studentRegistrationRoutes);
+router.use('/tutorLink', tutorLinkRoutes);
 router.use('/tutorLocation', tutorLocation);
-router.use('/reviews', tutorReview);
+router.use('/tutorReview', tutorReview);
 router.use('/postReview', postReview);
+
 
 module.exports = router;
