@@ -68,7 +68,7 @@ updateUserInfoButton.addEventListener("click", async function(){
         window.localStorage.setItem('username', JSON.stringify(email))
         window.location.reload();
     }
-    else {alert('Sorry, something went wrong, please ensure you are logged in, refresh the browser and try again')}
+    else {alert('😵 Sorry, something went wrong, please ensure you are logged in, refresh the browser and try again 😵')}
 });
 
 // add instrument
@@ -84,18 +84,15 @@ addInstrumentButton.addEventListener("click", async function(){
         body: JSON.stringify({ user_id: user_id, instrument_id: instrument_id })
     });
 
-    if(response.ok) { alert ('you have successfully added an instrument to your profile!')}
-    else {alert('Sorry, something went wrong, please ensure you are logged in, refresh the browser and try again')}
+    if(response.ok) { alert ('🎸 you have successfully added an instrument to your profile! 🎻')}
+    else if (response.status === 422) {
+        alert('This instrument has already been added to your profile 😊');
+    }
 });
 
 // remove instrument
 removeInstrumentButton.addEventListener("click", async function(){
 
-        let email = localStorage.getItem('username');
-        email = JSON.parse(email); 
-        const apiData = await fetch(`./api/users/email/${email}`);
-        const data = await apiData.json();
-        const user_id = data.id;
         const instrument_id = document.getElementById('instrumentlist').value;
         const response = await fetch(`./api/tutorInstrument/${user_id}/${instrument_id}`, {
             method: 'DELETE',
@@ -104,18 +101,18 @@ removeInstrumentButton.addEventListener("click", async function(){
             },
         });
     
-        if(response.ok) { alert ('the instrument has been eliminated from your profile')} 
-        else { alert('Sorry, it does not seem this instrument has been associated with your profile in our records.')}
+        if(response.ok) { 
+            alert('👻 You have removed an instrument from your profile 👻');
+        } else if (response.status === 404) {
+            alert('Sorry, it does not appear that this instrument has been associated with your profile in our records 🤔');
+        } else if (response.status === 422) {
+            alert('Sorry, an error has occurred please ensure you are logged in, refresh the browser and try again 😵');
+        }
 });
 
 
 // add certification
 addCertificationButton.addEventListener("click", async function(){
-    let email = localStorage.getItem('username');
-    email = JSON.parse(email); 
-    const apiData = await fetch(`./api/users/email/${email}`);
-    const data = await apiData.json();
-    const user_id = data.id;
 
     const certification_id = document.getElementById('certification-list').value;
     const response = await fetch('./api/tutorCertification', {
@@ -125,16 +122,17 @@ addCertificationButton.addEventListener("click", async function(){
         },
         body: JSON.stringify({ user_id: user_id, certification_id: certification_id})
     });
-    if(response.ok) { alert ('you have successfully added a certification to your profile!')}
+    if(response.ok) { 
+        alert ('😃 you have successfully added a certification to your profile! 😃')
+    } else if (response.status === 404) {
+        alert('Sorry, it does not appear that this certification has been associated with your profile in our records 🤔');
+    } else if (response.status === 422) {
+        alert('This certification has already been added to your profile 😊');
+    }
 });
 
 // remove certification
 removeCertificationButton.addEventListener("click", async function(){
-    let email = localStorage.getItem('username');
-    email = JSON.parse(email); 
-    const apiData = await fetch(`./api/users/email/${email}`);
-    const data = await apiData.json();
-    const user_id = data.id;
 
     const certification_id = document.getElementById('certification-list').value;
     const response = await fetch(`./api/tutorCertification/${user_id}/${certification_id}`, {
@@ -143,7 +141,13 @@ removeCertificationButton.addEventListener("click", async function(){
             'Content-Type': 'application/json'
         },
     });
-    if(response.ok) { alert ('you have removed a certification to your profile')}
+    if (response.ok) {
+        alert('👻 You have removed a certification from your profile 👻');
+    } else if (response.status === 404) {
+        alert('Sorry, it does not appear that this certification has been associated with your profile in our records 🤔');
+    } else if (response.status === 422) {
+        alert('Sorry, an error has occurred please ensure you are logged in, refresh the browser and try again 😵');
+    }
 });
 
 // add specialty

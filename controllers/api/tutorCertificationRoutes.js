@@ -38,7 +38,7 @@ router.post('/', async(req, res) => {
 
         });
         res.status(200).json('A new certification has successfully added to your profile!')
-    } catch (err) { res.status(500).json({err}); }
+    } catch (err) { res.status(422).json({err}); }
 });
 
 // remove records from the tutor_certification table
