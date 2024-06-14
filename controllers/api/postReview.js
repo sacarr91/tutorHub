@@ -11,8 +11,9 @@ router.post('/', async (req, res) => {
   try {
     await TutorReview.create({
       user_id: req.body.user_id,
-      student_id: req.body.student_id,
+      student_email: req.body.student_email,
       review: req.body.review,
+      rating: req.body.rating,
     });
     res.redirect('/tutordave.html');
   } catch (err) {
