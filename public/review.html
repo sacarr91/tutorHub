@@ -10,12 +10,24 @@
 
     </header>
     <form id="review-form" action="/api/postReview" method="POST">
-        <input type="text" name="user_id" class="form-control normal-text" placeholder="First name" aria-label="First name">
-        <input type="text" name="student_id" class="form-control normal-text" placeholder="First name" aria-label="First name">
-        <input type="text" name="review" class="form-control normal-text" placeholder="First name" aria-label="First name">
+        <input type="text" name="user_id" class="form-control normal-text" hidden value="${tutor}" >
+        <input type="text" name="student_id" class="form-control normal-text" hidden value="${student}">
+            <label for="reviewRating" class="form-label">Rating</label>
+            <select name="rating"class="form-select" id="reviewRating" required>
+              <option value="">Select a rating</option>
+              <option value="0">0</option>
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+          </div>
+            <label for="reviewText" class="form-label">Detailed Review</label>
+            <textarea name="review"class="form-control" id="reviewText" rows="3" required></textarea>
+          </div>
         <button id="next" class="btn col-6">Post Review</button>
     </form>
-    <script src="./js/nav.js"></script>
 
 </body>
 </html>

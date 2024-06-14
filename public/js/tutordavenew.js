@@ -55,10 +55,22 @@ async function createCertificationSearch() {
         const specialties = data[y].specialties && data[y].specialties.length > 0 ? data[y].specialties[0].specialty_name : "";
         const certifications = data[y].certifications && data[y].certifications.length > 0 ? data[y].certifications[0].certification_name : "";
         const instruments = data[y].instruments && data[y].instruments.length > 0 ? data[y].instruments[0].instrument_name : "";
-        const location = data[y].lesson_setting;
+        const locationRaw = data[y].lesson_setting;
         const email = data[y].email;
         const phoneNumber = data[y].phone;
         const tutorReviews = data[y].tutor_reviews.length > 0 ? data[y].tutor_reviews : null;
+
+        if (locationRaw == "virtual"){
+            tutorLocation = "Virtual"
+        } else if (locationRaw == "inHome"){
+            tutorLocation = "In Home"
+        } else if (locationRaw == "inStudio"){
+            tutorLocation = "Tutor's Studio"
+        } else if (locationRaw == "hybrid"){
+            tutorLocation = "Hybrid"
+        } else {
+            tutorLocation = "Contact Instructor"
+        }
 
         let reviewsHTML = "";
 
@@ -121,7 +133,7 @@ async function createCertificationSearch() {
                                     <div class="SIDE-BY-SIDE-CONTAINER-LOCATION-INTERESTS row">
                                         <div class="LOCATION-OPTIONS-OFFERED col-auto" style="max-width: 50%;">
                                             <h5 class="pt-1">Location</h5>
-                                            <div class="row text-muted">${location}</div>
+                                            <div class="row text-muted"><p>${tutorLocation}</p></div>
                                         </div>
                                         <div class="SPECIAL-INTERESTS col border-start border-opacity-10" style="max-width: 50%;">
                                             <h5 class="pt-1">Specialties</h5>
