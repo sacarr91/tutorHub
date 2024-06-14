@@ -5,6 +5,25 @@ const addLinkButton = document.getElementById('addLink');
 const removeInstrumentButton = document.getElementById('removeInstrument');
 const removeCertificationButton = document.getElementById('removeCertification');
 const updateUserInfoButton = document.getElementById('updateUserInfo');
+const changePasswordButton = document.getElementById('changePassword');
+
+// change password button
+changePasswordButton.addEventListener("click", async function(){
+    const password = document.getElementById('inputPassword5').value;
+    const response = await fetch(`./api/users/${user_id}`, {
+        method: 'PUT',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+        body: JSON.stringify({
+            password: password,
+        })
+    });
+    if(response.ok) { alert ('🤐 you have successfully updated your password! 🤐')
+    }
+    else {alert('✋ Please ensure your password is at minimum 8 characters long')}
+});
+
 
 // populate form functions
 // get the username from local storage
