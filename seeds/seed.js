@@ -1,31 +1,30 @@
 require("dotenv").config({
-  path: '../.env'
-})
-const sequelize = require('../config/connection');
-const { 
+  path: "../.env",
+});
+const sequelize = require("../config/connection");
+const {
   User,
-  Role, 
-  Instrument, 
-  UserInstrument, 
-  Certification, 
-  TutorCertification, 
-  Specialty, 
+  Role,
+  Instrument,
+  UserInstrument,
+  Certification,
+  TutorCertification,
+  Specialty,
   TutorSpecialty,
   TutorLink,
-TutorReview } 
-  
-  = require('../models');
+  TutorReview,
+} = require("../models");
 
-const userData = require('./userData.json');
-const roleData = require('./roleData.json');
-const instrumentData = require('./instrumentData.json');
-const userInstrumentData = require('./userInstrumentData.json');
-const certificationData = require('./certificationData.json');
-const tutorCerificationData = require('./tutorCertificationData.json');
-const specialtyData = require('./specialtyData.json');
-const tutorSpecialtyData = require('./tutorSpecialtyData.json');
-const tutorLinkData = require('./tutorLinkData.json');
-const tutorReviewData = require('./tutorReview.json');
+const userData = require("./userData.json");
+const roleData = require("./roleData.json");
+const instrumentData = require("./instrumentData.json");
+const userInstrumentData = require("./userInstrumentData.json");
+const certificationData = require("./certificationData.json");
+const tutorCertificationData = require("./tutorCertificationData.json");
+const specialtyData = require("./specialtyData.json");
+const tutorSpecialtyData = require("./tutorSpecialtyData.json");
+const tutorLinkData = require("./tutorLinkData.json");
+const tutorReviewData = require("./tutorReview.json");
 
 const seedDatabase = async () => {
   await sequelize.sync({ force: true });
@@ -55,7 +54,7 @@ const seedDatabase = async () => {
     returning: true,
   });
 
-  await TutorCertification.bulkCreate(tutorCerificationData, {
+  await TutorCertification.bulkCreate(tutorCertificationData, {
     returning: true,
   });
 
@@ -69,7 +68,7 @@ const seedDatabase = async () => {
 
   await TutorReview.bulkCreate(tutorReviewData, {
     returning: true,
-  })
+  });
 
   process.exit(0);
 };
