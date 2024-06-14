@@ -5,17 +5,37 @@ const addLinkButton = document.getElementById('addLink');
 const removeInstrumentButton = document.getElementById('removeInstrument');
 const removeCertificationButton = document.getElementById('removeCertification');
 
+// populate form functions
+// get the username from local storage
+const userEmail = localStorage.getItem('username');
+email = JSON.parse(userEmail);
+
+// pull the user data from the api by user email
+fetch(`./api/users/email/${email}`).then( response => {
+    if(!response.ok) {
+        alert('Sorry Something went wrong....')
+    }
+    return response.json();
+    // handle the data in the appropriate form spaces 
+}).then(data => {
+    document.getElementById('choose-profile-image').value = data.profile_img;
+    selectImage(data.profile_img);
+    document.getElementById('salutation').value = data.salutation;
+    document.getElementById('first-name').value = data.firstName;
+    document.getElementById('last-name').value = data.lastName;
+    document.getElementById('email-input').value = data.email;
+    document.getElementById('zipcode').value = data.zipcode;
+    document.getElementById('price').value = data.price;
+
+    // send the user_id out for use in other edit profile functions
+    return user_id = data.id;
+}).catch(err => alert('we apologize, something went wrong...', err))
+
+
+
 // add instrument
 addInstrumentButton.addEventListener("click", async function(){
-    // pull email from local storage
-    let email = localStorage.getItem('username');
-    //parse the JSON string to extract email value
-    email = JSON.parse(email); 
-    // get user id
-    const apiData = await fetch(`./api/users/email/${email}`);
-    const data = await apiData.json();
-    const user_id = data.id;
-    // Get the selected instrument_id from the form
+
     const instrument_id = document.getElementById('instrumentlist').value;
     // send needed data to the api
     const response = await fetch('./api/tutorInstrument', {

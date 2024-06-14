@@ -117,42 +117,39 @@
                       </select>
                 </div>
               <div class="col-4">
-                <input type="text" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name">
+                <input type="text" id="first-name" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name">
               </div>
               <div class="col-5 mb-3">
-                <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name">
+                <input type="text" id="last-name" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name">
               </div>
             </div>
             <label for="email-input" class="form-label patrick">Email address <i>(will be your username)</i></label>
             <input name="email" type="email" class="form-control mb-3 normal-text" id="email-input" placeholder="name@example.com">
+            <h3 class="col-auto me-3 mb-3">Zipcode</h3>
+            <div class="col-5">
+              <input type="text" id="zipcode" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
+            </div>
+            <div id="price-range" class="row align-items-bottom">
+              <h3 class="col-3">Price Per Lesson</h3>
+              <select name="price" class="form-select" aria-label="Default select example" id="price">
+                <option value="$">$ ($30 or less)</option>
+                <option value="$$">$$ ($35 to $55)</option>
+                <option value="$$$">$$$ ($60 to $80)</option>
+                <option value="$$$$">$$$$ ($85+)</option>
+              </select>
+              <div class="row my-4 justify-content-center" id="next">
+                <button type="submit" id="submit" value="Submit" class="btn col-16 btn-primary">Update Your Info</button>
+              </div>
             <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
             <input name="password" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
             <div id="passwordHelpBlock" class="mb-3 form-label patrick">
               Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
               characters, or emoji.
             </div>
-            <h3 class="col-auto me-3 mb-3">
-                Zipcode
-              </h3>
-              <div class="col-5">
-                <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
-              </div>
-              <br>
+            <div>
+              <button id="changePassword" class="btn col-16 btn-danger" type="button">Change Password</button>
+            </div>
             <!-- Tutor Details -->
-            <div id="price-range" class="row align-items-bottom">
-                <h3 class="col-1">
-                  Price Per Lesson
-                </h3>
-                <div class="btn-group col-auto mb-3" role="group" aria-label="Basic radio toggle button group">
-                  <input name="price" value="$" type="radio" class="btn-check" name="btnradio" id="$" autocomplete="off" checked>
-                  <label class="btn my-btn" for="$">$ ($30 or less)</label>
-                  <input name="price" value="$$" type="radio" class="btn-check" name="btnradio" id="$$" autocomplete="off">
-                  <label class="btn my-btn" for="$$">$$ ($35 to $55)</label>
-                  <input name="price" value="$$$" type="radio" class="btn-check" name="btnradio" id="$$$" autocomplete="off">
-                  <label class="btn my-btn" for="$$$">$$$ ($60 to $80)</label>
-                  <input name="price" value="$$$$" type="radio" class="btn-check" name="btnradio" id="$$$$" autocomplete="off">
-                  <label class="btn my-btn" for="$$$$">$$$$ ($85+)</label>
-                </div>
                 <div class="col-8">
                     <h3>Instruments</h3>
                     <div id="performAndTeach" class="form-label patrick">
@@ -177,7 +174,7 @@
                     <option selected disabled>Select a Certification</option>
                   </select>
                   <div>
-                    <button id="addCertification" class="btn col-16" type="button">Add Certification!</button>
+                    <button id="addCertification" class="btn col-16 btn-primary" type="button">Add Certification!</button>
                   </div>
                   <div>
                     <button id="removeCertification" class="btn col-16 btn-danger" type="button">Remove Certification</button>
@@ -191,7 +188,7 @@
                         <option selected disabled>Select a Specialty</option>
                       </select>
                       <div>
-                        <button id="addSpecialty" class="btn col-16" type="button">Add Specialty!</button>
+                        <button id="addSpecialty" class="btn col-16 btn-primary" type="button">Add Specialty!</button>
                       </div>
                   </div>
                   
@@ -212,9 +209,6 @@
                         <button id="addLink" class="btn col-16" type="button">Add Link!</button>
                       </div>
                 </div>
-        <div class="row my-4 justify-content-center" id="next">
-            <button type="submit" id="submit" value="Submit" class="btn col-16">Update Your Info</button>
-          </div>
           <script src="./js/nav.js"></script>
           <script src="./js/choose-image.js"></script>
         <script src="./js/pullListData.js"></script>
