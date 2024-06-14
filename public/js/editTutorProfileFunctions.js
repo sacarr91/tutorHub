@@ -4,6 +4,7 @@ const addSpecialtyButton = document.getElementById('addSpecialty');
 const addLinkButton = document.getElementById('addLink');
 const removeInstrumentButton = document.getElementById('removeInstrument');
 const removeCertificationButton = document.getElementById('removeCertification');
+const updateUserInfoButton = document.getElementById('updateUserInfo');
 
 // populate form functions
 // get the username from local storage
@@ -31,7 +32,10 @@ fetch(`./api/users/email/${email}`).then( response => {
     return user_id = data.id;
 }).catch(err => alert('we apologize, something went wrong...', err))
 
-
+// submit personal information button
+updateUserInfoButton.addEventListener("click", async function(){
+    
+});
 
 // add instrument
 addInstrumentButton.addEventListener("click", async function(){

@@ -125,10 +125,21 @@
             </div>
             <label for="email-input" class="form-label patrick">Email address <i>(will be your username)</i></label>
             <input name="email" type="email" class="form-control mb-3 normal-text" id="email-input" placeholder="name@example.com">
-            <h3 class="col-auto me-3 mb-3">Zipcode</h3>
-            <div class="col-5">
-              <input type="text" id="zipcode" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
+            <div class="row col-sm-12 col-md-6">
+              <h3 class="col-auto">Zipcode</h3>
+              <div class="col-5">
+                <input type="text" id="zipcode" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
+              </div>
             </div>
+            <br>
+            <div class="PHONE-NUMBER row col-sm-12 col-md-6">
+              <h3 class="col-auto">Phone #</h3>
+              <div class="col-sm-6 col-md-8">
+                <input name="phone" type="text" class="form-control normal-text" placeholder="(000) 000-0000">
+              </div>
+              <br>
+              <br>
+              <br>
             <div id="price-range" class="row align-items-bottom">
               <h3 class="col-3">Price Per Lesson</h3>
               <select name="price" class="form-select" aria-label="Default select example" id="price">
@@ -137,8 +148,25 @@
                 <option value="$$$">$$$ ($60 to $80)</option>
                 <option value="$$$$">$$$$ ($85+)</option>
               </select>
+            </div>
+            <div>
+              <div id="setting">
+                <h3 class="col-5" id="setting-header">
+                  Lesson Location
+                </h3>
+              <select name="lesson_setting" class="form-select text-muted mb-3" aria-label="Default select example"
+                id="lesson-setting-list" required>
+                <option value="">Select lesson setting</option>
+                <option value="Student's Home">✅In Person 🏠Willing to Travel to Student's Home</option>
+                <option value="Tutor's Studio">✅Teacher's Studio Only / ⛔Travel ⛔Virtual</option>
+                <option value="Virtual">✅Virtual Only / ⛔In-Person</option>
+                <option value="Studio or Virtual">✅In-Studio ✅Virtual / ⛔Travel</option>
+                <option value="Studio / Virtual / Home">✅In-Studio ✅Virtual / ✅Travel</option>
+              </select>
+              </div>
+            </div>
               <div class="row my-4 justify-content-center" id="next">
-                <button type="submit" id="submit" value="Submit" class="btn col-16 btn-primary">Update Your Info</button>
+                <button id="updateUserInfo" type="submit" id="submit" value="Submit" class="btn col-16 btn-primary">Update Your Info</button>
               </div>
             <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
             <input name="password" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">

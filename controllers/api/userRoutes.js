@@ -1,4 +1,5 @@
 const router = require('express').Router();
+const { DataTypes } = require('sequelize');
 const { User } = require('../../models');
 
 // code to handle retrieve user by id
@@ -23,6 +24,30 @@ router.get('/email/:email', async (req, res) => {
   } catch (err) {
       res.status(500).json(err);
   }
+});
+
+// code to handle update user info
+router.put('/:id', async (req, res) => {
+try {
+  const [ rowsAffected, [updatedUser]] = await User.update(
+    {
+      salutation: req.body.salutation,
+      firstname: req.body.firstname,
+      lastname: req.body.lastname,
+      email: req.body.email,
+      profile_img: req.body.profile_img,
+      price: req.body.price,
+      lesson_setting: req.body.lesson_setting,
+      phone: req.body.phone,
+    },
+    { where: {id: req.params.id}, returning: true }
+  )
+  if (rowsAffected === 0) {
+    return res.status(422).json({message: 'Sorry, something went wrong, please ensure that you are logged in, refresh the page and try again'})
+  }
+  res.status(200).json({message: "You have successfully updated your profile details!"})
+} 
+catch(err){res.status(422).json({message: "Sorry, your request could not be proceessed at this time due to the following error" + err})}
 });
 
 // code to handle login and logout 
