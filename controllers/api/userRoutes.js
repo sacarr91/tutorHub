@@ -1,6 +1,6 @@
 const router = require('express').Router();
-const { DataTypes } = require('sequelize');
 const { User } = require('../../models');
+const bcrypt = require('bcrypt');
 
 // code to handle retrieve user by id
 router.get('/:id', async (req, res) => {
@@ -29,20 +29,23 @@ router.get('/email/:email', async (req, res) => {
 // code to handle update user info
 router.put('/:id', async (req, res) => {
 try {
-  const [ rowsAffected, [updatedUser]] = await User.update(
-    {
-      salutation: req.body.salutation,
-      firstName: req.body.firstName,
-      lastName: req.body.lastName,
-      email: req.body.email,
-      profile_img: req.body.profile_img,
-      price: req.body.price,
-      lesson_setting: req.body.lesson_setting,
-      phone: req.body.phone,
-      zipcode: req.body.zipcode,
-    },
-    { where: {id: req.params.id}, returning: true }
-  )
+
+const userData = {
+  salutation: req.body.salutation,
+  firstName: req.body.firstName,
+  lastName: req.body.lastName,
+  email: req.body.email,
+  profile_img: req.body.profile_img,
+  price: req.body.price,
+  lesson_setting: req.body.lesson_setting,
+  phone: req.body.phone,
+  zipcode: req.body.zipcode,
+};
+
+if (req.body.password) {
+  userData.password = await bcrypt.hash(req.body.password, 10);
+}
+  const [ rowsAffected ] = await User.update( userData,{ where: {id: req.params.id}, returning: true })
   if (rowsAffected === 0) {
     return res.status(422).json({message: 'Sorry, something went wrong, please ensure that you are logged in, refresh the page and try again'})
   }
