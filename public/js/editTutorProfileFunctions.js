@@ -3,6 +3,7 @@ const addCertificationButton = document.getElementById('addCertification');
 const addSpecialtyButton = document.getElementById('addSpecialty');
 const addLinkButton = document.getElementById('addLink');
 const removeInstrumentButton = document.getElementById('removeInstrument');
+const removeCertificationButton = document.getElementById('removeCertification');
 
 // add instrument
 addInstrumentButton.addEventListener("click", async function(){
@@ -66,6 +67,24 @@ addCertificationButton.addEventListener("click", async function(){
         body: JSON.stringify({ user_id: user_id, certification_id: certification_id})
     });
     if(response.ok) { alert ('you have successfully added a certification to your profile!')}
+});
+
+// remove certification
+removeCertificationButton.addEventListener("click", async function(){
+    let email = localStorage.getItem('username');
+    email = JSON.parse(email); 
+    const apiData = await fetch(`./api/users/email/${email}`);
+    const data = await apiData.json();
+    const user_id = data.id;
+
+    const certification_id = document.getElementById('certification-list').value;
+    const response = await fetch(`./api/tutorCertification/${user_id}/${certification_id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    if(response.ok) { alert ('you have removed a certification to your profile')}
 });
 
 // add specialty
