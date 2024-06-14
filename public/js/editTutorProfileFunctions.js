@@ -26,7 +26,9 @@ fetch(`./api/users/email/${email}`).then( response => {
     document.getElementById('last-name').value = data.lastName;
     document.getElementById('email-input').value = data.email;
     document.getElementById('zipcode').value = data.zipcode;
+    document.getElementById('phone').value = data.phone;
     document.getElementById('price').value = data.price;
+    document.getElementById('lesson-setting-list').value = data.lesson_setting;
 
     // send the user_id out for use in other edit profile functions
     return user_id = data.id;
@@ -34,7 +36,7 @@ fetch(`./api/users/email/${email}`).then( response => {
 
 // submit personal information button
 updateUserInfoButton.addEventListener("click", async function(){
-    
+
 });
 
 // add instrument
