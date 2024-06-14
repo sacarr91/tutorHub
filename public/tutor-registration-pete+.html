@@ -1,15 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
-  <meta charset="UTF-8">
-  <meta name="imageviewport" content="width=device-width, initial-scale=1.0">
-  <!-- bootstrap -->
-  <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css" rel="stylesheet"
-    integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH" crossorigin="anonymous" />
-  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css" />
-  <!-- Google Fonts -->
-  <style>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="imageviewport" content="width=device-width, initial-scale=1.0">
+        <!-- bootstrap -->
+        <link
+            href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/css/bootstrap.min.css"
+            rel="stylesheet"
+            integrity="sha384-QWTKZyjpPEjISv5WaRU9OFeRpok6YctnYmDr5pNlyT2bRjXh0JMhjY6hW+ALEwIH"
+            crossorigin="anonymous"
+        >
+        <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
+        <!-- Google Fonts -->
+        <style>
     @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
   </style>
   <link rel="stylesheet" href="./assets/css/style.css" />
@@ -19,20 +22,7 @@
 <body>
   <!-- Sticky Header -->
   <header id="header">
-    <nav class="navbar navbar-expand-sm sticky-top patrick">
-      <div class="container-fluid">
-        <a class="navbar-brand brush" href="index.html">TutorHub </a>
-        <!-- Login -->
-        <ul class="navbar-nav">
-          <li class="nav-item">
-            <a class="nav-link" href="user-registration-pg1.html">Register</a>
-          </li>
-          <li class="nav-item">
-            <a class="nav-link" href="login.html">Login</a>
-          </li>
-        </ul>
-      </div>
-    </nav>
+   
   </header>
 
 
@@ -138,19 +128,19 @@
               </div>
               <div class="col-4">
                 <input type="text" name="firstName" class="form-control normal-text" placeholder="First name"
-                  aria-label="First name">
+                  aria-label="First name" required>
               </div>
               <div class="col-5 mb-3">
                 <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name"
-                  aria-label="Last name">
+                  aria-label="Last name" required>
               </div>
             </div>
             <label for="email-input" class="form-label patrick h5">Email address <i>(will be your username)</i></label>
             <input name="email" type="email" class="form-control mb-3 normal-text" id="email-input"
-              placeholder="name@example.com">
+              placeholder="name@example.com" required>
             <label for="inputPassword5" class="form-label patrick h5">Choose a Password</label>
             <input name="password" type="password" id="inputPassword5" class="form-control"
-              aria-describedby="passwordHelpBlock">
+              aria-describedby="passwordHelpBlock" required>
             <div id="passwordHelpBlock" class="form-text mb-3">
               Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special characters, or emoji.
             </div>
@@ -164,7 +154,7 @@
                 For now, please select your primary instrument. You will have the option to edit your profile to add more teaching instruments after initial registration.
                 <div class="input-group">
                   <select name="instrument_id" class="form-select text-muted mt-1 mb-3" aria-label="Default select example"
-                    id="instrumentlist">
+                    id="instrumentlist" required>
                     <option selected disabled>Select an Instrument</option>
                   </select>
                 </div>
@@ -176,7 +166,7 @@
           </div>
           <div class="input-group">
             <select name="certification_id" class="form-select text-muted mb-3" aria-label="Default select example"
-              id="certification-list">
+              id="certification-list" required>
               <option selected disabled>Add a Certification</option>
             </select>
           </div>
@@ -184,7 +174,7 @@
             <h3>Special Teaching Interests<i class="text-muted"> optional</i></h3>
 
             <select name="specialty_id" class="form-select text-muted mb-3" aria-label="Default select example"
-              id="specialty-list">
+              id="specialty-list" required>
               <option selected disabled>Select a Specialty</option>
             </select>
             <div id="price-range" class="row align-items-bottom">
@@ -211,7 +201,7 @@
                 Lesson Location
               </h3>
               <select name="lesson_setting" class="form-select text-muted mb-3" aria-label="Default select example"
-                id="lesson-setting-list">
+                id="lesson-setting-list" required>
                 <option value="">Select lesson setting</option>
                 <option value="Student's Home">✅In Person 🏠Willing to Travel to Student's Home</option>
                 <option value="Tutor's Studio">✅Teacher's Studio Only / ⛔Travel ⛔Virtual</option>
@@ -226,7 +216,7 @@
                 </h3>
                 <div class="col-sm-4 col-md-8">
                   <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code"
-                    aria-label="Zip Code">
+                    aria-label="Zip Code" required>
                 </div>
               </div>
               <div class="PHONE-NUMBER row col-sm-12 col-md-6">
@@ -236,7 +226,7 @@
                 <div class="col-sm-6 col-md-8">
                   <input name="phone" type="text" class="form-control normal-text" placeholder="(000) 000-0000">
                 </div>
-              </div>
+              </div required>
             </div>
             <div class="row my-4 justify-content-center" id="next">
               <button type="submit" id="submit" value="Submit" class="btn col-6">Create Your Profile</button>
@@ -250,7 +240,8 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-  <script src="./js/choose-image.js"></script>
+    <script src="./js/nav.js"></script>
+    <script src="./js/choose-image.js"></script>
   <script src="./js/pullListData.js"></script>
   <script>pullInstrumentData();</script>
   <script>pullCertData();</script>
