@@ -43,6 +43,7 @@ async function createCertificationSearch() {
     }
   }
 
+
   const cardCreate = (data) => {
     for (let y = 0; y < data.length; y++) {
         // Variables to be used in HTML
