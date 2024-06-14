@@ -65,7 +65,7 @@ async function createCertificationSearch() {
         const phoneNumber = data[y].phone;
         const student = localStorage.getItem('username');
         const tutor = data[y].id;
-        const tutorReviews = data[y].tutor_reviews.length > 0 ? data[y].tutor_reviews : null;
+        const tutorReviews = data[y].tutorReviews && data[y].tutor_reviews.length > 0 ? data[y].tutor_reviews : "";
         const rate = data[y].price;
 
         // Allowing us to populate a more user friendly response on card than is in JSON data
