@@ -65,6 +65,7 @@ updateUserInfoButton.addEventListener("click", async function(){
         })
     });
     if(response.ok) { alert ('you have successfully updated your personal information!')
+        window.localStorage.setItem('username', JSON.stringify(email))
         window.location.reload();
     }
     else {alert('Sorry, something went wrong, please ensure you are logged in, refresh the browser and try again')}
