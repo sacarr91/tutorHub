@@ -31,7 +31,7 @@
           <h6>Name</h6>
           <div class="row">
             <div class="col-2">
-              <select name="salutation" id="salutation" class="form-select normal-text" aria-label="Default select example">
+              <select name="salutation" id="salutation" class="form-select normal-text" aria-label="Default select example" required>
                 <option></option>
                 <option value="Miss">Miss</option>
                 <option value="Ms.">Ms.</option>
@@ -57,19 +57,19 @@
               </select>
             </div>
             <div class="col-4">
-              <input type="text" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name">
+              <input type="text" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name" required>
             </div>
             <div class="col-4 mb-2">
-              <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name">
+              <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name" required>
             </div>
             <div class="col-2">
-              <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
+              <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code" required>
             </div>
           </div>
           <label for="email-input" class="form-label patrick">Email address <i>(will be your username)</i></label>
-          <input name="email" type="email" class="form-control mb-2 normal-text" id="email-input" placeholder="name@example.com">
+          <input name="email" type="email" class="form-control mb-2 normal-text" id="email-input" placeholder="name@example.com" required>
           <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
-          <input name="password"type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+          <input name="password"type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock" required>
           <div id="passwordHelpBlock" class="form-text mb-3">
             Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces,
             special
