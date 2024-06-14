@@ -2,6 +2,7 @@ const addInstrumentButton = document.getElementById('addInstrument');
 const addCertificationButton = document.getElementById('addCertification');
 const addSpecialtyButton = document.getElementById('addSpecialty');
 const addLinkButton = document.getElementById('addLink');
+const removeInstrumentButton = document.getElementById('removeInstrument');
 
 // add instrument
 addInstrumentButton.addEventListener("click", async function(){
@@ -26,6 +27,27 @@ addInstrumentButton.addEventListener("click", async function(){
 
     if(response.ok) { alert ('you have successfully added an instrument to your profile!')}
 });
+
+// remove instrument
+removeInstrumentButton.addEventListener("click", async function(){
+
+        let email = localStorage.getItem('username');
+        email = JSON.parse(email); 
+        const apiData = await fetch(`./api/users/email/${email}`);
+        const data = await apiData.json();
+        const user_id = data.id;
+        const instrument_id = document.getElementById('instrumentlist').value;
+        const response = await fetch(`./api/tutorInstrument/${user_id}/${instrument_id}`, {
+            method: 'DELETE',
+            headers: {
+                'Content-Type': 'application/json'
+            },
+        });
+    
+        if(response.ok) { alert ('the instrument has been eliminated from your profile')} 
+        else { alert('Sorry, it does not seem this instrument has been associated with your profile in our records.')}
+});
+
 
 // add certification
 addCertificationButton.addEventListener("click", async function(){
@@ -84,3 +106,4 @@ addLinkButton.addEventListener("click", async function(){
     });
     if(response.ok) { alert ('you have successfully added a link to your profile!')}
 });
+
