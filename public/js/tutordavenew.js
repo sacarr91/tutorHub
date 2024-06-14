@@ -63,11 +63,16 @@ async function createCertificationSearch() {
         const locationRaw = data[y].lesson_setting;
         const email = data[y].email;
         const phoneNumber = data[y].phone;
-        const student = localStorage.getItem('username');
+        const studentJSON = localStorage.getItem('username');
+        let student;
+        if (studentJSON === null) {
+        student = 'guest';
+        } else {
+        student = JSON.parse(studentJSON)
+        };
         const tutor = data[y].id;
         let tutorReviews = data[y].tutor_reviews && data[y].tutor_reviews.length > 0 ? data[y].tutor_reviews : [];
         const rate = data[y].price;
-
         // Allowing us to populate a more user friendly response on card than is in JSON data
         if (locationRaw == "virtual"){
             tutorLocation = "Virtual"
@@ -221,52 +226,96 @@ async function createAllTutors() {
     var data = await apiData.json();
     console.log(data);
     cardCreate(data);
-  }
-  
-  // Displays tutors with selected instrument
-  async function getByInstrument(instrumentChoice) {
-      instrumentChoice = instrumentList.value; 
-      const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
-      var data = await apiData.json();
-      cardDeck.innerHTML = "";
-      cardCreate(data);
+    return allTutors = data
   }
 
-  //Displays tutors with selected certification
-  async function getByCertification(certificationChoice) {
+const filterByInstrument = (tutors, instrumentChoice) => {
+    tutors = allTutors;
+    instrumentChoice = instrumentList.value; 
+    const tutorsFiltered = tutors.filter(tutors => {
+        return tutors.instruments.some(instrument => instrument.instrument_name === instrumentChoice);
+    });
+    cardDeck.innerHTML = "";
+    cardCreate(tutorsFiltered);
+}
+
+const filterByCertification = (tutors, certificationChoice) => {
+    tutors = allTutors;
     certificationChoice = certificationList.value; 
-    if (certificationChoice === "0"){
-        alert("Please choose an option to search");
-        return false;
-    }
-    const apiData = await fetch(`./api/tutorCertification/${certificationChoice}`);
-    var data = await apiData.json();
+    const tutorsFiltered = tutors.filter(tutors => {
+        return tutors.certifications.some(certification => certification.certification_name === certificationChoice);
+    });
     cardDeck.innerHTML = "";
-    cardCreate(data);
+    cardCreate(tutorsFiltered);
 }
 
-//Displays tutors with selected specialty 
-async function getBySpecialty(specialtyChoice) {
+const filterBySpecialty = (tutors, specialtyChoice) => {
+    tutors = allTutors;
     specialtyChoice = interestList.value; 
-    if (specialtyChoice === "0"){
-        alert("Please choose an option to search");
-        return false;
-    }
-    const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
-    var data = await apiData.json();
+    const tutorsFiltered = tutors.filter(tutors => {
+        return tutors.specialties.some(specialty => specialty.specialty_name === specialtyChoice);
+    });
     cardDeck.innerHTML = "";
-    cardCreate(data);
+    cardCreate(tutorsFiltered);
 }
 
-//Displays tutors with preferred location choice
-async function getByLocation(locationChoice) {
+const filterByLocation = (tutors, locationChoice) => {
+    tutors = allTutors;
     locationChoice = locationList.value; 
-    if (locationChoice === "0"){
-        alert("Please choose an option to search");
-        return false;
-    }
-    const apiData = await fetch(`./api/tutorLocation/${locationChoice}`);
-    var data = await apiData.json();
+    const tutorsFiltered = tutors.filter(tutor => tutor.lesson_setting === locationChoice);
     cardDeck.innerHTML = "";
-    cardCreate(data);
+    cardCreate(tutorsFiltered);
 }
+  
+
+
+// Code we went away from due to API payloads not presenting us complete data
+
+
+//   // Displays tutors with selected instrument
+//   async function getByInstrument(instrumentChoice) {
+//       instrumentChoice = instrumentList.value; 
+//       const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
+//       var data = await apiData.json();
+//       cardDeck.innerHTML = "";
+//       cardCreate(data);
+//   }
+
+//   //Displays tutors with selected certification
+//   async function getByCertification(certificationChoice) {
+//     certificationChoice = certificationList.value; 
+//     if (certificationChoice === "0"){
+//         alert("Please choose an option to search");
+//         return false;
+//     }
+//     const apiData = await fetch(`./api/tutorCertification/${certificationChoice}`);
+//     var data = await apiData.json();
+//     cardDeck.innerHTML = "";
+//     cardCreate(data);
+// }
+
+// //Displays tutors with selected specialty 
+// async function getBySpecialty(specialtyChoice) {
+//     specialtyChoice = interestList.value; 
+//     if (specialtyChoice === "0"){
+//         alert("Please choose an option to search");
+//         return false;
+//     }
+//     const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
+//     var data = await apiData.json();
+//     cardDeck.innerHTML = "";
+//     cardCreate(data);
+// }
+
+// //Displays tutors with preferred location choice
+// async function getByLocation(locationChoice) {
+//     locationChoice = locationList.value; 
+//     if (locationChoice === "0"){
+//         alert("Please choose an option to search");
+//         return false;
+//     }
+//     const apiData = await fetch(`./api/tutorLocation/${locationChoice}`);
+//     var data = await apiData.json();
+//     cardDeck.innerHTML = "";
+//     cardCreate(data);
+// }
