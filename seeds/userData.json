@@ -19,7 +19,12 @@
     "email": "scarr@gmail.com",
     "password": "password12345",
     "zipcode": "34695",
-    "role_id": 1
+    "role_id": 1,
+    "salutation": "Lady",
+    "profile_img":"Bassoon 1",
+    "price": "$$",
+    "lesson_setting": "virtual",
+    "phone": "813-555-5555"
   },
   {
     "firstName": "Joe",
@@ -27,7 +32,12 @@
     "email": "jruff@aol.com",
     "password": "password12345",
     "zipcode": "34695",
-    "role_id": 1
+    "role_id": 1,
+    "salutation": "Mr",
+    "profile_img":"Cello 1",
+    "price": "$$$$",
+    "lesson_setting": "virtual",
+    "phone": "813-555-5555"
   },
   {
     "firstName": "David",
@@ -35,7 +45,12 @@
     "email": "drauf@aol.com",
     "password": "password12345",
     "zipcode": "34695",
-    "role_id": 1
+    "role_id": 1,
+    "salutation": "Hon",
+    "profile_img":"Piano 3",
+    "price": "$$$$",
+    "lesson_setting": "virtual",
+    "phone": "813-555-5555"
   },
   {
     "firstName": "Pranith",
@@ -43,7 +58,12 @@
     "email": "pranithgunda@hotmail.com",
     "password": "password12345",
     "zipcode": "34695",
-    "role_id": 1
+    "role_id": 1,
+    "salutation": "Dr",
+    "profile_img":"Guitar 3",
+    "price": "$$$$",
+    "lesson_setting": "virtual",
+    "phone": "813-555-5555"
   },
   {
     "firstName": "Jean-Michelle",
