@@ -1,3 +1,5 @@
+//Setting initial variables
+
 const cardDeck = document.querySelector("#tupperware");
 const instrumentList = document.querySelector("#instrumentlist");
 const certificationList = document.querySelector("#certificationlist");
@@ -18,6 +20,8 @@ async function createInstrumentSearch() {
         instrumentList.innerHTML += listItem;
     }
 }
+
+// Function to dynamically populate certifications from our certification list
 async function createCertificationSearch() {
     const apiData = await fetch("./api/certifications");
     var data = await apiData.json();
@@ -30,6 +34,7 @@ async function createCertificationSearch() {
       certificationList.innerHTML += listItem;
     }
   }
+  // Function to dynamically populate specialties from our specialty list
   async function createSpecialtySearch() {
     const apiData = await fetch("./api/specialty");
     var data = await apiData.json();
@@ -43,10 +48,10 @@ async function createCertificationSearch() {
     }
   }
 
-
+// Function creates the cards on Tutor page
   const cardCreate = (data) => {
     for (let y = 0; y < data.length; y++) {
-        // Variables to be used in HTML
+        // Variables being used in dom manipulation
         const sal = data[y].salutation ? data[y].salutation : "";
         const first = data[y].firstName;
         const surname = data[y].lastName;
@@ -61,7 +66,9 @@ async function createCertificationSearch() {
         const student = localStorage.getItem('username');
         const tutor = data[y].id;
         const tutorReviews = data[y].tutor_reviews.length > 0 ? data[y].tutor_reviews : null;
+        const rate = data[y].price;
 
+        // Allowing us to populate a more user friendly response on card than is in JSON data
         if (locationRaw == "virtual"){
             tutorLocation = "Virtual"
         } else if (locationRaw == "inHome"){
@@ -74,6 +81,7 @@ async function createCertificationSearch() {
             tutorLocation = "Contact Instructor"
         }
 
+        // Creating functionality to have stars show up in card for the review rating of the tutor
         let reviewsHTML = "";
 
         if (tutorReviews !== null) {
@@ -108,11 +116,9 @@ async function createCertificationSearch() {
             }
         } else {
             reviewsHTML = `<div>No reviews available</div>`;
-        }
+        };
 
-        const rate = data[y].price;
-
-        // HTML injection
+        // The card itself, card was built in a HTML file and the brought over to the JS file
         const card = `
       <div class="ACTUAL-TUTOR-CARD-WITH-MARGINS-AND-PADDING card card-450 cardLayout p-3" id="${tutorName}-card">
           <div class="CONTAINER-T0-PUT-MAIN-INFO-AND-DETAILS-COLUMNS-SIDE-BY-SIDE row">
@@ -218,6 +224,7 @@ async function createAllTutors() {
     cardCreate(data);
   }
   
+  // Displays tutors with selected instrument
   async function getByInstrument(instrumentChoice) {
       instrumentChoice = instrumentList.value; 
       const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
@@ -227,6 +234,7 @@ async function createAllTutors() {
       cardCreate(data);
   }
 
+  //Displays tutors with selected certification
   async function getByCertification(certificationChoice) {
     certificationChoice = certificationList.value; 
     if (certificationChoice === "0"){
@@ -239,6 +247,8 @@ async function createAllTutors() {
     cardDeck.innerHTML = "";
     cardCreate(data);
 }
+
+//Displays tutors with selected specialty 
 async function getBySpecialty(specialtyChoice) {
     specialtyChoice = interestList.value; 
     if (specialtyChoice === "0"){
@@ -252,6 +262,7 @@ async function getBySpecialty(specialtyChoice) {
     cardCreate(data);
 }
 
+//Displays tutors with preferred location choice
 async function getByLocation(locationChoice) {
     locationChoice = locationList.value; 
     if (locationChoice === "0"){
