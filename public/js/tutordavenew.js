@@ -65,7 +65,7 @@ async function createCertificationSearch() {
         const phoneNumber = data[y].phone;
         const student = localStorage.getItem('username');
         const tutor = data[y].id;
-        const tutorReviews = data[y].tutorReviews && data[y].tutor_reviews.length > 0 ? data[y].tutor_reviews : "";
+        let tutorReviews = data[y].tutor_reviews && data[y].tutor_reviews.length > 0 ? data[y].tutor_reviews : [];
         const rate = data[y].price;
 
         // Allowing us to populate a more user friendly response on card than is in JSON data
@@ -84,7 +84,7 @@ async function createCertificationSearch() {
         // Creating functionality to have stars show up in card for the review rating of the tutor
         let reviewsHTML = "";
 
-        if (tutorReviews !== null) {
+        if (tutorReviews) {
             for (let s = 0; s < tutorReviews.length; s++) {
                 let starRating = "";
 
@@ -220,7 +220,6 @@ async function createAllTutors() {
     const apiData = await fetch("./api/tutors");
     var data = await apiData.json();
     console.log(data);
-    let length = data.length;
     cardCreate(data);
   }
   
@@ -229,7 +228,6 @@ async function createAllTutors() {
       instrumentChoice = instrumentList.value; 
       const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
       var data = await apiData.json();
-      let length = data.length;
       cardDeck.innerHTML = "";
       cardCreate(data);
   }
@@ -243,7 +241,6 @@ async function createAllTutors() {
     }
     const apiData = await fetch(`./api/tutorCertification/${certificationChoice}`);
     var data = await apiData.json();
-    let length = data.length;
     cardDeck.innerHTML = "";
     cardCreate(data);
 }
@@ -257,7 +254,6 @@ async function getBySpecialty(specialtyChoice) {
     }
     const apiData = await fetch(`./api/tutorSpecialty/${specialtyChoice}`);
     var data = await apiData.json();
-    let length = data.length;
     cardDeck.innerHTML = "";
     cardCreate(data);
 }
@@ -271,7 +267,6 @@ async function getByLocation(locationChoice) {
     }
     const apiData = await fetch(`./api/tutorLocation/${locationChoice}`);
     var data = await apiData.json();
-    let length = data.length;
     cardDeck.innerHTML = "";
     cardCreate(data);
 }
