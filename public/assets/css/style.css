@@ -68,7 +68,9 @@ body {
 #searchArea {
   text-align: center;
 }
-
+.tutor-btn {
+  font-size: 30px;
+}
 .btn {
   background-color: var(--clr-accent1);
   color: var(--clr-light);
