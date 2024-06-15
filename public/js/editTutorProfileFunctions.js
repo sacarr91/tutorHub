@@ -171,12 +171,7 @@ removeCertificationButton.addEventListener("click", async function(){
 
 // add specialty
 addSpecialtyButton.addEventListener("click", async function(){
-    let email = localStorage.getItem('username');
-    email = JSON.parse(email); 
-    const apiData = await fetch(`./api/users/email/${email}`);
-    const data = await apiData.json();
-    const user_id = data.id;
-
+   
     const specialty_id = document.getElementById('specialty-list').value;
     const response = await fetch('./api/tutorSpecialty', {
         method: 'POST',
@@ -190,11 +185,6 @@ addSpecialtyButton.addEventListener("click", async function(){
 
 // add link
 addLinkButton.addEventListener("click", async function(){
-    let email = localStorage.getItem('username');
-    email = JSON.parse(email); 
-    const apiData = await fetch(`./api/users/email/${email}`);
-    const data = await apiData.json();
-    const user_id = data.id;
 
     const link = document.getElementById('link').value;
     const platform =  document.getElementById('platform').value;
