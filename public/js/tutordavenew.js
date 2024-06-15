@@ -10,12 +10,16 @@ const locationList = document.querySelector("#locationlist");
 // Function to dynamically populate instrument choices from available instruments in table
 async function createInstrumentSearch() {
     const apiData = await fetch("./api/instruments");
-    var data = await apiData.json()
-    let length = data.length;
+    var data = await apiData.json();
+    function compareNumbers(obj1, obj2) {
+        return obj1.id - obj2.id;
+    };
+    let instList = data.sort(compareNumbers);
 
-    for (let i = 0; i < data.length; i++) {
+
+    for (let i = 0; i < instList.length; i++) {
         const listItem = `
-        <option value="${data[i].instrument_name}">${data[i].instrument_name}</option>
+        <option value="${instList[i].instrument_name}">${instList[i].instrument_name}</option>
         `;
         instrumentList.innerHTML += listItem;
     }
