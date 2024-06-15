@@ -92,7 +92,7 @@ router.post('/login', async (req, res) => {
       req.session.user_id = userData.id;
       req.session.logged_in = true;
       
-      res.redirect('/tutordave.html');
+      res.redirect('/find-a-tutor.html');
     });
 
   } catch (err) {

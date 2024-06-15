@@ -17,6 +17,7 @@
   margin-top: var(--bs-gutter-y);
   margin: 0.5rem;
 }
+
 @media (min-width: 955px) {
   .cardLayout {
     flex: 0 0 auto;
