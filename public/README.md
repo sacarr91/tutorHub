@@ -36,11 +36,14 @@ Write something cool man!
 ## Key Features
 
 - Guest Search: Explore our extensive database of musicians without needing to register.
-- User and Tutor Accounts: Users or Tutors can register and log in to customize your profile and enhance your experience.
+- User and Tutor Accounts: Users or Tutors can register and log in to customize their profiles to enhance their experience.
 - Musician Profiles: Musicians can register and log in to expand their clientele and connect with eager students.
-- Musicians display on cards after users makes a selection
-- Musicians can be filtered by certification, instrument, teaching specialty, and location
+- Tutor cards: musicians are displayed on cards with selectable tabs that allow users to browse and add reviews in addition to the performer's basic information and contact details.
+- Tutor cards page: Tutors search can be filtered by certification, instrument, teaching specialty, and location
 - Image carousel that you can scroll through to view random musicians
+- Developers page: Shares brief details about the creators
+- Registration/login modal: When you click register or login a modal pops up with either a registration or login form.
+- Custom footer and transparent TutorHub logo
 
 - [TutorHub Render Link](https://tutorhub-spk8.onrender.com/)
 
@@ -66,7 +69,7 @@ Stephanie Carr
 
 Pranith Gunda
 
-> Write contributions here...
+> Developed the logic and modal for registration and login. Contributed to the database's back-end development using Postgres and Sequelize.
 
 ---
 
@@ -78,7 +81,7 @@ David Rauf
 
 Joseph Ruff
 
-> Helped develop the framework and logic for the tutorcards. Focused on back-end work with development of APIs with GET, POST, and DELETE routes.
+> Helped develop the foundational framework and logic for the tutorcards. I contributed to the back-end development of the APIs and models, assisting in the creation of GET, POST, and DELETE routes.
 
 ---
 
