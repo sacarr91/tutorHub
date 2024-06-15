@@ -58,7 +58,6 @@ body {
 .hero {
   margin-top: 5vh;
   margin-bottom: 5vh;
-  margin-left: 2vh;
 }
 
 .hero img {
@@ -153,4 +152,12 @@ body {
 #reviewdiv {
   max-height: 196px;
   overflow-y: auto;
+}
+
+.carousel-control-prev {
+  justify-content: left;
+}
+
+.carousel-control-next {
+  justify-content: right;
 }
