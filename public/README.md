@@ -53,9 +53,9 @@
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-## Contibution Screenshot
+## Team Contributions
 
-!["contributions"]()
+!["contributions"](./assets/images/contributions.png)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
