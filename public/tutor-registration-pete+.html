@@ -22,7 +22,13 @@
 <body>
   <!-- Sticky Header -->
   <header id="header">
-   
+    <nav class="navbar navbar-expand-sm sticky-top patrick">
+      <div class="container-fluid">
+          <a class="navbar-brand logo" href="index.html">
+              <img src="./assets/images/logo_transparent_2.png">
+          </a>
+      </div>
+  </nav>
   </header>
 
 
@@ -203,10 +209,10 @@
               <select name="lesson_setting" class="form-select text-muted mb-3" aria-label="Default select example"
                 id="lesson-setting-list" required>
                 <option value="">Select lesson setting</option>
-                <option value="Student's Home">✅In Person 🏠Willing to Travel to Student's Home</option>
-                <option value="Tutor's Studio">✅Teacher's Studio Only / ⛔Travel ⛔Virtual</option>
-                <option value="Virtual">✅Virtual Only / ⛔In-Person</option>
-                <option value="Studio or Virtual">✅In-Studio ✅Virtual / ⛔Travel</option>
+                <option value="inHome">✅In Person 🏠Willing to Travel to Student's Home</option>
+                <option value="inStudio">✅Teacher's Studio Only / ⛔Travel ⛔Virtual</option>
+                <option value="virtual">✅Virtual Only / ⛔In-Person</option>
+                <option value="hybrid">✅In-Studio ✅In Person</option>
               </select>
             </div>
             <div class="ZIP-AND-PHONE row">
@@ -240,7 +246,6 @@
   <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js"
     integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz"
     crossorigin="anonymous"></script>
-    <script src="./js/nav.js"></script>
     <script src="./js/choose-image.js"></script>
   <script src="./js/pullListData.js"></script>
   <script>pullInstrumentData();</script>

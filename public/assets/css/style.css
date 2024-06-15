@@ -149,3 +149,8 @@ body {
 .searchBar {
   display: flex;
 }
+
+#reviewdiv {
+  max-height: 196px;
+  overflow-y: auto;
+}
