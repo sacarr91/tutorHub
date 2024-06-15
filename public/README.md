@@ -78,7 +78,7 @@ David Rauf
 
 Joseph Ruff
 
-> Write contributions here...
+> Helped develop the framework and logic for the tutorcards. Focused on back-end work with development of APIs with GET, POST, and DELETE routes.
 
 ---
 
@@ -124,6 +124,7 @@ Peter Smith
 - [lleriayo](https://github.com/Ileriayo/markdown-badges)
 - [Home](https://home.aveek.io/GitHub-Profile-Badges/)
 - [Canva](https://www.canva.com/features/transparent-background/)
+- [Frontendjoe](https://www.instagram.com/frontendjoe?igsh=NmFtNGl0NnZnMGRu)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 

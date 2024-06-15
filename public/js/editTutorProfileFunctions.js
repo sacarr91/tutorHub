@@ -139,7 +139,7 @@ removeCertificationButton.addEventListener("click", async function () {
   const data = await apiData.json();
   const user_id = data.id;
 
-  const certification_id = document.getElementById("certification-list").value;
+  const certification_id = document.getElementById("certificationlist").value;
   const response = await fetch(
     `./api/tutorCertification/${user_id}/${certification_id}`,
     {

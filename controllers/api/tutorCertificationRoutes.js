@@ -35,6 +35,7 @@ router.get("/:id", async (req, res) => {
 
 // add records to the tutor_certification table
 router.post("/", async (req, res) => {
+  console.log(req.body);
   try {
     await TutorCertification.create({
       user_id: req.body.user_id,
@@ -45,6 +46,7 @@ router.post("/", async (req, res) => {
       .json("A new certification has successfully added to your profile!");
   } catch (err) {
     res.status(500).json({ err });
+    console.log(err);
   }
 });
 
