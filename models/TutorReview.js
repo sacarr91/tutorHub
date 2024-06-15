@@ -20,16 +20,16 @@ TutorReview.init(
       },
       allowNull: false,
     },
-    student_id: {
-        type: DataTypes.INTEGER,
-        references: {
-          model: 'user',
-          key: 'id',
-    },
-    allowNull: false
+    student_email: {
+        type: DataTypes.STRING,
+        allowNull: false
 },
     review: {
       type: DataTypes.STRING,
+      allowNull: false,
+    },
+    rating: {
+      type: DataTypes.INTEGER,
       allowNull: false,
     }
   },

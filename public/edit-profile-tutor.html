@@ -131,6 +131,7 @@
                 <div class="col-4">
                     <input
                         type="text"
+                        id="first-name"
                         name="firstName"
                         class="form-control normal-text"
                         placeholder="First name"
@@ -140,6 +141,7 @@
                 <div class="col-5 mb-3">
                     <input
                         type="text"
+                        id="last-name"
                         name="lastName"
                         class="form-control normal-text"
                         placeholder="Last name"
@@ -147,8 +149,7 @@
                     >
                 </div>
             </div>
-            <label for="email-input" class="form-label patrick">
-                Email address
+            <label for="email-input" class="form-label patrick">Email address
                 <i>(will be your username)</i>
             </label>
             <input
@@ -158,79 +159,93 @@
                 id="email-input"
                 placeholder="name@example.com"
             >
-            <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
-            <input
-                name="password"
-                type="password"
-                id="inputPassword5"
-                class="form-control"
-                aria-describedby="passwordHelpBlock"
-            >
-            <div id="passwordHelpBlock" class="mb-3 form-label patrick">
-                Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
-              characters, or emoji.
-            </div>
-            <h3 class="col-auto me-3 mb-3">
-                Zipcode
-            </h3>
-            <div class="col-5">
-                <input
-                    type="text"
-                    name="zipcode"
-                    class="form-control normal-text"
-                    placeholder="Zip Code"
-                    aria-label="Zip Code"
-                >
+            <div class="row col-sm-12 col-md-6">
+                <h3 class="col-auto">Zipcode</h3>
+                <div class="col-5">
+                    <input
+                        type="text"
+                        id="zipcode"
+                        name="zipcode"
+                        class="form-control normal-text"
+                        placeholder="Zip Code"
+                        aria-label="Zip Code"
+                    >
+                </div>
             </div>
             <br>
-            <!-- Tutor Details -->
-            <div id="price-range" class="row align-items-bottom">
-                <h3 class="col-1">
-                    Price Per Lesson
-                </h3>
-                <div class="btn-group col-auto mb-3" role="group" aria-label="Basic radio toggle button group">
+            <div class="PHONE-NUMBER row col-sm-12 col-md-6">
+                <h3 class="col-auto">Phone #</h3>
+                <div class="col-sm-6 col-md-8">
                     <input
-                        name="price"
-                        value="$"
-                        type="radio"
-                        class="btn-check"
-                        name="btnradio"
-                        id="$"
-                        autocomplete="off"
-                        checked
+                        name="phone"
+                        id="phone"
+                        type="text"
+                        class="form-control normal-text"
+                        placeholder="(000) 000-0000"
                     >
-                    <label class="btn my-btn" for="$">$ ($30 or less)</label>
-                    <input
-                        name="price"
-                        value="$$"
-                        type="radio"
-                        class="btn-check"
-                        name="btnradio"
-                        id="$$"
-                        autocomplete="off"
-                    >
-                    <label class="btn my-btn" for="$$">$$ ($35 to $55)</label>
-                    <input
-                        name="price"
-                        value="$$$"
-                        type="radio"
-                        class="btn-check"
-                        name="btnradio"
-                        id="$$$"
-                        autocomplete="off"
-                    >
-                    <label class="btn my-btn" for="$$$">$$$ ($60 to $80)</label>
-                    <input
-                        name="price"
-                        value="$$$$"
-                        type="radio"
-                        class="btn-check"
-                        name="btnradio"
-                        id="$$$$"
-                        autocomplete="off"
-                    >
-                    <label class="btn my-btn" for="$$$$">$$$$ ($85+)</label>
                 </div>
+                <br>
+                <br>
+                <br>
+                <div id="price-range" class="row align-items-bottom">
+                    <h3 class="col-3">Price Per Lesson</h3>
+                    <select
+                        name="price"
+                        class="form-select"
+                        aria-label="Default select example"
+                        id="price"
+                    >
+                        <option value="$">$ ($30 or less)</option>
+                        <option value="$$">$$ ($35 to $55)</option>
+                        <option value="$$$">$$$ ($60 to $80)</option>
+                        <option value="$$$$">$$$$ ($85+)</option>
+                    </select>
+                </div>
+                <div>
+                    <div id="setting">
+                        <h3 class="col-5" id="setting-header">
+                            Lesson Location
+                        </h3>
+                        <select
+                            name="lesson_setting"
+                            class="form-select text-muted mb-3"
+                            aria-label="Default select example"
+                            id="lesson-setting-list"
+                            required
+                        >
+                            <option value="">Select lesson setting</option>
+                            <option value="inHome">✅In Person 🏠Willing to Travel to Student's Home</option>
+                            <option value="inStudio">✅Teacher's Studio Only / ⛔Travel ⛔Virtual</option>
+                            <option value="virtual">✅Virtual Only / ⛔In-Person</option>
+                            <option value="hybrid">✅Virtual ✅In Person</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row my-4 justify-content-center" id="next">
+                    <button
+                        id="updateUserInfo"
+                        type="submit"
+                        id="submit"
+                        value="Submit"
+                        class="btn col-16 btn-primary"
+                    >Update Your Info</button>
+                </div>
+                <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
+                <input
+                    name="password"
+                    type="password"
+                    id="inputPassword5"
+                    class="form-control"
+                    aria-describedby="passwordHelpBlock"
+                >
+                <div id="passwordHelpBlock" class="mb-3 form-label patrick">
+                    Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+              characters, or emoji.
+                </div>
+                <div>
+                    <button id="changePassword" class="btn col-16 btn-danger" type="button">Change Password</button>
+                </div>
+                <!-- Tutor Details -->
                 <div class="col-8">
                     <h3>Instruments</h3>
                     <div id="performAndTeach" class="form-label patrick">
@@ -270,10 +285,10 @@
                             <option selected disabled>Select a Certification</option>
                         </select>
                         <div>
-                            <button id="addCertification" class="btn col-16" type="button">Add Certification!</button>
+                            <button id="addCertification" class="btn col-16 btn-primary" type="button">Add Certification!</button>
                         </div>
                         <div>
-                            <button id="removeCertification" class="btn col-16" type="button">Remove Certification!</button>
+                            <button id="removeCertification" class="btn col-16 btn-danger" type="button">Remove Certification</button>
                         </div>
                     </div>
                     <div id="special-interests-header">
@@ -289,10 +304,7 @@
                             <option selected disabled>Select a Specialty</option>
                         </select>
                         <div>
-                            <button id="addSpecialty" class="btn col-16" type="button">Add Specialty!</button>
-                        </div>
-                        <div>
-                            <button id="removeSpecialty" class="btn col-16" type="button">Remove Specialty!</button>
+                            <button id="addSpecialty" class="btn col-16 btn-primary" type="button">Add Specialty!</button>
                         </div>
                     </div>
                 </div>
@@ -323,18 +335,12 @@
                             <button id="addLink" class="btn col-16" type="button">Add Link!</button>
                         </div>
                     </div>
-                    <div class="row my-4 justify-content-center" id="next">
-                        <button
-                            type="submit"
-                            id="submit"
-                            value="Submit"
-                            class="btn col-16"
-                        >Update Your Info</button>
-                    </div>
                     <script src="./js/nav.js"></script>
                     <script src="./js/choose-image.js"></script>
                     <script src="./js/pullListData.js"></script>
                     <script src="./js/editTutorProfileFunctions.js"></script>
+                    <script src="./js/loginlogic.js"></script>
+                    <script src="./js/logout.js"></script>
                     <script>pullInstrumentData();</script>
                     <script>pullCertData();</script>
                     <script>pullSpecialtyData();</script>

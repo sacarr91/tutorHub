@@ -39,7 +39,7 @@ router.post('/', async(req, res) => {
         instrument_id: req.body.instrument_id,
         });
         res.status(200).json({ message: `a new instrument has been successfully added to your profile!` })
-    } catch (err) { res.status(500).json(err);}
+    } catch (err) {res.status(422).json({err});}
 });
 
 //  remove records from the user_instrument table
