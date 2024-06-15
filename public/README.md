@@ -29,21 +29,21 @@
 
 ## Usage
 
-Write something cool man!
+<p>This app serves both users and tutors. Users can search for musicians to help them improve their skills, while tutors can use the platform to build a clientele for their private tutoring business. While searching is possible without registration or login, doing so allows users and tutors to personalize their profiles.</p>
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ## Key Features
 
-- Guest Search: Explore our extensive database of musicians without needing to register.
+- Guest Search: Users cam explore tutor database without needing to register or login.
 - User and Tutor Accounts: Users or Tutors can register and log in to customize their profiles to enhance their experience.
-- Musician Profiles: Musicians can register and log in to expand their clientele and connect with eager students.
-- Tutor cards: musicians are displayed on cards with selectable tabs that allow users to browse and add reviews in addition to the performer's basic information and contact details.
-- Tutor cards page: Tutors search can be filtered by certification, instrument, teaching specialty, and location
-- Image carousel that you can scroll through to view random musicians
+- Tutor cards: Musicians are displayed on cards with selectable tabs that allow users to browse and add reviews in addition to the performer's basic information and contact details.
+- Tutor cards page: Your search can be filtered by certification, instrument, teaching specialty, and location.
+- Image carousel on homepage
 - Developers page: Shares brief details about the creators
 - Registration/login modal: When you click register or login a modal pops up with either a registration or login form.
 - Custom footer and transparent TutorHub logo
+- TutorHub Logo home button
 
 - [TutorHub Render Link](https://tutorhub-spk8.onrender.com/)
 
