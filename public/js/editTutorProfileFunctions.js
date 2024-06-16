@@ -6,6 +6,7 @@ const removeInstrumentButton = document.getElementById('removeInstrument');
 const removeCertificationButton = document.getElementById('removeCertification');
 const updateUserInfoButton = document.getElementById('updateUserInfo');
 const changePasswordButton = document.getElementById('changePassword');
+const removeSpecialtyButton = document.getElementById('removeSpecialty');
 
 // change password button
 changePasswordButton.addEventListener("click", async function(){
@@ -83,7 +84,7 @@ updateUserInfoButton.addEventListener("click", async function(){
 
         })
     });
-    if(response.ok) { alert ('you have successfully updated your personal information!')
+    if(response.ok) { alert ('🤘 you have successfully updated your personal information! 🤘')
         window.localStorage.setItem('username', JSON.stringify(email))
         window.location.reload();
     }
@@ -142,9 +143,7 @@ addCertificationButton.addEventListener("click", async function(){
         body: JSON.stringify({ user_id: user_id, certification_id: certification_id})
     });
     if(response.ok) { 
-        alert ('😃 you have successfully added a certification to your profile! 😃')
-    } else if (response.status === 404) {
-        alert('Sorry, it does not appear that this certification has been associated with your profile in our records 🤔');
+        alert ('🥇 you have successfully added a certification to your profile! 🥇')
     } else if (response.status === 422) {
         alert('This certification has already been added to your profile 😊');
     }
@@ -180,7 +179,30 @@ addSpecialtyButton.addEventListener("click", async function(){
         },
         body: JSON.stringify({ user_id: user_id, specialty_id: specialty_id})
     });
-    if(response.ok) { alert ('you have successfully added a specialty to your profile!')}
+    if(response.ok) { 
+        alert ('🦄 you have successfully added a specialty to your profile! 🧙')
+    } else if (response.status === 422) {
+        alert('This specialty has already been added to your profile 😊');
+    }
+});
+
+// remove specialty
+removeSpecialtyButton.addEventListener("click", async function(){
+
+    const specialty_id = document.getElementById('specialty-list').value;
+    const response = await fetch(`./api/tutorSpecialty/${user_id}/${specialty_id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    if (response.ok) {
+        alert('👻 You have removed a specialty from your profile 👻');
+    } else if (response.status === 404) {
+        alert('Sorry, it does not appear that this specialty has been associated with your profile in our records 🤔');
+    } else if (response.status === 422) {
+        alert('Sorry, an error has occurred please ensure you are logged in, refresh the browser and try again 😵');
+    }
 });
 
 // add link
