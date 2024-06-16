@@ -49,13 +49,13 @@
 
 - [TutorHub Repo Link](https://github.com/peteCodes4u/tutorHub)
 
-- ![SCREENSHOTS GO HERE]()
+- ![Finished Product](./assets/images/finished-product.gif)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ## Team Contributions
 
-!["contributions"](./assets/images/contributions.png)
+<img src="./assets/images/contributions.png" alt="contributions" width="600" height="338">
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -87,7 +87,7 @@ Joseph Ruff
 
 Peter Smith
 
-> Write contributions here...
+> Specialized in developing the database, APIs, and routes. Worked alongside team members to finalize the logic for fetching and filtering data to align with each specific search parameter.
 
 ## Team Contact
 
