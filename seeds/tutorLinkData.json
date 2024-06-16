@@ -1,37 +1,37 @@
 [
     {
         "user_id": 1,
-        "platform": "Website",
+        "platform_id": 1,
         "link": "https://github.com/peteCodes4u"
     },
     {
         "user_id": 1,
-        "platform": "Facebook",
+        "platform_id": 2,
         "link": "https://github.com/peteCodes4u"
     },
     {
         "user_id": 1,
-        "platform": "Instagram",
+        "platform_id": 3,
         "link": "https://github.com/peteCodes4u"
     },
     {
         "user_id": 1,
-        "platform": "Tiktok",
+        "platform_id": 4,
         "link": "https://github.com/peteCodes4u"
     },
     {
         "user_id": 1,
-        "platform": "YouTube",
+        "platform_id": 5,
         "link": "https://github.com/peteCodes4u"
     },
     {
         "user_id": 1,
-        "platform": "other",
+        "platform_id": 6,
         "link": "https://github.com/peteCodes4u"
     },
     {
         "user_id": 2,
-        "platform": "Website",
+        "platform_id": 3,
         "link": "https://github.com/peteCodes4u"
     }
 ]

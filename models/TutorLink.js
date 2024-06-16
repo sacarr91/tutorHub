@@ -20,9 +20,12 @@ TutorLink.init(
         key: 'id'
       },
     },
-    platform: {
-        type: DataTypes.STRING,
-        allowNull: false,
+    platform_id: {
+        type: DataTypes.INTEGER,
+        references: {
+          model: 'platform',
+          key: 'id'
+        },
     },
     link: {
       type: DataTypes.STRING,
