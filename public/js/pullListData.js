@@ -11,8 +11,8 @@ async function pullInstrumentData() {
 
       const listItem = `<option value="${data[i].id}">${data[i].instrument_name}</option>`;
       instrumentList.innerHTML += listItem;
-    }
-  }
+    };
+  };
 
   // Pull Certification list
   async function pullCertData() {
@@ -23,8 +23,8 @@ async function pullInstrumentData() {
 
       const listItem = `<option value="${data[i].id}">${data[i].certification_name}</option>`;
       certificationList.innerHTML += listItem;
-    }
-  }
+    };
+  };
 
     // Pull Specialty list
     async function pullSpecialtyData() {
@@ -35,6 +35,11 @@ async function pullInstrumentData() {
   
         const listItem = `<option value="${data[i].id}">${data[i].specialty_name}</option>`;
         specialtyList.innerHTML += listItem;
-      }
-    }
+      };
+    };
+
+    // Pull Link Platform list
+    async function pullLinkPlatform() {
+      const apiData = await fetch("./api/")
+    } 
 
