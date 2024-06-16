@@ -128,6 +128,7 @@ Peter Smith
 - [Home](https://home.aveek.io/GitHub-Profile-Badges/)
 - [Canva](https://www.canva.com/features/transparent-background/)
 - [Frontendjoe](https://www.instagram.com/frontendjoe?igsh=NmFtNGl0NnZnMGRu)
+- [ezgif](https://ezgif.com/)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
