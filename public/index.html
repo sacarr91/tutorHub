@@ -13,7 +13,7 @@
         <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/font/bootstrap-icons.min.css">
         <!-- Google Fonts -->
         <style>
-    @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
+        @import url('https://fonts.googleapis.com/css2?family=Comforter+Brush&family=Open+Sans:ital,wdth,wght@0,75..100,300..800;1,75..100,300..800&family=Patrick+Hand+SC&display=swap');
         </style>
         <link rel="stylesheet" href="./assets/css/style.css">
         <link rel="stylesheet" href="./assets/css/footer.css">
@@ -30,40 +30,40 @@
                     <div id="heroCarousel" class="carousel slide">
                         <div class="carousel-inner">
                             <div class="carousel-item active">
-                                <div class="col-12 row">
-                                    <div class="col-4" style="height: 50vh">
+                                <div class="row">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash1.jpg">
                                     </div>
-                                    <div class="col-4" style="height: 50vh">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash2.jpg">
                                     </div>
-                                    <div class="col-4" style="height: 50vh">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash3.jpg">
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="col-12 row">
-                                    <div class="col-4" style="height: 50vh">
+                                <div class="row">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash10.jpg">
                                     </div>
-                                    <div class="col-4" style="height: 50vh">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash5.jpg">
                                     </div>
-                                    <div class="col-4" style="height: 50vh">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash6.jpg">
                                     </div>
                                 </div>
                             </div>
                             <div class="carousel-item">
-                                <div class="col-12 row">
-                                    <div class="col-4" style="height: 50vh">
+                                <div class="row">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash7.jpg">
                                     </div>
-                                    <div class="col-4" style="height: 50vh">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash8.jpg">
                                     </div>
-                                    <div class="col-4" style="height: 50vh">
+                                    <div class="col-4">
                                         <img src="./assets/images/splash9.jpg">
                                     </div>
                                 </div>
@@ -89,8 +89,10 @@
                         </button>
                     </div>
                 </div>
+                <!-- Welcome & Button -->
                 <div id="searchArea" style="margin-left: 25%; margin-right: 25%;">
-                    <a href="tutordave.html" class="btn btn-outline-light tutor-btn brush" id="searchAreaLink">Find a Tutor</a>
+                    <h1 style="justify-content: center; font-size: 90px;">Welcome to TutorHub!</h1>
+                    <a href="find-a-tutor.html" class="btn btn-outline-light light-text" id="searchAreaLink">click here to search</a>
                 </div>
             </div>
             <!-- Registration Modal -->
@@ -259,27 +261,31 @@
                     </svg>
                 </div>
                 <section>
-                    <ul class="links">
-                        <li>
-                            <a href="./index.html">Home</a>
-                        </li>
-                        <li>
-                            <a href="developers.html">Developers</a>
-                        </li>
-                    </ul>
-                    <div class="logo">
-                        <img src="./assets/images/logo_transparent_2.png">
+                    <div class="row align-items-bottom">
+                        <div class="logo col-auto">
+                            <img src="./assets/images/logo_transparent_2.png">
+                        </div>
+                        <div class="col-auto my-4">
+                            <ul class="links mb-1">
+                                <li>
+                                    <a href="./index.html">Home</a>
+                                </li>
+                                <li>
+                                    <a href="developers.html">Developers</a>
+                                </li>
+                            </ul>
+                            <p class="legal">© 2024 All rights reserved</p>
+                        </div>
                     </div>
-                    <p class="legal">© 2024 All rights reserved</p>
                 </section>
             </footer>
         </div>
         <!-- Including Bootstrap JS -->
         <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
         <script>
-    function clickHandler() {
-      window.location.href = 'tutordave.html';
-    }
+        function clickHandler() {
+            window.location.href = 'find-a-tutor.html';
+        }
         </script>
         <script src="./js/nav.js"></script>
         <script src="./js/login.js"></script>

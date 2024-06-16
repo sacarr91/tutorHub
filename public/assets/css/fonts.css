@@ -123,8 +123,9 @@ h6 {
   font-style: normal;
 }
 footer {
-  font-family: "Patrick Hand SC", cursive;
+  font-family: "Open Sans" sans-serif;
   font-size: 20px;
+  font-weight: 300;
 }
 
 .normal-text {
