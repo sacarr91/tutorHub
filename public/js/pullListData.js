@@ -1,6 +1,7 @@
 const instrumentList = document.querySelector("#instrumentlist");
 const certificationList = document.querySelector("#certification-list");
 const specialtyList = document.querySelector("#specialty-list");
+const linkPlatformList = document.querySelector("#platform-link");
 
 // Pull Instrument List
 async function pullInstrumentData() {
@@ -40,6 +41,12 @@ async function pullInstrumentData() {
 
     // Pull Link Platform list
     async function pullLinkPlatform() {
-      const apiData = await fetch("./api/")
-    } 
+      const apiData = await fetch("./api/linkPlatform");
+      const data = await apiData.json();
+
+      for (let i = 0; i < data.length; i++) {
+        const listItem = `<option value="${data[i].id}">${data[i].platform_name}</option>`;
+        linkPlatformList.innerHTML += listItem;
+      };
+    }; 
 

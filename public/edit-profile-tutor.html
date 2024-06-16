@@ -225,14 +225,9 @@
                 </div>
                 <h3>Website & Socials</h3>
                 <div class="input-group mb-1">
-                  <select name="platform" class="form-select normal-text" id="platform" aria-label="Default select example">
-                    <option selected></option>
-                    <option value="Website">Website</option>
-                    <option value="Facebook">Facebook</option>
-                    <option value="Instagram">Instagram</option>
-                    <option value="TikTok">TikTok</option>
-                    <option value="YouTube">YouTube</option>
-                    <option value="Other">Other</option> 
+                  <select name="platform" class="form-select normal-text" id="platform-link" aria-label="Default select example">
+                    <option selected disabled>Select a Platform</option>
+                  </select>
                     <input name="link" id="link" type="text" class="form-control normal-text" placeholder="Link to Page"
                       aria-label="Text input with dropdown button">
                       <div>
@@ -248,5 +243,6 @@
         <script>pullInstrumentData();</script>
         <script>pullCertData();</script>
          <script>pullSpecialtyData();</script>
+         <script>pullLinkPlatform();</script>
     </body>
 </html>
