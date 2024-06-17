@@ -55,7 +55,7 @@
 
 ## Team Contributions
 
-<img src="./assets/images/contributions.png" alt="contributions" width="600" height="338">
+<img src="./public/assets/images/contributions.png" alt="contributions" width="600" height="338">
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
