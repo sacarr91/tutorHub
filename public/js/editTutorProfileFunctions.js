@@ -209,14 +209,18 @@ removeSpecialtyButton.addEventListener("click", async function(){
 addLinkButton.addEventListener("click", async function(){
 
     const link = document.getElementById('link').value;
-    const platform =  document.getElementById('platform').value;
+    const platform =  document.getElementById('platform-list').value;
     const response = await fetch('./api/tutorLink', {
         method: 'POST',
         headers: {
             'Content-Type': 'application/json'
         },
-        body: JSON.stringify({ user_id: user_id, platform: platform, link: link})
+        body: JSON.stringify({ user_id: user_id, platform_id: platform, link: link})
     });
-    if(response.ok) { alert ('you have successfully added a link to your profile!')}
+    if(response.ok) { 
+        alert (' you have successfully added a specialty to your profile! 👍')
+    } else if (response.status === 422) {
+        alert('A link for this platform has already been added to your profile, if you wish to update that link please first delete the link associated with that platform 😊');
+    }
 });
 

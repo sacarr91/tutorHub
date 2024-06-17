@@ -1,7 +1,7 @@
 const instrumentList = document.querySelector("#instrumentlist");
 const certificationList = document.querySelector("#certification-list");
 const specialtyList = document.querySelector("#specialty-list");
-const linkPlatformList = document.querySelector("#platform-link");
+const linkPlatformList = document.querySelector("#platform-list");
 
 // Pull Instrument List
 async function pullInstrumentData() {

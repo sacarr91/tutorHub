@@ -16,11 +16,11 @@ router.post('/', async(req, res) => {
     try{
         await TutorLink.create({
             user_id: req.body.user_id,
-            platform: req.body.platform,
+            platform_id: req.body.platform_id,
             link: req.body.link,
         });
         res.status(200).json({message: `a new link has been added to your profile!`})
-    }catch(err){res.status(500).json(err);}
+    }catch(err){res.status(422).json(err);}
 });
 
 module.exports = router;
