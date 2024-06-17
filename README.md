@@ -49,7 +49,7 @@
 
 - [TutorHub Repo Link](https://github.com/peteCodes4u/tutorHub)
 
-- ![Finished Product](./assets/images/finished-product.gif)
+- ![Finished Product](./public/assets/images/finished-product.gif)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
