@@ -39,3 +39,16 @@ $container-max-widths: (
 .card-450 {
     max-width: 450px;
 };
+
+.searchFilters {
+    @include make-col-ready();
+    @include media-breakpoint-down(sm) {
+        @include make-col(12);
+    };    
+    @include media-breakpoint-up(sm) {
+        @include make-col(6);
+    };
+    @include media-breakpoint-up(md) {
+        @include make-col(3);
+    };
+}

@@ -140,30 +140,38 @@
                         <option value="HRH">HRH</option>
                       </select>
                 </div>
-              <div class="col-4">
-                <input type="text" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name">
+                <div class="col-4">
+                  <input type="text" id="first-name" name="firstName" class="form-control normal-text" placeholder="First name" aria-label="First name">
+                </div>
+                <div class="col-5 mb-3">
+                  <input type="text" id="last-name" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name">
+                </div>
               </div>
-              <div class="col-5 mb-3">
-                <input type="text" name="lastName" class="form-control normal-text" placeholder="Last name" aria-label="Last name">
+              <label for="email-input" class="form-label patrick">Email address <i>(will be your username)</i></label>
+              <input name="email" type="email" class="form-control mb-3 normal-text" id="email-input" placeholder="name@example.com">
+              <div class="row col-sm-12 col-md-6">
+                <h3 class="col-auto">Zipcode</h3>
+                <div class="col-5">
+                  <input type="text" id="zipcode" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
+                </div>
               </div>
-            </div>
-            <label for="email-input" class="form-label patrick">Email address <i>(will be your username)</i></label>
-            <input name="email" type="email" class="form-control mb-3 normal-text" id="email-input" placeholder="name@example.com">
-            <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
-            <input name="password" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
-            <div id="passwordHelpBlock" class="mb-3 form-label patrick">
-              Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
-              characters, or emoji.
-            </div>
-            <div class="col-2">
-                <input type="text" name="zipcode" class="form-control normal-text" placeholder="Zip Code" aria-label="Zip Code">
-              </div>
+              <br>
+        <div class="row my-4 justify-content-center" id="next">
+          <button id="updateUserInfo" type="submit" id="submit" value="Submit" class="btn col-16 btn-primary">Update Your Info</button>
         </div>
-        <div class="row my-4" id="next">
-          <button type="submit" id="submit" value="Submit" class="btn col-16">Update your info!</button>
-        </div>
-        <script src="./js/nav.js"></script>
+      <label for="inputPassword5" class="form-label patrick">Choose a Password</label>
+      <input name="password" type="password" id="inputPassword5" class="form-control" aria-describedby="passwordHelpBlock">
+      <div id="passwordHelpBlock" class="mb-3 form-label patrick">
+        Your password must be 8-20 characters long, contain letters and numbers, and must not contain spaces, special
+        characters, or emoji.
+      </div>
+      <div>
+        <button id="changePassword" class="btn col-16 btn-danger" type="button">Change Password</button>
+      </div>
+  <script src="./js/nav.js"></script>
         <script src="./js/choose-image.js"></script>
         <script src="./js/loginlogic.js"></script>
+        <script src="./js/logout.js"></script>
+        <script src="./js/editStudentProfileFunctions.js"></script>
     </body>
 </html>

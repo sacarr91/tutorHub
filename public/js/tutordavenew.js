@@ -6,125 +6,139 @@ const certificationList = document.querySelector("#certificationlist");
 const interestList = document.querySelector("#interestlist");
 const locationList = document.querySelector("#locationlist");
 
-
 // Function to dynamically populate instrument choices from available instruments in table
 async function createInstrumentSearch() {
-    const apiData = await fetch("./api/instruments");
-    var data = await apiData.json()
-    let length = data.length;
+  const apiData = await fetch("./api/instruments");
+  var data = await apiData.json();
+  function compareNumbers(obj1, obj2) {
+    return obj1.id - obj2.id;
+  }
+  let instList = data.sort(compareNumbers);
 
-    for (let i = 0; i < data.length; i++) {
-        const listItem = `
-        <option value="${data[i].instrument_name}">${data[i].instrument_name}</option>
+  for (let i = 0; i < instList.length; i++) {
+    const listItem = `
+        <option value="${instList[i].instrument_name}">${instList[i].instrument_name}</option>
         `;
-        instrumentList.innerHTML += listItem;
-    }
+    instrumentList.innerHTML += listItem;
+  }
 }
 
 // Function to dynamically populate certifications from our certification list
 async function createCertificationSearch() {
-    const apiData = await fetch("./api/certifications");
-    var data = await apiData.json();
-    let length = data.length;
-  
-    for (let i = 0; i < data.length; i++) {
-      const listItem = `
+  const apiData = await fetch("./api/certifications");
+  var data = await apiData.json();
+  let length = data.length;
+
+  for (let i = 0; i < data.length; i++) {
+    const listItem = `
           <option value="${data[i].certification_name}">${data[i].certification_name}</option>
           `;
-      certificationList.innerHTML += listItem;
-    }
+    certificationList.innerHTML += listItem;
   }
-  // Function to dynamically populate specialties from our specialty list
-  async function createSpecialtySearch() {
-    const apiData = await fetch("./api/specialty");
-    var data = await apiData.json();
-    let length = data.length;
-  
-    for (let i = 0; i < data.length; i++) {
-      const listItem = `
+}
+// Function to dynamically populate specialties from our specialty list
+async function createSpecialtySearch() {
+  const apiData = await fetch("./api/specialty");
+  var data = await apiData.json();
+  let length = data.length;
+
+  for (let i = 0; i < data.length; i++) {
+    const listItem = `
           <option value="${data[i].specialty_name}">${data[i].specialty_name}</option>
           `;
-      interestList.innerHTML += listItem;
-    }
+    interestList.innerHTML += listItem;
   }
+}
 
 // Function creates the cards on Tutor page
-  const cardCreate = (data) => {
-    for (let y = 0; y < data.length; y++) {
-        // Variables being used in dom manipulation
-        const sal = data[y].salutation ? data[y].salutation : "";
-        const first = data[y].firstName;
-        const surname = data[y].lastName;
-        const tutorName = `${data[y].firstName}-${data[y].lastName}`;
-        const avatarDisp = data[y].profile_img ? data[y].profile_img  : "default";
-        const specialties = data[y].specialties && data[y].specialties.length > 0 ? data[y].specialties[0].specialty_name : "";
-        const certifications = data[y].certifications && data[y].certifications.length > 0 ? data[y].certifications[0].certification_name : "";
-        const instruments = data[y].instruments && data[y].instruments.length > 0 ? data[y].instruments[0].instrument_name : "";
-        const locationRaw = data[y].lesson_setting;
-        const email = data[y].email;
-        const phoneNumber = data[y].phone;
-        const studentJSON = localStorage.getItem('username');
-        let student;
-        if (studentJSON === null) {
-        student = 'guest';
+const cardCreate = (data) => {
+  for (let y = 0; y < data.length; y++) {
+    // Variables being used in dom manipulation
+    const sal = data[y].salutation ? data[y].salutation : "";
+    const first = data[y].firstName;
+    const surname = data[y].lastName;
+    const tutorName = `${data[y].firstName}-${data[y].lastName}`;
+    const avatarDisp = data[y].profile_img ? data[y].profile_img : "default";
+    const specialties =
+      data[y].specialties && data[y].specialties.length > 0
+        ? data[y].specialties[0].specialty_name
+        : "";
+    const certifications =
+      data[y].certifications && data[y].certifications.length > 0
+        ? data[y].certifications[0].certification_name
+        : "";
+    const instruments =
+      data[y].instruments && data[y].instruments.length > 0
+        ? data[y].instruments[0].instrument_name
+        : "";
+    const locationRaw = data[y].lesson_setting;
+    const email = data[y].email;
+    const phoneNumber = data[y].phone;
+    const studentJSON = localStorage.getItem("username");
+    let student;
+    if (studentJSON === null) {
+      student = "guest";
+    } else {
+      student = JSON.parse(studentJSON);
+    }
+    const tutor = data[y].id;
+    let tutorReviews =
+      data[y].tutor_reviews && data[y].tutor_reviews.length > 0
+        ? data[y].tutor_reviews
+        : [];
+    const rate = data[y].price;
+    // Allowing us to populate a more user friendly response on card than is in JSON data
+    if (locationRaw == "virtual") {
+      tutorLocation = "Virtual";
+    } else if (locationRaw == "inHome") {
+      tutorLocation = "In Home";
+    } else if (locationRaw == "inStudio") {
+      tutorLocation = "Tutor's Studio";
+    } else if (locationRaw == "hybrid") {
+      tutorLocation = "Hybrid";
+    } else {
+      tutorLocation = "Contact Instructor";
+    }
+
+    // Creating functionality to have stars show up in card for the review rating of the tutor
+    let reviewsHTML = "";
+
+    if (tutorReviews) {
+      for (let s = 0; s < tutorReviews.length; s++) {
+        let starRating = "";
+
+        if (tutorReviews[s].rating === 0) {
+          starRating = `<i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
+        } else if (tutorReviews[s].rating === 1) {
+          starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
+        } else if (tutorReviews[s].rating === 2) {
+          starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
+        } else if (tutorReviews[s].rating === 3) {
+          starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
+        } else if (tutorReviews[s].rating === 4) {
+          starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>`;
+        } else if (tutorReviews[s].rating === 5) {
+          starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>`;
         } else {
-        student = JSON.parse(studentJSON)
-        };
-        const tutor = data[y].id;
-        let tutorReviews = data[y].tutor_reviews && data[y].tutor_reviews.length > 0 ? data[y].tutor_reviews : [];
-        const rate = data[y].price;
-        // Allowing us to populate a more user friendly response on card than is in JSON data
-        if (locationRaw == "virtual"){
-            tutorLocation = "Virtual"
-        } else if (locationRaw == "inHome"){
-            tutorLocation = "In Home"
-        } else if (locationRaw == "inStudio"){
-            tutorLocation = "Tutor's Studio"
-        } else if (locationRaw == "hybrid"){
-            tutorLocation = "Hybrid"
-        } else {
-            tutorLocation = "Contact Instructor"
+          starRating = "Error loading rating";
         }
 
-        // Creating functionality to have stars show up in card for the review rating of the tutor
-        let reviewsHTML = "";
+        let review = tutorReviews[s].review;
+        let reviewer = tutorReviews[s].student_email;
 
-        if (tutorReviews) {
-            for (let s = 0; s < tutorReviews.length; s++) {
-                let starRating = "";
-
-                if (tutorReviews[s].rating === 0) {
-                    starRating = `<i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
-                } else if (tutorReviews[s].rating === 1) {
-                    starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
-                } else if (tutorReviews[s].rating === 2) {
-                    starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
-                } else if (tutorReviews[s].rating === 3) {
-                    starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i><i class="bi bi-star"></i>`;
-                } else if (tutorReviews[s].rating === 4) {
-                    starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star"></i>`;
-                } else if (tutorReviews[s].rating === 5) {
-                    starRating = `<i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i><i class="bi bi-star-fill"></i>`;
-                } else {
-                    starRating = "Error loading rating";
-                }
-
-                let review = tutorReviews[s].review;
-                let reviewer = tutorReviews[s].student_email;
-
-                reviewsHTML += `
+        reviewsHTML += `
                     <div class="review">
                         <div>${starRating}</div>
                         <div>${review}</div>
                         <div>By: ${reviewer}</div>
                     </div>`;
-            }
-        } else {
-            reviewsHTML = `<div>No reviews available</div>`;
-        };
+      }
+    } else {
+      reviewsHTML = `<div>No reviews available</div>`;
+    }
 
-        // The card itself, card was built in a HTML file and the brought over to the JS file
-        const card = `
+    // The card itself, card was built in a HTML file and the brought over to the JS file
+    const card = `
       <div class="ACTUAL-TUTOR-CARD-WITH-MARGINS-AND-PADDING card card-450 cardLayout p-3" id="${tutorName}-card">
           <div class="CONTAINER-T0-PUT-MAIN-INFO-AND-DETAILS-COLUMNS-SIDE-BY-SIDE row">
               <div class="LEFT-SIDE-OF-TUTOR-CARD col-4">
@@ -215,66 +229,71 @@ async function createCertificationSearch() {
           </div>
       </div>`;
 
-        cardDeck.innerHTML += card;
-    }
+    cardDeck.innerHTML += card;
+  }
 };
-
 
 // Displays all tutor cards
 async function createAllTutors() {
-    const apiData = await fetch("./api/tutors");
-    var data = await apiData.json();
-    console.log(data);
-    cardCreate(data);
-    return allTutors = data
-  }
+  const apiData = await fetch("./api/tutors");
+  var data = await apiData.json();
+  console.log(data);
+  cardCreate(data);
+  return (allTutors = data);
+}
 
 const filterByInstrument = (tutors, instrumentChoice) => {
-    tutors = allTutors;
-    instrumentChoice = instrumentList.value; 
-    const tutorsFiltered = tutors.filter(tutors => {
-        return tutors.instruments.some(instrument => instrument.instrument_name === instrumentChoice);
-    });
-    cardDeck.innerHTML = "";
-    cardCreate(tutorsFiltered);
-}
+  tutors = allTutors;
+  instrumentChoice = instrumentList.value;
+  const tutorsFiltered = tutors.filter((tutors) => {
+    return tutors.instruments.some(
+      (instrument) => instrument.instrument_name === instrumentChoice
+    );
+  });
+  cardDeck.innerHTML = "";
+  cardCreate(tutorsFiltered);
+};
 
 const filterByCertification = (tutors, certificationChoice) => {
-    tutors = allTutors;
-    certificationChoice = certificationList.value; 
-    const tutorsFiltered = tutors.filter(tutors => {
-        return tutors.certifications.some(certification => certification.certification_name === certificationChoice);
-    });
-    cardDeck.innerHTML = "";
-    cardCreate(tutorsFiltered);
-}
+  tutors = allTutors;
+  certificationChoice = certificationList.value;
+  const tutorsFiltered = tutors.filter((tutors) => {
+    return tutors.certifications.some(
+      (certification) =>
+        certification.certification_name === certificationChoice
+    );
+  });
+  cardDeck.innerHTML = "";
+  cardCreate(tutorsFiltered);
+};
 
 const filterBySpecialty = (tutors, specialtyChoice) => {
-    tutors = allTutors;
-    specialtyChoice = interestList.value; 
-    const tutorsFiltered = tutors.filter(tutors => {
-        return tutors.specialties.some(specialty => specialty.specialty_name === specialtyChoice);
-    });
-    cardDeck.innerHTML = "";
-    cardCreate(tutorsFiltered);
-}
+  tutors = allTutors;
+  specialtyChoice = interestList.value;
+  const tutorsFiltered = tutors.filter((tutors) => {
+    return tutors.specialties.some(
+      (specialty) => specialty.specialty_name === specialtyChoice
+    );
+  });
+  cardDeck.innerHTML = "";
+  cardCreate(tutorsFiltered);
+};
 
 const filterByLocation = (tutors, locationChoice) => {
-    tutors = allTutors;
-    locationChoice = locationList.value; 
-    const tutorsFiltered = tutors.filter(tutor => tutor.lesson_setting === locationChoice);
-    cardDeck.innerHTML = "";
-    cardCreate(tutorsFiltered);
-}
-  
-
+  tutors = allTutors;
+  locationChoice = locationList.value;
+  const tutorsFiltered = tutors.filter(
+    (tutor) => tutor.lesson_setting === locationChoice
+  );
+  cardDeck.innerHTML = "";
+  cardCreate(tutorsFiltered);
+};
 
 // Code we went away from due to API payloads not presenting us complete data
 
-
 //   // Displays tutors with selected instrument
 //   async function getByInstrument(instrumentChoice) {
-//       instrumentChoice = instrumentList.value; 
+//       instrumentChoice = instrumentList.value;
 //       const apiData = await fetch(`./api/tutorInstrument/${instrumentChoice}`);
 //       var data = await apiData.json();
 //       cardDeck.innerHTML = "";
@@ -283,7 +302,7 @@ const filterByLocation = (tutors, locationChoice) => {
 
 //   //Displays tutors with selected certification
 //   async function getByCertification(certificationChoice) {
-//     certificationChoice = certificationList.value; 
+//     certificationChoice = certificationList.value;
 //     if (certificationChoice === "0"){
 //         alert("Please choose an option to search");
 //         return false;
@@ -294,9 +313,9 @@ const filterByLocation = (tutors, locationChoice) => {
 //     cardCreate(data);
 // }
 
-// //Displays tutors with selected specialty 
+// //Displays tutors with selected specialty
 // async function getBySpecialty(specialtyChoice) {
-//     specialtyChoice = interestList.value; 
+//     specialtyChoice = interestList.value;
 //     if (specialtyChoice === "0"){
 //         alert("Please choose an option to search");
 //         return false;
@@ -309,7 +328,7 @@ const filterByLocation = (tutors, locationChoice) => {
 
 // //Displays tutors with preferred location choice
 // async function getByLocation(locationChoice) {
-//     locationChoice = locationList.value; 
+//     locationChoice = locationList.value;
 //     if (locationChoice === "0"){
 //         alert("Please choose an option to search");
 //         return false;

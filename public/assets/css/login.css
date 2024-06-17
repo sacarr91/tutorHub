@@ -1,36 +1,46 @@
-:root{
-    --clr-dark:#1b383a;
-    --clr-accent1:#e1895d;
+:root {
+    --clr-dark: #1b383a;
+    --clr-accent1: #e1895d;
 }
 
 #header a {
     color: var(--clr-accent1);
     font-weight: 400;
-    font-size:3vh;
+    font-size: 3vh;
 }
 
-.bg-darkgreen{
+.bg-darkgreen {
     background-color: var(--clr-dark);
 }
 
-h3{
-    color:var(--clr-accent1);
+h3 {
+    color: var(--clr-accent1);
 }
 
-.align-center{
-    align-items:center;
+.align-center {
+    align-items: center;
 }
 
-.justify-center{
-    justify-content:center;
+.justify-center {
+    justify-content: center;
 }
 
-.col-6{
-    flex:0 0 50%;
-    max-width:50%;
+.col-6 {
+    flex: 0 0 50%;
+    max-width: 50%;
 }
 
-.btn-login{
+.btn-login {
     background-color: var(--clr-accent1);
-    margin-top:4px;
+    margin-top: 4px;
+}
+
+#edit-profile {
+    background-color: var(--clr-accent1);
+    color: var(--clr-light);
+}
+
+#logout {
+    background-color: var(--clr-accent1);
+    color: var(--clr-light);
 }

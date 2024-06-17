@@ -29,30 +29,33 @@
 
 ## Usage
 
-Write something cool man!
+<p>This app serves both users and tutors. Users can search for musicians to help them improve their skills, while tutors can use the platform to build a clientele for their private tutoring business. While searching is possible without registration or login, doing so allows users and tutors to personalize their profiles.</p>
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
 ## Key Features
 
-- Guest Search: Explore our extensive database of musicians without needing to register.
-- User and Tutor Accounts: Users or Tutors can register and log in to customize your profile and enhance your experience.
-- Musician Profiles: Musicians can register and log in to expand their clientele and connect with eager students.
-- Musicians display on cards after users makes a selection
-- Musicians can be filtered by certification, instrument, teaching specialty, and location
-- Image carousel that you can scroll through to view random musicians
+- Guest Search: Users cam explore tutor database without needing to register or login.
+- User and Tutor Accounts: Users or Tutors can register and log in to customize their profiles to enhance their experience.
+- Tutor cards: Musicians are displayed on cards with selectable tabs that allow users to browse and add reviews in addition to the performer's basic information and contact details.
+- Tutor cards page: Your search can be filtered by certification, instrument, teaching specialty, and location.
+- Image carousel on homepage
+- Developers page: Shares brief details about the creators
+- Registration/login modal: When you click register or login a modal pops up with either a registration or login form.
+- Custom footer and transparent TutorHub logo
+- TutorHub Logo home button
 
 - [TutorHub Render Link](https://tutorhub-spk8.onrender.com/)
 
 - [TutorHub Repo Link](https://github.com/peteCodes4u/tutorHub)
 
-- ![SCREENSHOTS GO HERE]()
+- ![Finished Product](./assets/images/finished-product.gif)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
-## Contibution Screenshot
+## Team Contributions
 
-!["contributions"]()
+<img src="./assets/images/contributions.png" alt="contributions" width="600" height="338">
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -66,7 +69,7 @@ Stephanie Carr
 
 Pranith Gunda
 
-> Write contributions here...
+> Developed the logic and modal for registration and login. Contributed to the database's back-end development using Postgres and Sequelize.
 
 ---
 
@@ -78,13 +81,13 @@ David Rauf
 
 Joseph Ruff
 
-> Write contributions here...
+> Helped develop the foundational framework and logic for the tutorcards. I contributed to the back-end development of the APIs and models, assisting in the creation of GET, POST, and DELETE routes.
 
 ---
 
 Peter Smith
 
-> Write contributions here...
+> Specialized in developing the database, APIs, and routes. Worked alongside team members to finalize the logic for fetching and filtering data to align with each specific search parameter.
 
 ## Team Contact
 
@@ -124,6 +127,8 @@ Peter Smith
 - [lleriayo](https://github.com/Ileriayo/markdown-badges)
 - [Home](https://home.aveek.io/GitHub-Profile-Badges/)
 - [Canva](https://www.canva.com/features/transparent-background/)
+- [Frontendjoe](https://www.instagram.com/frontendjoe?igsh=NmFtNGl0NnZnMGRu)
+- [ezgif](https://ezgif.com/)
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
