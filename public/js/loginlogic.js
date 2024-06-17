@@ -8,15 +8,26 @@ const clearArea = (area) => {
 
 const replaceWithName = (name) => {
     clearArea('#loginarea');
-    loginArea.innerHTML = `${name} <button id='logout' class='ms-2'>Log Out</button> <button id='edit-profile' class='ms-2'>Edit Profile</button>`
+    loginArea.innerHTML = `
+        <ul class="navbar-nav" id="loginarea">
+           <li>
+                <p class='ms-2 mt-1 patrick' id='display-user-name'>Welcome, ${name}!</p>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link light-text ms-2' style='font-size: smaller' id='edit-profile'>Edit Profile</a>
+            </li>
+            <li class='nav-item'>
+                <a class='nav-link light-text ms-2' style='font-size: smaller' id='logout'>Log Out</a>
+            </li>
+        </ul>`
 }
 
 
 const logic = () => {
-    if(userName != ""){
+    if (userName != "") {
         replaceWithName(userName)
     }
-    }
+}
 
-    logic()
+logic()
 

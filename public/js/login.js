@@ -14,7 +14,7 @@ const loginFormHandler = async (event) => {
     });
 
     if (response.ok) {
-      document.location.replace('/tutordave.html');
+      document.location.replace('/find-a-tutor.html');
       window.localStorage.setItem("username", JSON.stringify(email))
     } else {
       alert('Failed to log in');

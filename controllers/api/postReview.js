@@ -15,7 +15,7 @@ router.post('/', async (req, res) => {
       review: req.body.review,
       rating: req.body.rating,
     });
-    res.redirect('/tutordave.html');
+    res.redirect('/find-a-tutor.html');
   } catch (err) {
     res.status(422).json({ message: "Sorry, your request could not be processed due to the following error - " + err });
   }

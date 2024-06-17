@@ -58,7 +58,6 @@ body {
 .hero {
   margin-top: 5vh;
   margin-bottom: 5vh;
-  margin-left: 2vh;
 }
 
 .hero img {
@@ -104,14 +103,15 @@ body {
   border-color: transparent;
 }
 
-/* Changed the color of the find a tutor button */
-#searchArea a {
-  color: var(--clr-light);
+#searchAreaLink {
+  font-size: 37.5px; 
+  background-color: #1b383a; 
+  border-color: #e1895d; 
+  color: #e1895d;
 }
 
-/* Added a hover effect to change the color to main font color of page */
 #searchArea a:hover {
-  color: var(--clr-accent1);
+  background-color: #f5f3ee; 
 }
 
 /* modal related styles */
@@ -153,4 +153,12 @@ body {
 #reviewdiv {
   max-height: 196px;
   overflow-y: auto;
+}
+
+.carousel-control-prev {
+  justify-content: left;
+}
+
+.carousel-control-next {
+  justify-content: right;
 }

@@ -24,7 +24,7 @@ ul {
 }
 
 .socials a {
-  font-size: 24px;
+  font-size: 18px;
 }
 
 .links {
@@ -33,11 +33,14 @@ ul {
 
 .links a {
   color: white;
+  font-family: "Open Sans", sans-serif;
+  font-weight: 300;
 }
 
 .legal {
   font-size: 12px;
   margin: 0;
+  font-family: "Open Sans", sans-serif;
 }
 
 svg {
