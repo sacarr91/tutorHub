@@ -67,7 +67,9 @@ body {
 #searchArea {
   text-align: center;
 }
-
+.tutor-btn {
+  font-size: 30px;
+}
 .btn {
   background-color: var(--clr-accent1);
   color: var(--clr-light);
@@ -104,14 +106,14 @@ body {
 }
 
 #searchAreaLink {
-  font-size: 37.5px; 
-  background-color: #1b383a; 
-  border-color: #e1895d; 
+  font-size: 37.5px;
+  background-color: #1b383a;
+  border-color: #e1895d;
   color: #e1895d;
 }
 
 #searchArea a:hover {
-  background-color: #f5f3ee; 
+  background-color: #f5f3ee;
 }
 
 /* modal related styles */
