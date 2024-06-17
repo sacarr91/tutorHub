@@ -7,6 +7,7 @@ const removeCertificationButton = document.getElementById('removeCertification')
 const updateUserInfoButton = document.getElementById('updateUserInfo');
 const changePasswordButton = document.getElementById('changePassword');
 const removeSpecialtyButton = document.getElementById('removeSpecialty');
+const removeLinkButton = document.getElementById('removeLink');
 
 // change password button
 changePasswordButton.addEventListener("click", async function(){
@@ -224,3 +225,21 @@ addLinkButton.addEventListener("click", async function(){
     }
 });
 
+// remove link 
+removeLinkButton.addEventListener("click", async function(){
+
+    const platform_id = document.getElementById('platform-list').value;
+    const response = await fetch(`./api/tutorLink/${user_id}/${platform_id}`, {
+        method: 'DELETE',
+        headers: {
+            'Content-Type': 'application/json'
+        },
+    });
+    if (response.ok) {
+        alert('👻 You have removed a link from your profile 👻');
+    } else if (response.status === 404) {
+        alert('Sorry, it does not appear that this link platform has been associated with your profile in our records 🤔');
+    } else if (response.status === 422) {
+        alert('Sorry, an error has occurred please ensure you are logged in, refresh the browser and try again 😵');
+    }
+});
