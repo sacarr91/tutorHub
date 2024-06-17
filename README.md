@@ -55,7 +55,7 @@
 
 ## Team Contributions
 
-<img src="./assets/images/contributions.png" alt="contributions" width="600" height="338">
+<img src="./public/assets/images/contributions.png" alt="contributions" width="600" height="338">
 
 <p align="right"><a href="#readme-top">back to top</a></p>
 
@@ -75,7 +75,7 @@ Pranith Gunda
 
 David Rauf
 
-> Write contributions here...
+> Developed the landing page, starting with carousel. Helped build out the JS file for the page showing tutors. Built out functions allowing the lists to auto-populate from the databases we have as well as the functions to display cards on the page and filter by the search criteria. Worked with Pete to help build out some of the API routes and models using his framework.
 
 ---
 
