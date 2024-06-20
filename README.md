@@ -63,7 +63,7 @@
 
 Stephanie Carr
 
-> Write contributions here...
+> Developed UI aspects such as font-styling, card layout, and button styling. Contributed to html injection js for card display and dynamic attribute assignments, including dynamic card IDs.
 
 ---
 
